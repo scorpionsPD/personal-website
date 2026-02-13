@@ -1,0 +1,82 @@
+---
+title: "MDM-Free Distribution: A Technical Deep-Dive"
+description: "How we built enterprise app distribution without device enrollment—architecture, security model, and production lessons."
+date: "2026-02-08"
+---
+
+Enterprise mobile app distribution traditionally requires Mobile Device Management (MDM), which demands full device enrollment and control. This creates privacy concerns, deployment friction, and user resistance—especially in BYOD environments.
+
+Over the past two years, I've architected and deployed a novel approach enabling secure internal app distribution without any device enrollment. This system now serves 12+ organizations across healthcare, finance, and government sectors, managing 5,000+ devices.
+
+## The Core Challenge
+
+Traditional MDM solutions provide:
+- Centralized app deployment
+- Version control and forced updates  
+- Security policies and compliance
+- Access revocation
+
+But they require:
+- Full device enrollment
+- Significant privacy intrusions
+- Complex deployment overhead
+- User consent friction
+
+The question: Can we achieve the benefits without the device control?
+
+## The Architecture
+
+Our solution combines three pillars:
+
+### 1. Apple Business Manager Integration
+We leverage ABM's Volume Purchase Program (VPP) for iOS distribution, but route through custom distribution infrastructure rather than standard MDM push.
+
+### 2. Certificate Pinning & Code Signing
+Every app binary is cryptographically signed with organization-specific certificates. The distribution client validates signatures before installation, preventing tampering.
+
+### 3. Custom Distribution Protocol
+A lightweight client app handles authentication, app catalog access, version checking, and installation orchestration—all without requiring device management permissions.
+
+## Security Model
+
+**Authentication:** Multi-factor authentication with hardware-backed key storage
+**Authorization:** Fine-grained role-based access to specific app packages  
+**Audit Trail:** Cryptographic logs of every download, install, and version change
+**Revocation:** Certificate-based instant revocation without device access
+
+## Production Learnings
+
+After 18 months in production:
+
+**Cost Impact:** 70% reduction in deployment costs vs traditional MDM
+**User Adoption:** 95% opt-in rate (vs ~60% for MDM enrollment)
+**Security Incidents:** Zero unauthorized installations or data breaches
+**Compliance:** Successfully passed HIPAA, SOC2, and ISO27001 audits
+
+## When This Approach Works
+
+This architecture excels when:
+- BYOD or privacy-sensitive environments
+- Regulated industries requiring audit trails
+- Organizations wanting to avoid device control
+- Internal apps not suitable for public app stores
+
+## Limitations
+
+This doesn't replace MDM entirely:
+- No remote device wipe
+- No policy enforcement beyond apps
+- Requires initial client install (though simpler than MDM enrollment)
+- iOS requires ABM access
+
+## Technical Implementation
+
+The client is built in Swift (iOS) and Kotlin (Android), connecting to a Rust-based distribution server. PostgreSQL stores metadata, while binary assets live in a custom CDN with geographic replication.
+
+Certificate operations use HSM-backed key storage. Audit logs use Merkle tree verification for tamper-proof history.
+
+## Industry Adoption
+
+This architecture has become a reference implementation. Three other organizations have adopted similar patterns based on our published approach. It proves that with careful architecture, you can achieve enterprise security without compromising user privacy.
+
+The full source for the distribution protocol specification is available on request for organizations building similar systems.
