@@ -54,7 +54,7 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <div className="flex flex-col gap-20">
+    <div className="flex flex-col gap-32">
       <section className="grid items-center gap-12 md:grid-cols-[1.1fr_0.9fr]">
         <div className="flex flex-col gap-6">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
@@ -67,26 +67,20 @@ export default function HomePage() {
             I build continuity infrastructure for organisations and families where privacy,
             control, and long-term ownership are non-negotiable.
           </p>
-          <div className="flex flex-wrap gap-4">
-            <a
-              href="/work"
-              className="rounded-full bg-neutral-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-neutral-800"
-            >
-              Explore the work
+          <div className="flex flex-wrap gap-6 text-sm font-semibold text-[#1c1c1c]">
+            <a href="/impact" className="transition hover:underline">
+              View Impact →
             </a>
-            <a
-              href="/contact"
-              className="rounded-full border border-neutral-300 px-6 py-3 text-sm font-semibold text-neutral-800 transition hover:border-neutral-900"
-            >
-              Start a conversation
+            <a href="/work" className="transition hover:underline">
+              View Work →
             </a>
           </div>
           <div className="flex flex-wrap gap-6 text-sm text-neutral-500">
           </div>
         </div>
-        <div className="rounded-3xl border border-neutral-200 bg-neutral-50 p-8">
+        <div className="rounded-3xl border border-[#e6e6e3] bg-[#f7f7f5] p-8">
           <div className="flex flex-col gap-6">
-            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-accent">
+            <p className="text-sm font-semibold uppercase tracking-[0.25em] text-[#1f3d2b]">
               CURRENT FOCUS
             </p>
             <h2 className="font-display text-2xl text-neutral-900">
@@ -107,10 +101,10 @@ export default function HomePage() {
 
       <section className="flex flex-col gap-8">
         <div className="flex flex-col gap-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6b6b6b]">
             Selected products
           </p>
-          <h2 className="font-display text-3xl text-neutral-950">
+          <h2 className="font-display text-[28px] text-[#1c1c1c]">
             Continuity Systems in Practice
           </h2>
         </div>
@@ -118,16 +112,16 @@ export default function HomePage() {
           {featuredWork.map((item) => (
             <article
               key={item.title}
-              className="flex h-full flex-col justify-between rounded-2xl border border-neutral-200 bg-neutral-50 p-6"
+              className="flex h-full flex-col justify-between rounded-2xl border border-[#e6e6e3] bg-[#f7f7f5] p-6"
             >
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6b6b6b]">
                   {item.focus}
                 </p>
-                <h3 className="mt-4 text-lg font-semibold text-neutral-900">{item.title}</h3>
-                <p className="mt-3 text-sm leading-6 text-neutral-600">{item.result}</p>
+                <h3 className="mt-4 text-lg font-semibold text-[#1c1c1c]">{item.title}</h3>
+                <p className="mt-3 text-sm leading-6 text-[#6b6b6b]">{item.result}</p>
               </div>
-              <a href="/work" className="mt-6 text-sm font-semibold text-accent">
+              <a href="/work" className="mt-6 text-sm font-semibold text-[#1f3d2b]">
                 Read technical rationale →
               </a>
             </article>
@@ -135,12 +129,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="grid gap-10 rounded-3xl border border-neutral-200 bg-white p-10 md:grid-cols-[1.1fr_0.9fr]">
+      <section className="grid gap-10 rounded-3xl border border-[#e6e6e3] bg-[#f7f7f5] p-10 md:grid-cols-[1.1fr_0.9fr]">
         <div className="flex flex-col gap-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#6b6b6b]">
             Philosophy
           </p>
-          <h2 className="font-display text-3xl text-neutral-950">
+          <h2 className="font-display text-[28px] text-[#1c1c1c]">
             Software should survive operations, not demos.
           </h2>
           <p className="text-sm leading-7 text-neutral-600">

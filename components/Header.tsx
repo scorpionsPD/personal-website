@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -12,57 +12,40 @@ const navLinks = [
 ];
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen((prev) => !prev);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
+  const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-20 border-b border-neutral-200/80 bg-white/90 backdrop-blur">
-      <div className="mx-auto flex max-w-5xl flex-col gap-4 px-6 py-6 md:flex-row md:items-center md:justify-between">
-        <div className="flex items-center justify-between">
-          <Link href="/" className="font-display text-2xl font-semibold tracking-tight" onClick={closeMenu}>
+    <header className="sticky top-0 z-20 border-b border-[#e6e6e3] bg-[#f7f7f5]/95 backdrop-blur">
+      <div className="mx-auto max-w-5xl px-6 py-5">
+        <div className="flex flex-col gap-4 md:flex-row md:items-center">
+          <Link href="/" className="font-display text-2xl font-semibold tracking-tight">
             Pradeep Dahiya
           </Link>
-          <button
-            type="button"
-            className="rounded-full border border-neutral-300 px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-neutral-700 md:hidden"
-            onClick={toggleMenu}
-            aria-expanded={isOpen}
-            aria-controls="mobile-menu"
-          >
-            {isOpen ? "Close" : "Menu"}
-          </button>
+          <div className="flex flex-col gap-3 md:ml-8 md:flex-row md:items-center md:gap-8">
+            <nav className="flex flex-wrap gap-3 text-sm font-medium text-[#6b6b6b] md:gap-8">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                    className={`relative text-[#6b6b6b] transition hover:text-[#1c1c1c] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:origin-left after:bg-[#1f3d2b] after:transition-transform after:duration-300 hover:after:scale-x-100 ${
+                    isActive ? "after:scale-x-100" : "after:scale-x-0"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+              <Link
+                href="/contact"
+                className="relative text-[#6b6b6b] transition hover:text-[#1c1c1c] after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-full after:origin-left after:bg-[#1f3d2b] after:transition-transform after:duration-300 hover:after:scale-x-100"
+              >
+                Contact
+              </Link>
+            </nav>
+          </div>
         </div>
-        <nav
-          id="mobile-menu"
-          className={`flex flex-col gap-4 text-sm font-medium text-neutral-700 md:flex md:flex-row md:items-center md:gap-8 ${
-            isOpen ? "block" : "hidden"
-          } md:block`}
-        >
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="transition hover:text-neutral-950"
-              onClick={closeMenu}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </nav>
-        <Link
-          href="/contact"
-          className="self-start rounded-full border border-neutral-900 px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition hover:bg-neutral-900 hover:text-white md:self-auto"
-          onClick={closeMenu}
-        >
-          Contact
-        </Link>
       </div>
     </header>
   );
