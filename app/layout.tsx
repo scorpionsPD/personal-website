@@ -45,11 +45,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className="bg-white text-neutral-950">
         <div className="min-h-screen bg-white">
           <header className="sticky top-0 z-20 border-b border-neutral-200/80 bg-white/90 backdrop-blur">
-            <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-6">
+            <div className="mx-auto flex max-w-5xl flex-col gap-4 px-6 py-6 md:flex-row md:items-center md:justify-between">
               <Link href="/" className="font-display text-2xl font-semibold tracking-tight">
                 Pradeep Dahiya
               </Link>
-              <nav className="hidden items-center gap-8 text-sm font-medium text-neutral-700 md:flex">
+              <nav className="flex flex-wrap items-center gap-4 text-sm font-medium text-neutral-700">
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}
@@ -62,7 +62,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               </nav>
               <Link
                 href="/contact"
-                className="rounded-full border border-neutral-900 px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition hover:bg-neutral-900 hover:text-white"
+                className="self-start rounded-full border border-neutral-900 px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition hover:bg-neutral-900 hover:text-white"
               >
                 Contact
               </Link>
@@ -74,10 +74,27 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </main>
 
           <footer className="border-t border-neutral-200/80 bg-white">
-            <div className="mx-auto flex max-w-5xl flex-col gap-4 px-6 py-10 text-sm text-neutral-600 md:flex-row md:items-center md:justify-between">
-              <p>Building operational platforms with clarity, ownership, and control.</p>
-              <div className="flex gap-6 text-neutral-500">
-                <span>Glasgow, UK</span>
+            <div className="mx-auto grid max-w-5xl gap-10 px-6 py-12 text-sm text-neutral-600 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+              <div className="flex flex-col gap-2">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500">About</p>
+                <p>Independent software focused on operational and human continuity.</p>
+              </div>
+              <div className="flex flex-col gap-2">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500">Contact</p>
+                <a className="text-neutral-700 hover:text-neutral-900" href="mailto:pradeepdahiya@hotmail.com">pradeepdahiya@hotmail.com</a>
+              </div>
+              <div className="flex flex-col gap-2">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500">Sections</p>
+                <div className="flex flex-col gap-1">
+                  <Link className="text-neutral-700 hover:text-neutral-900" href="/work">Work</Link>
+                  <Link className="text-neutral-700 hover:text-neutral-900" href="/">Philosophy</Link>
+                  <Link className="text-neutral-700 hover:text-neutral-900" href="/blog">Blog</Link>
+                  <Link className="text-neutral-700 hover:text-neutral-900" href="/contact">Contact</Link>
+                </div>
+              </div>
+              <div className="flex flex-col gap-2">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500">Legal</p>
+                <p>© 2026 All rights reserved.</p>
               </div>
             </div>
           </footer>

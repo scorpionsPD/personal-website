@@ -20,17 +20,17 @@ const featuredWork = [
   {
     title: "AppDeploy",
     focus: "Access-Controlled Mobile Distribution",
-    result: "Replaces device-level management with access-level governance, allowing organisations to distribute internal apps without controlling employee devices."
+    result: "AppDeploy keeps organisations operational when traditional app distribution fails. Companies rely on mobile apps for daily operations, yet most distribution methods depend on external control — app stores, device management policies, or manual installations that break at scale. AppDeploy provides a controlled internal distribution layer where organisations retain direct authority over access, availability, and lifecycle of their applications. Instead of managing devices, organisations manage operational continuity."
   },
   {
     title: "ScotiTech Workspace",
     focus: "Private AI Execution Environment",
-    result: "Introduces local AI processing where organisational data cannot leave infrastructure boundaries, making AI usable in regulated environments."
+    result: "When AI depends on moving sensitive data outside infrastructure boundaries, compliance and operational risk rise. ScotiTech Workspace enables local AI execution so teams keep data inside while still gaining AI capability."
   },
   {
     title: "ElderConnect+",
     focus: "Technology for Assisted Independence",
-    result: "Designing digital systems that elderly users can operate without requiring continuous technical support, prioritising clarity over feature complexity."
+    result: "When essential care depends on complex digital tools, continuity breaks for older adults and families. ElderConnect+ provides simplified systems that reduce support dependency while keeping routines stable."
   }
 ];
 
@@ -61,11 +61,11 @@ export default function HomePage() {
             Founder, ScotiTech • Systems Architect
           </p>
           <h1 className="font-display text-4xl leading-tight text-neutral-950 md:text-5xl">
-            I build operational software platforms for privacy, control, and long-term ownership.
+            Software designed to keep essential systems working.
           </h1>
           <p className="text-base leading-7 text-neutral-600 md:text-lg">
-            From MDM-free mobile distribution to self-hosted collaboration systems, I focus on
-            reliability and data sovereignty for teams that need full control.
+            I build continuity infrastructure for organisations and families where privacy,
+            control, and long-term ownership are non-negotiable.
           </p>
           <div className="flex flex-wrap gap-4">
             <a
@@ -82,35 +82,20 @@ export default function HomePage() {
             </a>
           </div>
           <div className="flex flex-wrap gap-6 text-sm text-neutral-500">
-            <span>Founder at ScotiTech • Award-winning innovator</span>
-          </div>
-          <div className="mt-2 flex flex-wrap items-center gap-4 text-xs text-neutral-400">
-            <span className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent"></span>
-              12+ years software architecture
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent"></span>
-              NASSCOM mentor
-            </span>
-            <span className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-accent"></span>
-              International recognition
-            </span>
           </div>
         </div>
         <div className="rounded-3xl border border-neutral-200 bg-neutral-50 p-8">
           <div className="flex flex-col gap-6">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-accent">
-              Current focus
+              CURRENT FOCUS
             </p>
             <h2 className="font-display text-2xl text-neutral-900">
-              AI you can run on‑prem, not in the cloud.
+              Making AI usable in environments where data cannot leave infrastructure boundaries.
             </h2>
             <p className="text-sm leading-7 text-neutral-600">
-              With ScotiTech Workspace, I'm tackling a common constraint: teams want AI help but
-              can’t let operational data leave their infrastructure. Most tools assume external
-              processing, which doesn’t work in regulated or contract-bound environments.
+              I'm tackling a common constraint: teams want AI help but can’t let operational data
+              leave their infrastructure. Most tools assume external processing, which doesn’t
+              work in regulated or contract-bound environments.
             </p>
             <p className="text-sm leading-7 text-neutral-600">
               I’m especially interested in healthcare, finance, government, or legal teams where
@@ -126,7 +111,7 @@ export default function HomePage() {
             Selected products
           </p>
           <h2 className="font-display text-3xl text-neutral-950">
-            Original systems solving operational constraints
+            Continuity Systems in Practice
           </h2>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
@@ -169,6 +154,17 @@ export default function HomePage() {
           <p className="text-sm leading-7 text-neutral-600">
             My work focuses on making advanced technology usable where reliability is mandatory
             rather than optional.
+          </p>
+          <p className="text-sm leading-7 text-neutral-600">
+            Technology should quietly prevent problems. The most valuable systems are not the
+            ones people actively use, but the ones they stop worrying about.
+          </p>
+          <p className="text-sm leading-7 text-neutral-600">
+            If the surrounding ecosystem changes — vendor, policy, device, or location —
+            essential activity should continue uninterrupted.
+          </p>
+          <p className="text-sm leading-7 text-neutral-600">
+            I build software that reduces dependence rather than increasing usage.
           </p>
         </div>
         <div className="grid gap-4 text-sm text-neutral-600">

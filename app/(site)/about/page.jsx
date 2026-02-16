@@ -1,11 +1,16 @@
 const paragraphs = [
-  "I started as a mobile developer, building apps where performance and stability showed up fast. That work taught me to respect constraints early: battery, bandwidth, offline behaviour, and devices I didn’t control. Shipping to production made reliability non‑negotiable.",
-  "As those systems grew, I moved from client code into the architecture that kept everything running. Identity, distribution, deployment pipelines, and data integrity became my day‑to‑day. Over 12+ years, I’ve built infrastructure users never see but rely on every day. The work was less about screens and more about how the system actually runs.",
-  "Earlier in my career, I led iOS teams in India, shipping production apps and owning core mobile architecture.",
-  "That shift moved my focus from features to system design. I became interested in the gap between software that works in demos and software that holds up inside real organisations. It usually came down to governance, control, and long‑term maintainability.",
-  "In 2024 I started ScotiTech to build platforms teams can actually own and run. The focus is on operational challenges SaaS tools don’t solve well: complete data sovereignty, MDM‑free mobile distribution, and self‑hosted collaboration environments. The work has been recognised with awards from Forttuna Global Excellence and the Indian Tech Society.",
-  "Outside the build work, I mentor startups through NASSCOM, share knowledge with teams like PNB MetLife, and give university lectures on software architecture. I’ve also been invited to contribute to Cambridge Institute for Sustainability Leadership discussions on responsible technology design.",
-  "Today I work as a software architect and founder, building platforms used in production settings. I care about composable systems, clear operational boundaries, and software that teams can own for years. My focus stays on problems where operational control and data sovereignty are non‑negotiable."
+  "I design software that people rely on when important things cannot afford to stop working.",
+  "Across organisations and everyday life, many critical activities now depend on external platforms — app stores, SaaS vendors, communication tools, or physical presence of a person. These dependencies are convenient until they fail. When access changes, services shut down, accounts expire, or distance increases, work slows down and care breaks down.",
+  "My work focuses on reducing that fragility.",
+  "Instead of building tools for productivity or engagement, I build continuity systems — environments that remain available regardless of platform restrictions, vendor lock-in, or location. The goal is simple: the system should keep functioning even when the surrounding conditions change.",
+  "Over the past decade I have worked on mobile and cloud infrastructure used across enterprise operations, private collaboration environments, and assisted living support. While these areas appear different, they share the same underlying problem: important processes depend on layers outside the user’s control.",
+  "My products therefore follow a consistent principle — control should exist closest to the people who depend on it.",
+  "Organisations should retain access to internal applications without relying on public distribution channels.",
+  "Teams should keep institutional knowledge accessible independent of subscription software.",
+  "Families should be able to support ageing members without constant physical presence.",
+  "This is less about features and more about stability. If the surrounding ecosystem changes, the system should still continue.",
+  "I am particularly interested in software that quietly prevents problems rather than visibly reacting to them — technology that becomes part of normal life rather than something users have to think about.",
+  "The direction remains ongoing: building dependable digital environments where absence, restriction, or distance does not interrupt essential activity."
 ];
 
 export const metadata = {
@@ -42,6 +47,22 @@ export default function AboutPage() {
         {paragraphs.map((text, index) => (
           <p key={index} className={index > 0 ? "mt-6" : ""}>{text}</p>
         ))}
+      </section>
+
+      <section className="grid gap-3 text-sm text-neutral-600 md:grid-cols-3">
+        <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
+          <p className="text-sm text-neutral-800">
+            14+ years of experience in software development and architecture design.
+          </p>
+        </div>
+        <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
+          <p className="text-sm text-neutral-800">Mentor through the NASSCOM program.</p>
+        </div>
+        <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
+          <p className="text-sm text-neutral-800">
+            Internationally recognised for contributions to operational system design.
+          </p>
+        </div>
       </section>
 
     </div>
