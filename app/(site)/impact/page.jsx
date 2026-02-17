@@ -55,7 +55,7 @@ const professionalImpact = [
 const builtAndShipped = [
   {
     year: "2025",
-    title: "AppDeploy: MDM-free distribution architecture",
+    title: "AppDeploy: Internal application distribution without MDM dependency or private hosting",
     detail:
       "Developed novel approach for enterprise app distribution without device enrollment, solving deployment friction in regulated environments. Shipped with paid pilots proving market demand."
   },

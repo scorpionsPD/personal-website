@@ -1,7 +1,7 @@
 const products = [
   {
     title: "AppDeploy",
-    summary: "Internal application distribution without device management",
+    summary: "Internal application distribution without MDM dependency or private hosting",
     casestudy: {
       dependency:
         "Internal mobile apps were delivered through app stores, MDM policies, or manual installs, all of which depend on external control and device ownership.",
