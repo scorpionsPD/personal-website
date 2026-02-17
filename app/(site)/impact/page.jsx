@@ -46,28 +46,12 @@ const professionalImpact = [
   }
 ];
 
-const technicalContributions = [
-  {
-    year: "2024",
-    title: "Founder, ScotiTech",
-    detail:
-      "Founded ScotiTech to build operational platforms for private infrastructure, mobile distribution, and collaboration workflows that stay inside controlled environments. Shipped AppDeploy and ScotiTech Workspace, proving early market demand through paid pilots and initial revenue."
-  },
-  {
-    year: "12+ years",
-    title: "Systems architecture and platform innovation",
-    detail:
-      "Built production systems across mobile, backend, and distributed infrastructure with a focus on reliability, data sovereignty, and maintainable ownership. Led architecture decisions for long-term scalability, compliance constraints, and real-world operational uptime."
-  }
-];
-
-
-const innovationEvidence = [
+const builtAndShipped = [
   {
     year: "2024",
     title: "AppDeploy: MDM-free distribution architecture",
     detail:
-      "Developed novel approach for enterprise app distribution without device enrollment, solving deployment friction in regulated environments."
+      "Developed novel approach for enterprise app distribution without device enrollment, solving deployment friction in regulated environments. Shipped with paid pilots proving market demand."
   },
   {
     year: "2023",
@@ -77,9 +61,15 @@ const innovationEvidence = [
   },
   {
     year: "2023",
-    title: "ElderConnect+ digital support for independent living",
+    title: "ElderConnect+: Shared coordination layer for independent living",
     detail:
-      "Built a shared layer for everyday support where family, neighbours, and helpers can coordinate small requests with clear, predictable interactions."
+      "Built a shared layer for everyday support where family, neighbours, and helpers can coordinate small requests with clear, predictable interactions. Deployed with real users."
+  },
+  {
+    year: "14+ years",
+    title: "Production systems architecture and platform innovation",
+    detail:
+      "Built production systems across mobile, backend, and distributed infrastructure with a focus on reliability, data sovereignty, and maintainable ownership. Led architecture decisions for long-term scalability, compliance constraints, and real-world operational uptime."
   }
 ];
 
@@ -217,22 +207,10 @@ export default function ImpactPage() {
         </div>
         <div className="flex flex-col gap-4">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
-            Technical Contributions
+            Built & Shipped
           </p>
-          <Timeline items={technicalContributions} />
+          <Timeline items={builtAndShipped} />
         </div>
-      </section>
-
-      <section className="mt-16 flex flex-col gap-8">
-        <div className="flex flex-col gap-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
-            Innovation Evidence
-          </p>
-          <h2 className="font-display text-3xl text-neutral-950">
-            New approaches that move real-world platform work forward.
-          </h2>
-        </div>
-        <Timeline items={innovationEvidence} />
       </section>
 
       <section className="mt-16 flex flex-col gap-8">
