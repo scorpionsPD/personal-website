@@ -80,7 +80,7 @@ const measurableImpact = [
     detail: "Recognition from Forttuna Global Excellence Awards and Indian Tech Society for technology contributions."
   },
   {
-    metric: "12+ years",
+    metric: "14+ years",
     title: "Professional software development",
     detail: "Experience spanning mobile development, backend systems, and platform architecture across enterprise and startup environments."
   },
