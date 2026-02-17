@@ -54,13 +54,13 @@ const professionalImpact = [
 
 const builtAndShipped = [
   {
-    year: "2024",
+    year: "2025",
     title: "AppDeploy: MDM-free distribution architecture",
     detail:
       "Developed novel approach for enterprise app distribution without device enrollment, solving deployment friction in regulated environments. Shipped with paid pilots proving market demand."
   },
   {
-    year: "2023",
+    year: "2025",
     title: "ScotiTech Workspace: Private AI execution architecture",
     detail:
       "Built platform enabling AI agents to operate entirely within controlled environments, solving the deployment constraint for regulated organizations where external AI processing is unacceptable."
