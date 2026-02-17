@@ -25,6 +25,12 @@ const professionalImpact = [
       "Selected as technical mentor supporting early-stage technology startups through NASSCOM's mentorship program."
   },
   {
+    year: "2024",
+    title: "Digital Trustee, Third Sector Lab",
+    detail:
+      "Serving as digital trustee providing governance, ethics, and technology strategy oversight across multiple sectors."
+  },
+  {
     year: "2025",
     title: "Identified by CISL & BSI Sustainability Accelerator",
     detail:
