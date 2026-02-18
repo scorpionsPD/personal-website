@@ -5,12 +5,12 @@ const paragraphs = [
   "Instead of building tools for productivity or engagement, I build continuity systems — environments that remain available regardless of platform restrictions, vendor lock-in, or location. The goal is simple: the system should keep functioning even when the surrounding conditions change.",
   "Over the past decade I have worked on mobile and cloud infrastructure used across enterprise operations, private collaboration environments, and assisted living support. While these areas appear different, they share the same underlying problem: important processes depend on layers outside the user’s control.",
   "My products therefore follow a consistent principle — control should exist closest to the people who depend on it.",
-  "Organisations should retain access to internal applications without relying on public distribution channels.",
-  "Teams should keep institutional knowledge accessible independent of subscription software.",
-  "Families should be able to support ageing members without constant physical presence.",
+  "Organisations should retain direct access to internal applications through controlled distribution channels.",
+  "Teams should keep institutional knowledge accessible under their own governance.",
+  "Families should be able to support ageing members through reliable coordination systems.",
   "This is less about features and more about stability. If the surrounding ecosystem changes, the system should still continue.",
   "I am particularly interested in software that quietly prevents problems rather than visibly reacting to them — technology that becomes part of normal life rather than something users have to think about.",
-  "The direction remains ongoing: building dependable digital environments where absence, restriction, or distance does not interrupt essential activity."
+  "The direction remains ongoing: building dependable digital environments that maintain essential activity across distance, changing conditions, and operational constraints."
 ];
 
 export const metadata = {

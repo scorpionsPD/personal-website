@@ -10,9 +10,9 @@ const products = [
       system:
         "AppDeploy creates a controlled entitlement layer between the organisation and its applications — separating device ownership from operational access and restoring governance over distribution.",
       outcome:
-        "Teams can roll out internal apps predictably without taking over devices, restoring operational continuity while keeping governance intact and user friction low."
+        "Teams gain predictable app deployment with full governance control and minimal user friction, enabling operational continuity across the organisation."
     },
-    innovation: "Entitlement-led distribution architecture without device management"
+    innovation: "Entitlement-led distribution architecture with full organisational control"
   },
   {
     title: "ScotiTech Workspace",
@@ -25,7 +25,7 @@ const products = [
       system:
         "ScotiTech Workspace creates a self‑controlled environment where communication, documents, and knowledge remain under organisational ownership. AI runs inside infrastructure boundaries rather than outside them.",
       outcome:
-        "Knowledge stays continuously accessible regardless of vendor shifts, and AI assistance is available without exporting operational data. AI becomes a capability inside the system, not the product itself."
+        "Knowledge remains continuously accessible under organisational control, with AI assistance running on internal infrastructure. AI becomes a capability teams control, integrated into operations."
     },
     innovation: "Private AI execution environment for regulated organisations"
   },
@@ -40,9 +40,9 @@ const products = [
       system:
         "ElderConnect+ provides a shared, low‑friction layer for requests and acknowledgements, keeping interactions explicit and predictable without forcing users into complex workflows.",
       outcome:
-        "Routine support becomes easier to organise, issues surface earlier, and users maintain confidence in daily life while existing support networks become reliable."
+        "Routine support becomes easier to organise, issues surface earlier, and users maintain confidence in daily life as support networks gain structure and reliability."
     },
-    innovation: "Coordinated, low-friction support without formal care workflows"
+    innovation: "Coordinated, low-friction support through lightweight shared visibility"
   }
 ];
 

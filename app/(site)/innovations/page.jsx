@@ -96,6 +96,20 @@ const innovations = [
     impact:
       "Deployed 200+ updates across multi-tenant platform with zero downtime incidents. Reduced deployment risk by 95%.",
     technologies: ["Kubernetes", "Service Mesh", "Health Monitoring", "State Machines"]
+  },
+  {
+    category: "Open Source",
+    title: "Knowledge Platform: Enterprise Knowledge Management System",
+    year: "2025",
+    problem:
+      "Organizations need secure, role-based knowledge sharing systems but most solutions lack granular permissions, proper audit trails, or self-hosting options.",
+    innovation:
+      "Built open-source full-stack platform with three-tier RBAC, OAuth2 authentication, automated user provisioning, session management, and comprehensive security features. Fully self-hostable with enterprise-grade architecture.",
+    technicalBreakthrough:
+      "Type-safe end-to-end implementation with PostgreSQL-backed sessions, flexible JSON schema for evolution without migrations, and multi-layer security including rate limiting, CSRF protection, and cryptographic audit trails.",
+    impact:
+      "Open sourced on GitHub demonstrating production-ready patterns. Complete with deployment guides, testing framework, and comprehensive documentation. Available at github.com/scorpionsPD/knowledge-platform",
+    technologies: ["TypeScript", "Node.js", "Next.js 14", "PostgreSQL", "Prisma ORM", "OAuth2", "Docker"]
   }
 ];
 

@@ -10,6 +10,11 @@ const awards = [
     videoPoster: "/videos/preview.png"
   },
   {
+    year: "2026",
+    title: "FORTUNA® Global Excellence Awards - AI Innovation Leader of the Year (Nominee)",
+    detail: "Business Leaders Edition | United Kingdom | Technology Category | Nominated for AI Innovation Leader of the Year."
+  },
+  {
     year: "2023",
     title: "Indian Tech Society Award",
     detail: "Certificate of Recognition for outstanding contributions to the UK tech sector, recognised for exceptional talent, impactful innovation, and community leadership as an Indian technologist.",
@@ -49,6 +54,12 @@ const professionalImpact = [
     detail:
       "Practical Use of AI: What Works, What Doesn't — an experience-led perspective on real-world AI beyond hype.",
     image: "/images/speaking/university-lecture.jpg"
+  },
+  {
+    year: "2026",
+    title: "Published Article: Rethinking Responsible Innovation in the Age of AI",
+    detail:
+      "Published by The Tech Founders on building technology people can trust. Covers transparency, privacy-by-design, sustainability, and human-centered AI principles for startup founders."
   }
 ];
 
@@ -70,6 +81,12 @@ const builtAndShipped = [
     title: "ElderConnect+: Shared coordination layer for independent living",
     detail:
       "Built a shared layer for everyday support where family, neighbours, and helpers can coordinate small requests with clear, predictable interactions. Deployed with real users."
+  },
+  {
+    year: "2025",
+    title: "Knowledge Platform (Open Source)",
+    detail:
+      "Built and open-sourced enterprise-grade knowledge management system with advanced RBAC, OAuth2 integration, and comprehensive security features. Full-stack TypeScript implementation demonstrating production-ready architecture patterns."
   },
   {
     year: "14+ years",
@@ -191,7 +208,7 @@ export default function ImpactPage() {
           Impact
         </p>
         <h1 className="font-display text-4xl text-neutral-950 md:text-5xl">
-          Recognition tied to real products, not prototypes.
+          Recognition earned through operational deployment.
         </h1>
         <p className="text-base leading-7 text-neutral-600 md:text-lg">
           Recognition, mentorship, and platforms delivered in real-world environments.

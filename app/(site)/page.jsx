@@ -25,7 +25,7 @@ const featuredWork = [
   {
     title: "ScotiTech Workspace",
     focus: "Private AI Execution Environment",
-    result: "When AI depends on moving sensitive data outside infrastructure boundaries, compliance and operational risk rise. ScotiTech Workspace enables local AI execution so teams keep data inside while still gaining AI capability."
+    result: "ScotiTech Workspace enables local AI execution, keeping sensitive data within infrastructure boundaries where compliance and operational control remain intact."
   },
   {
     title: "ElderConnect+",
