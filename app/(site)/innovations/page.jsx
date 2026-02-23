@@ -110,6 +110,20 @@ const innovations = [
     impact:
       "Open sourced on GitHub demonstrating production-ready patterns. Complete with deployment guides, testing framework, and comprehensive documentation. Available at github.com/scorpionsPD/knowledge-platform",
     technologies: ["TypeScript", "Node.js", "Next.js 14", "PostgreSQL", "Prisma ORM", "OAuth2", "Docker"]
+  },
+  {
+    category: "Open Source",
+    title: "SwiftUIArchitecture: Real-World App Architecture",
+    year: "2019",
+    problem:
+      "SwiftUI teams lacked a practical reference implementation for scalable state management, navigation, and modular composition in production apps.",
+    innovation:
+      "Published an open-source SwiftUI architecture reference that demonstrates modular feature boundaries, reusable view composition, and predictable state handling patterns.",
+    technicalBreakthrough:
+      "Codified a maintainable SwiftUI structure with clear separation between UI, state, and business logic, enabling onboarding and long-term evolution in real teams.",
+    impact:
+      "Shared as a public reference implementation for SwiftUI architecture patterns, with GitHub adoption signals from the community.",
+    technologies: ["Swift", "SwiftUI", "Architecture Patterns", "iOS"]
   }
 ];
 

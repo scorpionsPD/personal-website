@@ -36,6 +36,12 @@ const professionalImpact = [
       "Serving as digital trustee providing governance, ethics, and technology strategy oversight across multiple sectors."
   },
   {
+    year: "2026",
+    title: "Digital Trustee (Volunteer), TravelHands",
+    detail:
+      "Volunteer digital trustee supporting governance, ethics, and technology strategy for TravelHands."
+  },
+  {
     year: "2025",
     title: "Identified by CISL & BSI Sustainability Accelerator",
     detail:
@@ -89,6 +95,12 @@ const builtAndShipped = [
       "Built and open-sourced enterprise-grade knowledge management system with advanced RBAC, OAuth2 integration, and comprehensive security features. Full-stack TypeScript implementation demonstrating production-ready architecture patterns."
   },
   {
+    year: "2019",
+    title: "SwiftUIArchitecture (Open Source)",
+    detail:
+      "Published a real-world SwiftUI architecture reference implementation, showcasing modern patterns for state management, modular design, and maintainable UI composition."
+  },
+  {
     year: "14+ years",
     title: "Production systems architecture and platform innovation",
     detail:
@@ -111,6 +123,23 @@ const measurableImpact = [
     metric: "Multiple",
     title: "Production platforms deployed",
     detail: "Built and shipped operational systems including AppDeploy, ScotiTech Workspace, and ElderConnect+ serving real organizations."
+  }
+];
+
+const openSourceSignals = [
+  {
+    title: "Knowledge Platform",
+    detail:
+      "Enterprise-grade knowledge management system with deep technical documentation and deployment guides.",
+    link: "https://github.com/scorpionsPD/knowledge-platform",
+    linkLabel: "View repository"
+  },
+  {
+    title: "SwiftUIArchitecture",
+    detail:
+      "Reference implementation for scalable SwiftUI app architecture and maintainable UI composition.",
+    link: "https://github.com/scorpionsPD/SwiftUIArchitechture",
+    linkLabel: "View repository"
   }
 ];
 
@@ -211,7 +240,7 @@ export default function ImpactPage() {
           Recognition earned through operational deployment.
         </h1>
         <p className="text-base leading-7 text-neutral-600 md:text-lg">
-          Recognition, mentorship, and platforms delivered in real-world environments.
+          Recognition, mentorship, and platforms grounded in systems architecture, operational reliability, and responsible AI.
         </p>
       </section>
 
@@ -251,6 +280,33 @@ export default function ImpactPage() {
               <p className="text-3xl font-semibold text-accent">{item.metric}</p>
               <h3 className="mt-3 text-lg font-semibold text-neutral-900">{item.title}</h3>
               <p className="mt-2 text-sm text-neutral-600">{item.detail}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-16 flex flex-col gap-8">
+        <div className="flex flex-col gap-2">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
+            Open Source Signals
+          </p>
+          <h2 className="font-display text-3xl text-neutral-950">
+            Community usage and technical depth.
+          </h2>
+        </div>
+        <div className="grid gap-6 md:grid-cols-2">
+          {openSourceSignals.map((item) => (
+            <div key={item.title} className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+              <h3 className="mt-2 text-lg font-semibold text-neutral-900">{item.title}</h3>
+              <p className="mt-2 text-sm text-neutral-600">{item.detail}</p>
+              <a
+                href={item.link}
+                className="mt-4 inline-flex text-sm font-semibold text-accent"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {item.linkLabel} →
+              </a>
             </div>
           ))}
         </div>

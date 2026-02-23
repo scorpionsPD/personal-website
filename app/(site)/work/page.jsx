@@ -72,12 +72,13 @@ export default function WorkPage() {
           Products
         </p>
         <h1 className="font-display text-4xl text-neutral-950 md:text-5xl">
-          Platforms designed for control and long-term ownership
+          Operational platforms built for reliability and control
         </h1>
         <p className="text-base leading-7 text-neutral-600 md:text-lg">
           These projects grew out of situations where standard software assumptions didn’t
           hold — mixed device ownership, regulatory limits, and environments where systems
-          must keep running for years rather than weeks.
+          must keep running for years rather than weeks. The focus is practical systems
+          architecture and operational reliability in real-world conditions.
         </p>
       </section>
 
@@ -121,7 +122,7 @@ export default function WorkPage() {
 
                 <div className="border-l-2 border-neutral-200 pl-6">
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500 mb-2">
-                    3. The System I Designed
+                    3. System Architecture
                   </p>
                   <p className="text-sm leading-7 text-neutral-700">
                     {item.casestudy.system}
@@ -130,7 +131,7 @@ export default function WorkPage() {
 
                 <div className="border-l-2 border-accent pl-6 bg-neutral-50/50 py-4 -mx-6 px-6">
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent mb-2">
-                    4. What Changed After Implementation
+                    4. Operational Outcome
                   </p>
                   <p className="text-sm leading-7 text-neutral-800 font-medium">
                     {item.casestudy.outcome}
