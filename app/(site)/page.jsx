@@ -19,16 +19,19 @@ const highlights = [
 const featuredWork = [
   {
     title: "AppDeploy",
+    slug: "appdeploy",
     focus: "Access-Controlled Mobile Distribution",
     result: "AppDeploy keeps organisations operational when traditional app distribution fails. Companies rely on mobile apps for daily operations, yet most distribution methods depend on external control — app stores, device management policies, or manual installations that break at scale. AppDeploy provides a controlled internal distribution layer where organisations retain direct authority over access, availability, and lifecycle of their applications. Instead of managing devices, organisations manage operational continuity."
   },
   {
     title: "ScotiTech Workspace",
+    slug: "scotitech-workspace",
     focus: "Private AI Execution Environment",
     result: "ScotiTech Workspace enables local AI execution, keeping sensitive data within infrastructure boundaries where compliance and operational control remain intact."
   },
   {
     title: "ElderConnect+",
+    slug: "elderconnect-plus",
     focus: "Technology for Assisted Independence",
     result: "When essential care depends on complex digital tools, continuity breaks for older adults and families. ElderConnect+ provides simplified systems that reduce support dependency while keeping routines stable."
   }
@@ -121,8 +124,8 @@ export default function HomePage() {
                 <h3 className="mt-4 text-lg font-semibold text-[#1c1c1c]">{item.title}</h3>
                 <p className="mt-3 text-sm leading-6 text-[#6b6b6b]">{item.result}</p>
               </div>
-              <a href="/work" className="mt-6 text-sm font-semibold text-[#1f3d2b]">
-                Read technical rationale →
+              <a href={`/products/${item.slug}`} className="mt-6 text-sm font-semibold text-[#1f3d2b]">
+                View product details →
               </a>
             </article>
           ))}

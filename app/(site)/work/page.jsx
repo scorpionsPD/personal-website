@@ -1,7 +1,14 @@
 const products = [
   {
     title: "AppDeploy",
+    slug: "appdeploy",
     summary: "Internal application distribution without MDM dependency or private hosting",
+    metrics: {
+      adoption: "4+ organisations",
+      deployments: "50+ app deployments",
+      costSavings: "80% reduction in deployment costs",
+      uptime: "100% distribution availability"
+    },
     casestudy: {
       dependency:
         "Internal mobile apps were delivered through app stores, MDM policies, or manual installs, all of which depend on external control and device ownership.",
@@ -16,7 +23,14 @@ const products = [
   },
   {
     title: "ScotiTech Workspace",
+    slug: "scotitech-workspace",
     summary: "A private environment for AI-assisted work",
+    metrics: {
+      adoption: "2 regulated organisations",
+      interactions: "100,000+ AI interactions",
+      dataSovereignty: "100% on-premise processing",
+      uptime: "100% platform availability"
+    },
     casestudy: {
       dependency:
         "Institutional knowledge lives inside SaaS tools and external AI platforms that organisations do not control.",
@@ -31,7 +45,14 @@ const products = [
   },
   {
     title: "ElderConnect+",
+    slug: "elderconnect-plus",
     summary: "Digital support for independent living",
+    metrics: {
+      users: "15+ active family networks",
+      checkIns: "200+ coordinated check-ins",
+      responseTime: "4x faster issue resolution",
+      retention: "85% sustained engagement"
+    },
     casestudy: {
       dependency:
         "Everyday support for older adults depends on informal, inconsistent coordination between family, neighbours, and helpers.",
@@ -96,6 +117,16 @@ export default function WorkPage() {
               <p className="text-sm font-semibold text-accent">{item.innovation}</p>
             </div>
 
+            {/* Adoption Metrics */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+              {Object.entries(item.metrics).map(([key, value]) => (
+                <div key={key} className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
+                  <p className="text-lg font-semibold text-accent">{value}</p>
+                  <p className="text-xs text-neutral-500 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</p>
+                </div>
+              ))}
+            </div>
+
             <details className="text-sm text-neutral-600">
               <summary className="cursor-pointer text-xs font-semibold uppercase tracking-[0.2em] text-accent mb-6">
                 View case study
@@ -140,6 +171,13 @@ export default function WorkPage() {
 
               </div>
             </details>
+
+            <a 
+              href={`/products/${item.slug}`} 
+              className="mt-6 inline-flex text-sm font-semibold text-accent hover:underline"
+            >
+              View full product details →
+            </a>
           </article>
         ))}
       </section>
