@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ExternalLinkButton from "../../../../components/ExternalLinkButton";
 
 export const metadata = {
   title: "AppDeploy | Pradeep Dahiya",
@@ -114,14 +115,12 @@ export default function AppDeployPage() {
             />
           </div>
           <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center">
-            <a
+            <ExternalLinkButton
               href={appDeployLinks.website}
-              target="_blank"
-              rel="noreferrer"
               className="inline-flex items-center text-sm font-semibold text-accent hover:underline"
             >
               Visit website →
-            </a>
+            </ExternalLinkButton>
           </div>
         </div>
         <div className="flex items-center gap-4">
@@ -332,14 +331,12 @@ export default function AppDeployPage() {
           application distribution without relying on device enrollment or public app store workflows.
         </p>
         <div className="mt-6 flex flex-wrap gap-4">
-          <a
+          <ExternalLinkButton
             href={appDeployLinks.website}
-            target="_blank"
-            rel="noreferrer"
             className="inline-flex items-center rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white transition hover:opacity-90"
           >
             Visit AppDeploy
-          </a>
+          </ExternalLinkButton>
         </div>
       </section>
 
