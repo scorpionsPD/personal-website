@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
@@ -89,6 +90,11 @@ const useCases = [
   }
 ];
 
+const appDeployLinks = {
+  website: "https://appdeploy.scotitech.com:5173",
+  logo: "/images/products/AppdeployLogoBlack.png"
+};
+
 export default function AppDeployPage() {
   return (
     <div className="flex flex-col gap-16">
@@ -97,6 +103,27 @@ export default function AppDeployPage() {
         <Link href="/products" className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500 hover:text-accent">
           ← Products
         </Link>
+        <div className="flex items-center gap-4">
+          <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl p-2">
+            <Image
+              src={appDeployLinks.logo}
+              alt="AppDeploy logo"
+              width={48}
+              height={48}
+              className="h-auto w-full object-contain"
+            />
+          </div>
+          <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center">
+            <a
+              href={appDeployLinks.website}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center text-sm font-semibold text-accent hover:underline"
+            >
+              Visit website →
+            </a>
+          </div>
+        </div>
         <div className="flex items-center gap-4">
           <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent">
             Mobile Distribution
@@ -293,13 +320,36 @@ export default function AppDeployPage() {
         </div>
       </section>
 
+      <section className="rounded-2xl border border-neutral-200 bg-white p-8">
+        <p className="text-xs font-semibold uppercase tracking-wider text-accent mb-4">
+          Product Access
+        </p>
+        <h3 className="text-lg font-semibold text-neutral-900 mb-4">
+          Live distribution platform
+        </h3>
+        <p className="text-sm leading-7 text-neutral-600">
+          AppDeploy is available as a live platform for organisations that need controlled internal
+          application distribution without relying on device enrollment or public app store workflows.
+        </p>
+        <div className="mt-6 flex flex-wrap gap-4">
+          <a
+            href={appDeployLinks.website}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white transition hover:opacity-90"
+          >
+            Visit AppDeploy
+          </a>
+        </div>
+      </section>
+
       {/* Navigation */}
       <section className="flex justify-between items-center pt-8 border-t border-neutral-200">
         <Link href="/products" className="text-sm font-semibold text-neutral-600 hover:text-accent">
           ← All Products
         </Link>
         <Link href="/products/scotitech-workspace" className="text-sm font-semibold text-accent hover:underline">
-          Next: ScotiTech Workspace →
+          Next: AXOS - Private AI Workspace →
         </Link>
       </section>
     </div>

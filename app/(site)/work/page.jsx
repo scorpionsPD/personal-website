@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const products = [
   {
     title: "AppDeploy",
@@ -19,12 +21,13 @@ const products = [
       outcome:
         "Teams gain predictable app deployment with full governance control and minimal user friction, enabling operational continuity across the organisation."
     },
-    innovation: "Entitlement-led distribution architecture with full organisational control"
+    innovation: "Entitlement-led distribution architecture with full organisational control",
+    logo: "/images/products/AppdeployLogoBlack.png"
   },
   {
-    title: "ScotiTech Workspace",
+    title: "AXOS - Private AI Workspace",
     slug: "scotitech-workspace",
-    summary: "A private environment for AI-assisted work",
+    summary: "A private AI workspace for regulated organisations",
     metrics: {
       adoption: "2 regulated organisations",
       interactions: "100,000+ AI interactions",
@@ -37,11 +40,12 @@ const products = [
       breaks:
         "Teams are forced to push confidential documents into external SaaS and AI tools to get value, which trains third-party models and compromises data control. Critical knowledge leaves the organisation instead of staying on-premise.",
       system:
-        "ScotiTech Workspace creates a self‑controlled environment where communication, documents, and knowledge remain under organisational ownership. AI runs inside infrastructure boundaries rather than outside them.",
+        "AXOS creates a self‑controlled environment where communication, documents, and knowledge remain under organisational ownership. AI runs inside infrastructure boundaries rather than outside them.",
       outcome:
         "Knowledge remains continuously accessible under organisational control, with AI assistance running on internal infrastructure. AI becomes a capability teams control, integrated into operations."
     },
-    innovation: "Private AI execution environment for regulated organisations"
+    innovation: "Secure local AI execution with complete data sovereignty",
+    logo: "/images/products/AXOS.png"
   },
   {
     title: "ElderConnect+",
@@ -63,7 +67,8 @@ const products = [
       outcome:
         "Routine support becomes easier to organise, issues surface earlier, and users maintain confidence in daily life as support networks gain structure and reliability."
     },
-    innovation: "Coordinated, low-friction support through lightweight shared visibility"
+    innovation: "Coordinated, low-friction support through lightweight shared visibility",
+    logo: "/images/products/brand-logo.PNG"
   }
 ];
 
@@ -110,6 +115,17 @@ export default function WorkPage() {
             className="border-b border-neutral-200 pb-12"
           >
             <div className="flex flex-col gap-3 mb-8">
+              {item.logo && (
+                <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl p-2">
+                  <Image
+                    src={item.logo}
+                    alt={`${item.title} logo`}
+                    width={48}
+                    height={48}
+                    className="h-auto w-full object-contain"
+                  />
+                </div>
+              )}
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-400">
                 {(index + 1).toString().padStart(2, "0")} — {item.title}
               </p>

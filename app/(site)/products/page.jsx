@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const products = [
@@ -11,19 +12,21 @@ const products = [
       secondary: "50+ app deployments"
     },
     usp: "First production implementation of zero-touch enterprise distribution maintaining security equivalent to MDM while eliminating device control requirements.",
-    category: "Mobile Distribution"
+    category: "Mobile Distribution",
+    logo: "/images/products/AppdeployLogoBlack.png"
   },
   {
-    title: "ScotiTech Workspace",
+    title: "AXOS - Private AI Workspace",
     slug: "scotitech-workspace",
-    tagline: "Private AI execution environment for regulated organisations",
+    tagline: "Secure local AI execution with complete data sovereignty",
     description: "AI platform enabling local inference with complete data sovereignty for compliance-bound teams.",
     metrics: {
       primary: "2 regulated organisations",
       secondary: "100,000+ AI interactions"
     },
     usp: "Novel architecture combining containerized LLM inference with stateful workflow engine and cryptographic audit trails—enabling AI in air-gapped environments.",
-    category: "AI Architecture"
+    category: "AI Architecture",
+    logo: "/images/products/AXOS.png"
   },
   {
     title: "ElderConnect+",
@@ -35,7 +38,8 @@ const products = [
       secondary: "200+ check-ins coordinated"
     },
     usp: "Coordinated, low-friction support through lightweight shared visibility—replacing informal coordination with structured, predictable interactions.",
-    category: "Care Technology"
+    category: "Care Technology",
+    logo: "/images/products/brand-logo.PNG"
   }
 ];
 
@@ -82,10 +86,21 @@ export default function ProductsPage() {
             className="group rounded-2xl border border-neutral-200 bg-white p-8 transition hover:border-accent/50 hover:shadow-lg"
           >
             <div className="flex flex-col gap-6">
-              <div className="flex items-center gap-4">
+              <div className="flex items-center justify-between gap-4">
                 <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent">
                   {product.category}
                 </span>
+                {product.logo && (
+                  <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl p-2">
+                    <Image
+                      src={product.logo}
+                      alt={`${product.title} logo`}
+                      width={40}
+                      height={40}
+                      className="h-auto w-full object-contain"
+                    />
+                  </div>
+                )}
               </div>
               
               <div>

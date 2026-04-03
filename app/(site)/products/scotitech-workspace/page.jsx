@@ -1,20 +1,21 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "ScotiTech Workspace | Pradeep Dahiya",
+  title: "AXOS - Private AI Workspace | Pradeep Dahiya",
   description:
-    "Private AI execution environment for regulated organisations. AI assistance with complete data sovereignty and on-premise processing.",
+    "Private AI workspace for regulated organisations. AI assistance with complete data sovereignty and on-premise processing.",
   openGraph: {
-    title: "ScotiTech Workspace | Pradeep Dahiya",
+    title: "AXOS - Private AI Workspace | Pradeep Dahiya",
     description:
-      "Private AI execution environment for regulated organisations. AI assistance with complete data sovereignty and on-premise processing.",
+      "Private AI workspace for regulated organisations. AI assistance with complete data sovereignty and on-premise processing.",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "ScotiTech Workspace | Pradeep Dahiya",
+    title: "AXOS - Private AI Workspace | Pradeep Dahiya",
     description:
-      "Private AI execution environment for regulated organisations. AI assistance with complete data sovereignty and on-premise processing."
+      "Private AI workspace for regulated organisations. AI assistance with complete data sovereignty and on-premise processing."
   }
 };
 
@@ -75,7 +76,7 @@ const useCases = [
   {
     sector: "Healthcare",
     challenge: "Clinical teams want AI assistance but patient data cannot leave hospital infrastructure. HIPAA prohibits cloud AI.",
-    solution: "ScotiTech Workspace runs AI locally, enabling clinical documentation assistance while maintaining complete data sovereignty."
+    solution: "AXOS runs AI locally, enabling clinical documentation assistance while maintaining complete data sovereignty."
   },
   {
     sector: "Legal Services",
@@ -108,6 +109,10 @@ const governanceFeatures = [
   }
 ];
 
+const axosAssets = {
+  logo: "/images/products/AXOS.png"
+};
+
 export default function ScotiTechWorkspacePage() {
   return (
     <div className="flex flex-col gap-16">
@@ -116,6 +121,15 @@ export default function ScotiTechWorkspacePage() {
         <Link href="/products" className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500 hover:text-accent">
           ← Products
         </Link>
+        <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl p-2">
+          <Image
+            src={axosAssets.logo}
+            alt="AXOS logo"
+            width={48}
+            height={48}
+            className="h-auto w-full object-contain"
+          />
+        </div>
         <div className="flex items-center gap-4">
           <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent">
             AI Architecture
@@ -125,10 +139,10 @@ export default function ScotiTechWorkspacePage() {
           </span>
         </div>
         <h1 className="font-display text-4xl text-neutral-950 md:text-5xl">
-          ScotiTech Workspace
+          AXOS - Private AI Workspace
         </h1>
         <p className="text-xl text-neutral-600">
-          Private AI execution environment for regulated organisations.
+          Secure local AI execution with complete data sovereignty.
         </p>
       </section>
 
@@ -152,7 +166,7 @@ export default function ScotiTechWorkspacePage() {
           Novel architecture enabling AI in air-gapped environments
         </h2>
         <p className="text-base leading-7 text-neutral-700">
-          ScotiTech Workspace solves a fundamental constraint: teams want AI assistance but 
+          AXOS solves a fundamental constraint: teams want AI assistance but 
           cannot allow operational data to leave infrastructure boundaries. The platform combines 
           containerized LLM inference with a stateful workflow engine and cryptographic audit 
           trails—enabling AI adoption in environments where external processing is technically 
@@ -224,7 +238,7 @@ export default function ScotiTechWorkspacePage() {
             Technical Architecture
           </p>
           <h2 className="font-display text-3xl text-neutral-950">
-            How ScotiTech Workspace Works
+            How AXOS Works
           </h2>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
@@ -271,7 +285,7 @@ export default function ScotiTechWorkspacePage() {
             Competitive Differentiation
           </p>
           <h2 className="font-display text-3xl text-neutral-950">
-            Why ScotiTech Workspace is Different
+            Why AXOS is Different
           </h2>
         </div>
         <div className="overflow-x-auto">
@@ -279,7 +293,7 @@ export default function ScotiTechWorkspacePage() {
             <thead>
               <tr className="border-b border-neutral-200">
                 <th className="py-4 pr-4 text-left font-semibold text-neutral-900">Comparison</th>
-                <th className="py-4 px-4 text-left font-semibold text-accent">ScotiTech Workspace</th>
+                <th className="py-4 px-4 text-left font-semibold text-accent">AXOS</th>
                 <th className="py-4 pl-4 text-left font-semibold text-neutral-500">Alternative</th>
               </tr>
             </thead>
@@ -303,7 +317,7 @@ export default function ScotiTechWorkspacePage() {
             Use Cases
           </p>
           <h2 className="font-display text-3xl text-neutral-950">
-            Where ScotiTech Workspace Excels
+            Where AXOS Excels
           </h2>
         </div>
         <div className="grid gap-6 md:grid-cols-3">

@@ -78,7 +78,7 @@ const builtAndShipped = [
   },
   {
     year: "2025",
-    title: "ScotiTech Workspace: Private AI execution architecture",
+    title: "AXOS: Private AI workspace architecture",
     detail:
       "Built platform enabling AI agents to operate entirely within controlled environments, solving the deployment constraint for regulated organizations where external AI processing is unacceptable."
   },
@@ -122,7 +122,7 @@ const measurableImpact = [
   {
     metric: "Multiple",
     title: "Production platforms deployed",
-    detail: "Built and shipped operational systems including AppDeploy, ScotiTech Workspace, and ElderConnect+ serving real organizations."
+    detail: "Built and shipped operational systems including AppDeploy, AXOS, and ElderConnect+ serving real organizations."
   }
 ];
 

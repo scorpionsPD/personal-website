@@ -1,8 +1,10 @@
+import Image from "next/image";
+
 const highlights = [
   {
     title: "Private platforms",
     description: "Build internal distribution and collaboration systems without SaaS lock-in.",
-    metric: "AppDeploy + ScotiTech Workspace in production"
+    metric: "AppDeploy + AXOS in production"
   },
   {
     title: "Operational architecture",
@@ -21,19 +23,22 @@ const featuredWork = [
     title: "AppDeploy",
     slug: "appdeploy",
     focus: "Access-Controlled Mobile Distribution",
-    result: "AppDeploy keeps organisations operational when traditional app distribution fails. Companies rely on mobile apps for daily operations, yet most distribution methods depend on external control — app stores, device management policies, or manual installations that break at scale. AppDeploy provides a controlled internal distribution layer where organisations retain direct authority over access, availability, and lifecycle of their applications. Instead of managing devices, organisations manage operational continuity."
+    result: "AppDeploy keeps organisations operational when traditional app distribution fails. Companies rely on mobile apps for daily operations, yet most distribution methods depend on external control — app stores, device management policies, or manual installations that break at scale. AppDeploy provides a controlled internal distribution layer where organisations retain direct authority over access, availability, and lifecycle of their applications. Instead of managing devices, organisations manage operational continuity.",
+    logo: "/images/products/AppdeployLogoBlack.png"
   },
   {
-    title: "ScotiTech Workspace",
+    title: "AXOS - Private AI Workspace",
     slug: "scotitech-workspace",
-    focus: "Private AI Execution Environment",
-    result: "ScotiTech Workspace enables local AI execution, keeping sensitive data within infrastructure boundaries where compliance and operational control remain intact."
+    focus: "Private AI Workspace",
+    result: "AXOS enables local AI execution, keeping sensitive data within infrastructure boundaries where compliance and operational control remain intact.",
+    logo: "/images/products/AXOS.png"
   },
   {
     title: "ElderConnect+",
     slug: "elderconnect-plus",
     focus: "Technology for Assisted Independence",
-    result: "When essential care depends on complex digital tools, continuity breaks for older adults and families. ElderConnect+ provides simplified systems that reduce support dependency while keeping routines stable."
+    result: "When essential care depends on complex digital tools, continuity breaks for older adults and families. ElderConnect+ provides simplified systems that reduce support dependency while keeping routines stable.",
+    logo: "/images/products/brand-logo.PNG"
   }
 ];
 
@@ -118,6 +123,17 @@ export default function HomePage() {
               className="flex h-full flex-col justify-between rounded-2xl border border-[#e6e6e3] bg-[#f7f7f5] p-6"
             >
               <div>
+                {item.logo && (
+                  <div className="mb-4 flex h-14 w-14 items-center justify-center overflow-hidden rounded-2xl p-2">
+                    <Image
+                      src={item.logo}
+                      alt={`${item.title} logo`}
+                      width={40}
+                      height={40}
+                      className="h-auto w-full object-contain"
+                    />
+                  </div>
+                )}
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#6b6b6b]">
                   {item.focus}
                 </p>

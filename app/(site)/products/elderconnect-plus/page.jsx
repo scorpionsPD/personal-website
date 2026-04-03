@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
@@ -108,6 +109,12 @@ const designPrinciples = [
   }
 ];
 
+const elderConnectLinks = {
+  website: "https://www.elderconnect.co.uk/welcome",
+  appStore: "https://apps.apple.com/gb/app/elderconnect/id6720757966",
+  logo: "/images/products/brand-logo.PNG"
+};
+
 export default function ElderConnectPlusPage() {
   return (
     <div className="flex flex-col gap-16">
@@ -116,6 +123,35 @@ export default function ElderConnectPlusPage() {
         <Link href="/products" className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500 hover:text-accent">
           ← Products
         </Link>
+        <div className="flex items-center gap-4">
+          <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl p-2">
+            <Image
+              src={elderConnectLinks.logo}
+              alt="ElderConnect+ logo"
+              width={48}
+              height={48}
+              className="h-auto w-full object-contain"
+            />
+          </div>
+          <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center">
+            <a
+              href={elderConnectLinks.website}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center text-sm font-semibold text-accent hover:underline"
+            >
+              Visit website →
+            </a>
+            <a
+              href={elderConnectLinks.appStore}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center text-sm font-semibold text-accent hover:underline"
+            >
+              View on App Store →
+            </a>
+          </div>
+        </div>
         <div className="flex items-center gap-4">
           <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent">
             Care Technology
@@ -349,12 +385,30 @@ export default function ElderConnectPlusPage() {
           the long term, recognising that support needs evolve and technology should adapt to 
           users, not the other way around.
         </p>
+        <div className="mt-6 flex flex-wrap gap-4">
+          <a
+            href={elderConnectLinks.website}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center rounded-full border border-neutral-300 px-4 py-2 text-sm font-semibold text-neutral-800 transition hover:border-accent hover:text-accent"
+          >
+            Live website
+          </a>
+          <a
+            href={elderConnectLinks.appStore}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white transition hover:opacity-90"
+          >
+            Download on the App Store
+          </a>
+        </div>
       </section>
 
       {/* Navigation */}
       <section className="flex justify-between items-center pt-8 border-t border-neutral-200">
         <Link href="/products/scotitech-workspace" className="text-sm font-semibold text-neutral-600 hover:text-accent">
-          ← ScotiTech Workspace
+          ← AXOS - Private AI Workspace
         </Link>
         <Link href="/products" className="text-sm font-semibold text-accent hover:underline">
           All Products →
