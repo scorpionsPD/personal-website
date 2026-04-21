@@ -5,7 +5,7 @@ const awards = [
     year: "2025",
     title: "FORTUNA® Global Excellence Awards - Next-Gen Innovator of the Year",
     detail: "Technology | United Kingdom | Business Leaders | 2025 Global Edition.",
-    image: "/images/awards/forttuna-award.jpg",
+    image: "/images/awards/forttuna-award.JPG",
     video: "/videos/forttuna-award.mp4",
     videoPoster: "/videos/preview.png"
   },
