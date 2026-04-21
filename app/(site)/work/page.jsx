@@ -17,7 +17,7 @@ const products = [
       breaks:
         "Organisations invest in internal applications to control operations, yet depend on external distribution systems that introduce fragility.",
       system:
-        "AppDeploy creates a controlled entitlement layer between the organisation and its applications — separating device ownership from operational access and restoring governance over distribution.",
+        "Led and developed by me through ScotiTech, AppDeploy creates a controlled entitlement layer between the organisation and its applications — separating device ownership from operational access and restoring governance over distribution.",
       outcome:
         "Teams gain predictable app deployment with full governance control and minimal user friction, enabling operational continuity across the organisation."
     },
@@ -40,7 +40,7 @@ const products = [
       breaks:
         "Teams are forced to push confidential documents into external SaaS and AI tools to get value, which trains third-party models and compromises data control. Critical knowledge leaves the organisation instead of staying on-premise.",
       system:
-        "AXOS creates a self‑controlled environment where communication, documents, and knowledge remain under organisational ownership. AI runs inside infrastructure boundaries rather than outside them.",
+        "Led and developed by me through ScotiTech, AXOS creates a self‑controlled environment where communication, documents, and knowledge remain under organisational ownership. AI runs inside infrastructure boundaries rather than outside them.",
       outcome:
         "Knowledge remains continuously accessible under organisational control, with AI assistance running on internal infrastructure. AI becomes a capability teams control, integrated into operations."
     },
@@ -50,7 +50,7 @@ const products = [
   {
     title: "ElderConnect+",
     slug: "elderconnect-plus",
-    summary: "Digital support for independent living",
+    summary: "Community-focused digital support for independent living",
     metrics: {
       users: "15+ active family networks",
       checkIns: "200+ coordinated check-ins",
@@ -67,7 +67,7 @@ const products = [
       outcome:
         "Routine support becomes easier to organise, issues surface earlier, and users maintain confidence in daily life as support networks gain structure and reliability."
     },
-    innovation: "Coordinated, low-friction support through lightweight shared visibility",
+    innovation: "Applied social innovation through lightweight, reliable care coordination",
     logo: "/images/products/brand-logo.PNG"
   }
 ];

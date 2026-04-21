@@ -30,16 +30,12 @@ const professionalImpact = [
       "Selected as technical mentor supporting early-stage technology startups through NASSCOM's mentorship program."
   },
   {
-    year: "2024",
-    title: "Digital Trustee, Third Sector Lab",
-    detail:
-      "Serving as digital trustee providing governance, ethics, and technology strategy oversight across multiple sectors."
-  },
-  {
     year: "2026",
     title: "Digital Trustee (Volunteer), TravelHands",
     detail:
-      "Volunteer digital trustee supporting governance, ethics, and technology strategy for TravelHands."
+      "Serving as a Digital Trustee for TravelHands and supporting the development of an AI-based booking journey system to improve accessibility, trust, and operational usability.",
+    link: "https://www.linkedin.com/posts/pradeepkumar2411_im-pleased-to-share-that-ive-joinedtravel-activity-7432787531403784194-8dfg/",
+    linkLabel: "View LinkedIn post"
   },
   {
     year: "2025",
@@ -69,36 +65,67 @@ const professionalImpact = [
   }
 ];
 
+const ecosystemContribution = [
+  professionalImpact[0],
+  professionalImpact[1],
+  professionalImpact[2]
+];
+
+const publicContribution = [
+  professionalImpact[3],
+  professionalImpact[4],
+  professionalImpact[5]
+];
+
+const advisoryRelationships = [
+  {
+    name: "Dheeraj Rathee",
+    role: "Head of AI Strategy at Sensiwise AI and Chief Technology Officer at Provide Digital",
+    detail:
+      "Provides ongoing mentorship and strategic guidance on responsible AI, governance-first product design, and regulated-environment deployment.",
+    link: "https://www.linkedin.com/in/dheerajrathee/",
+    linkLabel: "View profile"
+  }
+];
+
 const builtAndShipped = [
   {
     year: "2025",
     title: "AppDeploy: Internal application distribution without MDM dependency or private hosting",
     detail:
-      "Developed novel approach for enterprise app distribution without device enrollment, solving deployment friction in regulated environments. Shipped with paid pilots proving market demand."
+      "Led and developed AppDeploy through ScotiTech as a novel approach to enterprise app distribution without device enrollment, solving deployment friction in regulated environments. Shipped with paid pilots proving market demand.",
+    link: "https://appdeploy.scotitech.com",
+    linkLabel: "Visit AppDeploy"
   },
   {
     year: "2025",
     title: "AXOS: Private AI workspace architecture",
     detail:
-      "Built platform enabling AI agents to operate entirely within controlled environments, solving the deployment constraint for regulated organizations where external AI processing is unacceptable."
+      "Led and developed AXOS through ScotiTech as a private AI workspace architecture for controlled environments, solving the deployment constraint for regulated organizations where external AI processing is unacceptable."
   },
   {
     year: "2023",
     title: "ElderConnect+: Shared coordination layer for independent living",
     detail:
-      "Built a shared layer for everyday support where family, neighbours, and helpers can coordinate small requests with clear, predictable interactions. Deployed with real users."
+      "Built a community-focused coordination layer for everyday support where family, neighbours, and helpers can manage small requests through clear, predictable interactions. Deployed with real users.",
+    link: "https://www.elderconnect.co.uk/welcome",
+    linkLabel: "Visit ElderConnect+"
   },
   {
     year: "2025",
     title: "Knowledge Platform (Open Source)",
     detail:
-      "Built and open-sourced enterprise-grade knowledge management system with advanced RBAC, OAuth2 integration, and comprehensive security features. Full-stack TypeScript implementation demonstrating production-ready architecture patterns."
+      "Built and open-sourced enterprise-grade knowledge management system with advanced RBAC, OAuth2 integration, and comprehensive security features. Full-stack TypeScript implementation demonstrating production-ready architecture patterns.",
+    link: "https://github.com/scorpionsPD/knowledge-platform",
+    linkLabel: "View repository"
   },
   {
     year: "2019",
     title: "SwiftUIArchitecture (Open Source)",
     detail:
-      "Published a real-world SwiftUI architecture reference implementation, showcasing modern patterns for state management, modular design, and maintainable UI composition."
+      "Published a real-world SwiftUI architecture reference implementation, showcasing modern patterns for state management, modular design, and maintainable UI composition.",
+    link: "https://github.com/scorpionsPD/SwiftUIArchitechture",
+    linkLabel: "View repository"
   },
   {
     year: "14+ years",
@@ -108,11 +135,11 @@ const builtAndShipped = [
   }
 ];
 
-const measurableImpact = [
+const evidenceAtGlance = [
   {
     metric: "2",
-    title: "International awards for innovation",
-    detail: "Recognition from Forttuna Global Excellence Awards and Indian Tech Society for technology contributions."
+    title: "International awards and nominations",
+    detail: "Recognition from Forttuna Global Excellence Awards and Indian Tech Society for innovation and technology contribution."
   },
   {
     metric: "14+ years",
@@ -123,6 +150,21 @@ const measurableImpact = [
     metric: "Multiple",
     title: "Production platforms deployed",
     detail: "Built and shipped operational systems including AppDeploy, AXOS, and ElderConnect+ serving real organizations."
+  },
+  {
+    metric: "Founder",
+    title: "ScotiTech",
+    detail: "Built and led products spanning AI governance, internal app distribution, and community-focused digital infrastructure."
+  },
+  {
+    metric: "Mentor",
+    title: "NASSCOM program",
+    detail: "Selected to support early-stage technology startups through technical mentorship."
+  },
+  {
+    metric: "Digital Trustee",
+    title: "Third sector and advisory work",
+    detail: "Digital Trustee and advisory work across mission-led organisations and community-focused technology initiatives."
   }
 ];
 
@@ -133,20 +175,13 @@ const openSourceSignals = [
       "Enterprise-grade knowledge management system with deep technical documentation and deployment guides.",
     link: "https://github.com/scorpionsPD/knowledge-platform",
     linkLabel: "View repository"
-  },
-  {
-    title: "SwiftUIArchitecture",
-    detail:
-      "Reference implementation for scalable SwiftUI app architecture and maintainable UI composition.",
-    link: "https://github.com/scorpionsPD/SwiftUIArchitechture",
-    linkLabel: "View repository"
   }
 ];
 
 const testimonials = [
   {
     quote:
-      "Working alongside Pradeep has been nothing short of inspiring. His technical acumen as an iOS developer, coupled with his strategic vision as the founder of ScotiTech Ltd, sets him apart as an industry leader and an innovator. Pradeep's dedication to delivering top-notch solutions is evident in every project he undertakes, be it through his proficiency in Swift, SwiftUI, and Objective-C, or his advocacy for solid software principles. Beyond his technical capabilities, Pradeep is a natural leader and a highly collaborative team player. In the time I've had the pleasure of working with him at BUSINESSNEXT, I've witnessed firsthand his willingness to listen, mentor, and drive forward-thinking initiatives that create tangible value. Pradeep's resilience, combined with his innovative spirit, makes him an invaluable asset to any team and an inspiration to all who have the opportunity to work with him.",
+      "Working alongside Pradeep has been nothing short of inspiring. His technical acumen as an iOS developer, coupled with his strategic vision as the founder of ScotiTech, sets him apart as an industry leader and an innovator. Pradeep's dedication to delivering top-notch solutions is evident in every project he undertakes, be it through his proficiency in Swift, SwiftUI, and Objective-C, or his advocacy for solid software principles. Beyond his technical capabilities, Pradeep is a natural leader and a highly collaborative team player. In the time I've had the pleasure of working with him at BUSINESSNEXT, I've witnessed firsthand his willingness to listen, mentor, and drive forward-thinking initiatives that create tangible value. Pradeep's resilience, combined with his innovative spirit, makes him an invaluable asset to any team and an inspiration to all who have the opportunity to work with him.",
     author: "Nitin Garg",
     context: "Enterprise Integration Tech Manager at Agdata"
   },
@@ -161,12 +196,6 @@ const testimonials = [
       "I had the pleasure of working closely with Pradeep Dahiya at CRMNext, where he served as an iOS Lead. Pradeep is a highly skilled iOS developer with a strong understanding of Swift, app architecture, performance optimization, and product-level development. What truly sets him apart is not just his technical expertise, but his calm, supportive, and professional nature. He leads by example, mentors team members effectively, and always approaches challenges with a problem-solving mindset. His ability to collaborate with cross-functional teams and deliver high-quality features on time makes him a valuable asset to any product-based organization.",
     author: "Aashish Tyagi",
     context: "Mobile Tech Enthusiast | 9+ Years in iOS Development | Expert in Swift, Objective-C, AI & ML, and Agile Practices"
-  },
-  {
-    quote:
-      "I've recently been working Pardeep and i had a nice time working with him. He got on with the team and would listen to all our feedback we gave him from code reviews. He learns very fast and it would be a pleasure for anyone to work with him in the future.",
-    author: "Bashir Sentongo",
-    context: "iOS Engineer"
   }
 ];
 
@@ -199,6 +228,16 @@ function Timeline({ items }) {
           </p>
           <h3 className="mt-2 text-lg font-semibold text-neutral-900">{item.title}</h3>
           <p className="mt-2 text-sm text-neutral-600">{item.detail}</p>
+          {item.link && (
+            <a
+              href={item.link}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-3 inline-flex text-sm font-semibold text-accent hover:underline"
+            >
+              {item.linkLabel} →
+            </a>
+          )}
           {item.video && (
             <div className="mt-4 overflow-hidden rounded-lg border border-neutral-200">
               <video
@@ -229,6 +268,46 @@ function Timeline({ items }) {
   );
 }
 
+function EvidenceCards({ items }) {
+  return (
+    <div className="grid gap-6 md:grid-cols-2">
+      {items.map((item) => (
+        <div key={item.title} className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-400">
+            {item.year}
+          </p>
+          <h3 className="mt-3 text-lg font-semibold text-neutral-900">{item.title}</h3>
+          <p className="mt-3 text-sm leading-7 text-neutral-600">{item.detail}</p>
+          {item.video && (
+            <div className="mt-4 overflow-hidden rounded-lg border border-neutral-200">
+              <video
+                src={item.video}
+                controls
+                className="h-48 w-full bg-neutral-50 object-contain"
+                preload="metadata"
+                poster={item.videoPoster}
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          )}
+          {item.image && (
+            <div className="mt-4 overflow-hidden rounded-lg border border-neutral-200">
+              <Image
+                src={item.image}
+                alt={item.title}
+                width={400}
+                height={240}
+                className="h-48 w-full bg-neutral-50 object-contain"
+              />
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function ImpactPage() {
   return (
     <div className="flex flex-col gap-16">
@@ -240,42 +319,21 @@ export default function ImpactPage() {
           Recognition earned through operational deployment.
         </h1>
         <p className="text-base leading-7 text-neutral-600 md:text-lg">
-          Recognition, mentorship, and platforms grounded in systems architecture, operational reliability, and responsible AI.
+          Recognition, mentorship, and shipped systems grounded in responsible AI, operational reliability, and governance-first architecture.
         </p>
       </section>
 
-      <section className="grid gap-12 md:grid-cols-3">
-        <div className="flex flex-col gap-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
-            Awards
-          </p>
-          <Timeline items={awards} />
-        </div>
-        <div className="flex flex-col gap-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
-            Professional Impact
-          </p>
-          <Timeline items={professionalImpact} />
-        </div>
-        <div className="flex flex-col gap-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
-            Built & Shipped
-          </p>
-          <Timeline items={builtAndShipped} />
-        </div>
-      </section>
-
-      <section className="mt-16 flex flex-col gap-8">
+      <section className="flex flex-col gap-8">
         <div className="flex flex-col gap-2">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
-            At a glance
+            Evidence At A Glance
           </p>
           <h2 className="font-display text-3xl text-neutral-950">
-            A few numbers from the work.
+            External validation, leadership, and real-world delivery.
           </h2>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
-          {measurableImpact.map((item) => (
+          {evidenceAtGlance.map((item) => (
             <div key={item.title} className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
               <p className="text-3xl font-semibold text-accent">{item.metric}</p>
               <h3 className="mt-3 text-lg font-semibold text-neutral-900">{item.title}</h3>
@@ -285,13 +343,77 @@ export default function ImpactPage() {
         </div>
       </section>
 
+      <section className="flex flex-col gap-8">
+        <div className="flex flex-col gap-2">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
+            Mentorship & Advisory Relationships
+          </p>
+          <h2 className="font-display text-3xl text-neutral-950">
+            Trusted guidance around responsible AI and product direction.
+          </h2>
+        </div>
+        <div className="grid gap-6 md:grid-cols-2">
+          {advisoryRelationships.map((item) => (
+            <div key={item.name} className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-neutral-900">{item.name}</h3>
+              <p className="mt-2 text-sm font-semibold text-accent">{item.role}</p>
+              <p className="mt-3 text-sm leading-7 text-neutral-600">{item.detail}</p>
+              <a
+                href={item.link}
+                className="mt-4 inline-flex text-sm font-semibold text-accent"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {item.linkLabel} →
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="flex flex-col gap-8">
+        <div className="flex flex-col gap-2">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
+            Recognition
+          </p>
+          <h2 className="font-display text-3xl text-neutral-950">
+            Awards and external recognition.
+          </h2>
+        </div>
+        <EvidenceCards items={awards} />
+      </section>
+
+      <section className="grid gap-12 md:grid-cols-2">
+        <div className="flex flex-col gap-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
+            Leadership & Ecosystem Contribution
+          </p>
+          <Timeline items={ecosystemContribution} />
+        </div>
+        <div className="flex flex-col gap-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
+            Public Writing & Speaking
+          </p>
+          <Timeline items={publicContribution} />
+        </div>
+      </section>
+
+      <section className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
+            Products Shipped
+          </p>
+          <Timeline items={builtAndShipped} />
+        </div>
+      </section>
+
       <section className="mt-16 flex flex-col gap-8">
         <div className="flex flex-col gap-2">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
-            Open Source Signals
+            Open Source & Technical Contribution
           </p>
           <h2 className="font-display text-3xl text-neutral-950">
-            Community usage and technical depth.
+            Technical depth beyond commercial work.
           </h2>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
@@ -315,10 +437,10 @@ export default function ImpactPage() {
       <section className="mt-16 flex flex-col gap-8">
         <div className="flex flex-col gap-2">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
-            Testimonials
+            Third-Party Validation
           </p>
           <h2 className="font-display text-3xl text-neutral-950">
-            What clients, peers, and mentees have said.
+            What peers and collaborators have said.
           </h2>
         </div>
         <div className="grid gap-6 md:grid-cols-2">

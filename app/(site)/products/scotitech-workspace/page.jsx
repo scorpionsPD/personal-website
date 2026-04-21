@@ -4,18 +4,18 @@ import Link from "next/link";
 export const metadata = {
   title: "AXOS - Private AI Workspace | Pradeep Dahiya",
   description:
-    "Private AI workspace for regulated organisations. AI assistance with complete data sovereignty and on-premise processing.",
+    "ScotiTech's private AI workspace for regulated organisations, built around data sovereignty, auditability, and governance-first deployment.",
   openGraph: {
     title: "AXOS - Private AI Workspace | Pradeep Dahiya",
     description:
-      "Private AI workspace for regulated organisations. AI assistance with complete data sovereignty and on-premise processing.",
+      "ScotiTech's private AI workspace for regulated organisations, built around data sovereignty, auditability, and governance-first deployment.",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
     title: "AXOS - Private AI Workspace | Pradeep Dahiya",
     description:
-      "Private AI workspace for regulated organisations. AI assistance with complete data sovereignty and on-premise processing."
+      "ScotiTech's private AI workspace for regulated organisations, built around data sovereignty, auditability, and governance-first deployment."
   }
 };
 
@@ -110,6 +110,7 @@ const governanceFeatures = [
 ];
 
 const axosAssets = {
+  website: "https://scotitech.com",
   logo: "/images/products/AXOS.png"
 };
 
@@ -138,11 +139,21 @@ export default function ScotiTechWorkspacePage() {
             Production since 2023
           </span>
         </div>
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
+          <a
+            href={axosAssets.website}
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-accent"
+          >
+            By ScotiTech
+          </a>
+        </p>
         <h1 className="font-display text-4xl text-neutral-950 md:text-5xl">
           AXOS - Private AI Workspace
         </h1>
         <p className="text-xl text-neutral-600">
-          Secure local AI execution with complete data sovereignty.
+          AXOS is a ScotiTech product led and developed by me for regulated organisations.
         </p>
       </section>
 
@@ -163,15 +174,15 @@ export default function ScotiTechWorkspacePage() {
           Technical Differentiation (USP)
         </p>
         <h2 className="font-display text-2xl text-neutral-950 mb-4">
-          Novel architecture enabling AI in air-gapped environments
+          Governance-first architecture for deployable AI in regulated environments
         </h2>
         <p className="text-base leading-7 text-neutral-700">
-          AXOS solves a fundamental constraint: teams want AI assistance but 
-          cannot allow operational data to leave infrastructure boundaries. The platform combines 
-          containerized LLM inference with a stateful workflow engine and cryptographic audit 
-          trails—enabling AI adoption in environments where external processing is technically 
-          impossible or legally prohibited. This is not a cloud API wrapper; it's a complete 
-          governance framework for responsible AI deployment.
+          AXOS solves a fundamental constraint: organisations want AI assistance, but adoption
+          stalls when governance, documentation, and accountability are treated as separate
+          workstreams. Led and developed by me through ScotiTech, the platform combines local
+          inference, workflow controls, audit trails, and human oversight so governance is
+          embedded directly into the product architecture rather than added later as policy
+          paperwork.
         </p>
       </section>
 

@@ -6,7 +6,7 @@ const products = [
     title: "AppDeploy",
     slug: "appdeploy",
     tagline: "Internal application distribution without MDM dependency",
-    description: "Enterprise app distribution that maintains security without requiring device enrollment or MDM control.",
+    description: "ScotiTech product led and developed by me, maintaining enterprise app security without requiring device enrollment or MDM control.",
     metrics: {
       primary: "4+ organisations",
       secondary: "50+ app deployments"
@@ -19,7 +19,7 @@ const products = [
     title: "AXOS - Private AI Workspace",
     slug: "scotitech-workspace",
     tagline: "Secure local AI execution with complete data sovereignty",
-    description: "AI platform enabling local inference with complete data sovereignty for compliance-bound teams.",
+    description: "ScotiTech product led and developed by me, enabling local AI execution with complete data sovereignty for compliance-bound teams.",
     metrics: {
       primary: "2 regulated organisations",
       secondary: "100,000+ AI interactions"
@@ -32,7 +32,7 @@ const products = [
     title: "ElderConnect+",
     slug: "elderconnect-plus",
     tagline: "Digital support for independent living",
-    description: "Coordination platform for family networks supporting older adults with lightweight, predictable interactions.",
+    description: "Community-focused coordination platform helping family networks support older adults through lightweight, predictable interactions.",
     metrics: {
       primary: "15+ family networks",
       secondary: "200+ check-ins coordinated"

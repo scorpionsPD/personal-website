@@ -1,33 +1,33 @@
 const paragraphs = [
-  "I design software that people rely on when important things cannot afford to stop working.",
-  "Across organisations and everyday life, many critical activities now depend on external platforms — app stores, SaaS vendors, communication tools, or physical presence of a person. These dependencies are convenient until they fail. When access changes, services shut down, accounts expire, or distance increases, work slows down and care breaks down.",
-  "My work focuses on reducing that fragility.",
-  "Instead of building tools for productivity or engagement, I build continuity systems — environments that remain available regardless of platform restrictions, vendor lock-in, or location. The goal is simple: the system should keep functioning even when the surrounding conditions change.",
-  "Over the past decade I have worked on mobile and cloud infrastructure used across enterprise operations, private collaboration environments, and assisted living support. While these areas appear different, they share the same underlying problem: important processes depend on layers outside the user’s control.",
-  "My products therefore follow a consistent principle — control should exist closest to the people who depend on it.",
+  "I build systems for environments where reliability, governance, and accountability matter as much as functionality.",
+  "My work sits at the intersection of product architecture, operational reliability, and responsible AI adoption. I am particularly interested in the point where technical possibility meets regulatory expectation, and where organisations need deployable systems rather than abstract policy discussion.",
+  "Through ScotiTech, I focus on a structural problem many organisations are now facing: AI adoption is accelerating faster than internal governance capability. Teams want the benefits of AI, but they also need traceability, risk visibility, documentation, and clear operational control.",
+  "Rather than treating governance as a legal afterthought, I design it into system architecture itself. That means building products where oversight, auditability, data sovereignty, and accountability checkpoints are part of the workflow from the beginning.",
+  "Over the past decade I have worked across mobile infrastructure, private collaboration environments, internal distribution systems, and digital support platforms. Across those domains, the consistent theme has been the same: important processes fail when organisations depend on external control or weak operational structure.",
+  "My products therefore follow a consistent principle — control should exist closest to the people who depend on the system.",
   "Organisations should retain direct access to internal applications through controlled distribution channels.",
-  "Teams should keep institutional knowledge accessible under their own governance.",
-  "Families should be able to support ageing members through reliable coordination systems.",
-  "This is less about features and more about stability. If the surrounding ecosystem changes, the system should still continue.",
-  "I am particularly interested in software that quietly prevents problems rather than visibly reacting to them — technology that becomes part of normal life rather than something users have to think about.",
-  "The direction remains ongoing: building dependable digital environments that maintain essential activity across distance, changing conditions, and operational constraints."
+  "Teams should keep knowledge and AI workflows inside governance boundaries they can actually manage.",
+  "Families and communities should be able to rely on digital coordination systems that reduce fragility rather than add complexity.",
+  "This is less about novelty for its own sake and more about deployable architecture that continues to work under real-world constraints.",
+  "I am especially interested in healthcare, finance, public-sector, and contract-bound environments where data exposure, audit readiness, and operational trust are non-negotiable.",
+  "The direction remains ongoing: building UK-origin products and technical systems that make advanced technology usable, governable, and trustworthy in practice."
 ];
 
 export const metadata = {
   title: "About | Pradeep Dahiya",
   description:
-    "Narrative biography of a software architect moving from mobile development to system design and operational platforms.",
+    "Founder biography focused on governance-first AI systems, operational software, and regulated-environment architecture.",
   openGraph: {
     title: "About | Pradeep Dahiya",
     description:
-      "Narrative biography of a software architect moving from mobile development to system design and operational platforms.",
+      "Founder biography focused on governance-first AI systems, operational software, and regulated-environment architecture.",
     type: "article"
   },
   twitter: {
     card: "summary_large_image",
     title: "About | Pradeep Dahiya",
     description:
-      "Narrative biography of a software architect moving from mobile development to system design and operational platforms."
+      "Founder biography focused on governance-first AI systems, operational software, and regulated-environment architecture."
   }
 };
 
@@ -39,7 +39,7 @@ export default function AboutPage() {
           About
         </p>
         <h1 className="font-display text-4xl text-neutral-950 md:text-5xl">
-          From mobile development to system design.
+          Building AI systems that organisations can trust.
         </h1>
       </section>
 
@@ -52,15 +52,15 @@ export default function AboutPage() {
       <section className="grid gap-3 text-sm text-neutral-600 md:grid-cols-3">
         <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
           <p className="text-sm text-neutral-800">
-            14+ years of experience in software development and architecture design.
+            14+ years designing production software, platform architecture, and regulated-environment systems.
           </p>
         </div>
         <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
-          <p className="text-sm text-neutral-800">Mentor through the NASSCOM program.</p>
+          <p className="text-sm text-neutral-800">Founder of ScotiTech, focused on governance-first AI adoption.</p>
         </div>
         <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
           <p className="text-sm text-neutral-800">
-            Internationally recognised for contributions to operational system design.
+            Internationally recognised for innovation, mentorship, and operational system design.
           </p>
         </div>
       </section>

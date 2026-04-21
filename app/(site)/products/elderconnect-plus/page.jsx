@@ -4,18 +4,18 @@ import Link from "next/link";
 export const metadata = {
   title: "ElderConnect+ | Pradeep Dahiya",
   description:
-    "Digital support for independent living. Coordination platform for family networks supporting older adults.",
+    "Community-focused digital support for independent living. Coordination platform for family networks supporting older adults.",
   openGraph: {
     title: "ElderConnect+ | Pradeep Dahiya",
     description:
-      "Digital support for independent living. Coordination platform for family networks supporting older adults.",
+      "Community-focused digital support for independent living. Coordination platform for family networks supporting older adults.",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
     title: "ElderConnect+ | Pradeep Dahiya",
     description:
-      "Digital support for independent living. Coordination platform for family networks supporting older adults."
+      "Community-focused digital support for independent living. Coordination platform for family networks supporting older adults."
   }
 };
 
@@ -164,7 +164,7 @@ export default function ElderConnectPlusPage() {
           ElderConnect+
         </h1>
         <p className="text-xl text-neutral-600">
-          Digital support for independent living.
+          Community-focused digital support for independent living.
         </p>
       </section>
 
@@ -193,7 +193,8 @@ export default function ElderConnectPlusPage() {
           but this informal coordination is fragile. Small needs get missed, check-ins become irregular, 
           and help becomes unreliable. The platform provides just enough structure to make informal 
           support networks reliable—without the complexity of care management software designed for 
-          professional caregivers.
+          professional caregivers. It is an example of applied social innovation through digital
+          infrastructure that strengthens community support rather than replacing it.
         </p>
       </section>
 

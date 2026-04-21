@@ -2,18 +2,18 @@ import Image from "next/image";
 
 const highlights = [
   {
-    title: "Private platforms",
-    description: "Build internal distribution and collaboration systems without SaaS lock-in.",
-    metric: "AppDeploy + AXOS in production"
+    title: "AI governance systems",
+    description: "Design AI products with accountability, traceability, and deployment control built in.",
+    metric: "ScotiTech, AXOS, and AppDeploy in production"
   },
   {
     title: "Operational architecture",
-    description: "Design systems for reliability, data sovereignty, and long-term ownership.",
+    description: "Build systems for data sovereignty, auditability, and long-term ownership.",
     metric: "12+ years production systems experience"
   },
   {
     title: "Founder & mentor",
-    description: "Founded ScotiTech and mentor emerging startups through NASSCOM program.",
+    description: "Founded ScotiTech and support emerging startups through the NASSCOM mentorship program.",
     metric: "Revenue-generating business + mentorship impact"
   }
 ];
@@ -23,21 +23,21 @@ const featuredWork = [
     title: "AppDeploy",
     slug: "appdeploy",
     focus: "Access-Controlled Mobile Distribution",
-    result: "AppDeploy keeps organisations operational when traditional app distribution fails. Companies rely on mobile apps for daily operations, yet most distribution methods depend on external control — app stores, device management policies, or manual installations that break at scale. AppDeploy provides a controlled internal distribution layer where organisations retain direct authority over access, availability, and lifecycle of their applications. Instead of managing devices, organisations manage operational continuity.",
+    result: "AppDeploy is a ScotiTech product led and developed by me. It keeps organisations operational when traditional app distribution fails by providing a controlled internal distribution layer where organisations retain direct authority over access, availability, and lifecycle of their applications.",
     logo: "/images/products/AppdeployLogoBlack.png"
   },
   {
     title: "AXOS - Private AI Workspace",
     slug: "scotitech-workspace",
     focus: "Private AI Workspace",
-    result: "AXOS enables local AI execution, keeping sensitive data within infrastructure boundaries where compliance and operational control remain intact.",
+    result: "AXOS is a ScotiTech product led and developed by me, enabling local AI execution with governance, auditability, and operational control built directly into regulated workflows.",
     logo: "/images/products/AXOS.png"
   },
   {
     title: "ElderConnect+",
     slug: "elderconnect-plus",
     focus: "Technology for Assisted Independence",
-    result: "When essential care depends on complex digital tools, continuity breaks for older adults and families. ElderConnect+ provides simplified systems that reduce support dependency while keeping routines stable.",
+    result: "ElderConnect+ applies community-focused system design to independent living, giving families and local support networks a more reliable way to coordinate everyday help for older adults.",
     logo: "/images/products/brand-logo.PNG"
   }
 ];
@@ -45,18 +45,18 @@ const featuredWork = [
 export const metadata = {
   title: "Pradeep Dahiya | Technology Architect & Founder",
   description:
-    "Systems architect and founder building operational software platforms, private infrastructure, and AI systems for real-world environments.",
+    "Founder and systems architect building governance-first AI platforms, private infrastructure, and operational software for regulated environments.",
   openGraph: {
     title: "Pradeep Dahiya | Technology Architect & Founder",
     description:
-      "Systems architect and founder building operational software platforms, private infrastructure, and AI systems for real-world environments.",
+      "Founder and systems architect building governance-first AI platforms, private infrastructure, and operational software for regulated environments.",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
     title: "Pradeep Dahiya | Technology Architect & Founder",
     description:
-      "Systems architect and founder building operational software platforms, private infrastructure, and AI systems for real-world environments."
+      "Founder and systems architect building governance-first AI platforms, private infrastructure, and operational software for regulated environments."
   }
 };
 
@@ -66,14 +66,14 @@ export default function HomePage() {
       <section className="grid items-center gap-12 md:grid-cols-[1.1fr_0.9fr]">
         <div className="flex flex-col gap-6">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
-            Founder, ScotiTech • Systems Architect
+            Founder, ScotiTech • AI Systems Architect
           </p>
           <h1 className="font-display text-4xl leading-tight text-neutral-950 md:text-5xl">
-            Software designed to keep essential systems working.
+            Governance-first AI systems for regulated environments.
           </h1>
           <p className="text-base leading-7 text-neutral-600 md:text-lg">
-            I build continuity infrastructure for organisations and families where privacy,
-            control, and long-term ownership are non-negotiable.
+            I design products and infrastructure that let organisations adopt AI without losing
+            control of data, auditability, or accountability.
           </p>
           <div className="flex flex-wrap gap-6 text-sm font-semibold text-[#1c1c1c]">
             <a href="/impact" className="transition hover:underline">
@@ -92,16 +92,18 @@ export default function HomePage() {
               CURRENT FOCUS
             </p>
             <h2 className="font-display text-2xl text-neutral-900">
-              Making AI usable in environments where data cannot leave infrastructure boundaries.
+              Turning AI governance requirements into deployable product architecture.
             </h2>
             <p className="text-sm leading-7 text-neutral-600">
-              I'm tackling a common constraint: teams want AI help but can’t let operational data
-              leave their infrastructure. Most tools assume external processing, which doesn’t
-              work in regulated or contract-bound environments.
+              Most organisations now face the same problem: AI adoption is moving faster than
+              internal governance capability. I build systems that embed oversight, traceability,
+              and risk awareness directly into workflows rather than treating compliance as an
+              afterthought.
             </p>
             <p className="text-sm leading-7 text-neutral-600">
-              I’m especially interested in healthcare, finance, government, or legal teams where
-              data sovereignty is non-negotiable but AI could still improve workflows.
+              My work is especially relevant in healthcare, finance, government, and other
+              regulated settings where data sovereignty, audit readiness, and operational trust are
+              non-negotiable.
             </p>
           </div>
         </div>

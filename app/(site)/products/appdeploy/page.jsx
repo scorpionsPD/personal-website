@@ -5,18 +5,18 @@ import ExternalLinkButton from "../../../../components/ExternalLinkButton";
 export const metadata = {
   title: "AppDeploy | Pradeep Dahiya",
   description:
-    "Internal application distribution without MDM dependency or private hosting. Enterprise app deployment with full organisational control.",
+    "ScotiTech product led and developed by me for internal application distribution without MDM dependency or private hosting.",
   openGraph: {
     title: "AppDeploy | Pradeep Dahiya",
     description:
-      "Internal application distribution without MDM dependency or private hosting. Enterprise app deployment with full organisational control.",
+      "ScotiTech product led and developed by me for internal application distribution without MDM dependency or private hosting.",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
     title: "AppDeploy | Pradeep Dahiya",
     description:
-      "Internal application distribution without MDM dependency or private hosting. Enterprise app deployment with full organisational control."
+      "ScotiTech product led and developed by me for internal application distribution without MDM dependency or private hosting."
   }
 };
 
@@ -92,7 +92,8 @@ const useCases = [
 ];
 
 const appDeployLinks = {
-  website: "https://appdeploy.scotitech.com:5173",
+  website: "https://appdeploy.scotitech.com",
+  scotitech: "https://scotitech.com",
   logo: "/images/products/AppdeployLogoBlack.png"
 };
 
@@ -131,11 +132,21 @@ export default function AppDeployPage() {
             Production since 2024
           </span>
         </div>
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
+          <a
+            href={appDeployLinks.scotitech}
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-accent"
+          >
+            By ScotiTech
+          </a>
+        </p>
         <h1 className="font-display text-4xl text-neutral-950 md:text-5xl">
           AppDeploy
         </h1>
         <p className="text-xl text-neutral-600">
-          Internal application distribution without MDM dependency or private hosting.
+          AppDeploy is a ScotiTech product led and developed by me for controlled internal app distribution.
         </p>
       </section>
 
@@ -159,11 +170,12 @@ export default function AppDeployPage() {
           First production implementation of zero-touch enterprise distribution
         </h2>
         <p className="text-base leading-7 text-neutral-700">
-          AppDeploy is the first production system to achieve MDM-equivalent security for enterprise 
-          app distribution without requiring device enrollment. The novel architecture leverages 
-          Apple Business Manager and custom distribution protocols to separate device ownership 
-          from operational access—solving a fundamental tension in BYOD environments where security 
-          and privacy have been mutually exclusive.
+          Led and developed by me through ScotiTech, AppDeploy is the first production system to
+          achieve MDM-equivalent security for enterprise app distribution without requiring device
+          enrollment. The architecture leverages Apple Business Manager and custom distribution
+          protocols to separate device ownership from operational access, solving a fundamental
+          tension in BYOD environments where security and privacy have historically been in
+          conflict.
         </p>
       </section>
 

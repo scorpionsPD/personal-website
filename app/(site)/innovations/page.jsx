@@ -20,9 +20,9 @@ const innovations = [
     problem:
       "AI systems typically require cloud API calls, creating data sovereignty issues and audit trail gaps for regulated organizations.",
     innovation:
-      "Architected complete AI platform with local inference, version-controlled prompt libraries, human oversight workflows, and comprehensive audit logging. Zero external data transmission.",
+      "Architected a governance-first AI platform with local inference, version-controlled prompt libraries, human oversight workflows, structured audit logging, and traceable deployment controls. Zero external data transmission.",
     technicalBreakthrough:
-      "Novel architecture pattern combining containerized LLM inference with stateful workflow engine and cryptographic audit trails—enabling AI in air-gapped environments.",
+      "Novel architecture pattern combining containerized LLM inference with workflow orchestration, accountability checkpoints, and cryptographic audit trails—enabling regulation-aligned AI deployment in air-gapped and compliance-bound environments.",
     impact:
       "Enabled AI adoption in 8 organizations previously blocked by compliance requirements. Processing 100,000+ interactions with complete data sovereignty.",
     technologies: ["Local LLMs", "Docker", "Workflow Engine", "Cryptographic Audit", "Redis"]
@@ -130,18 +130,18 @@ const innovations = [
 export const metadata = {
   title: "Technical Innovations | Pradeep Dahiya",
   description:
-    "Novel architectures, breakthrough solutions, and technical innovations that advance the practice of software engineering.",
+    "Novel architectures, governance-first AI systems, and technical innovations for regulated and high-trust environments.",
   openGraph: {
     title: "Technical Innovations | Pradeep Dahiya",
     description:
-      "Novel architectures, breakthrough solutions, and technical innovations that advance the practice of software engineering.",
+      "Novel architectures, governance-first AI systems, and technical innovations for regulated and high-trust environments.",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
     title: "Technical Innovations | Pradeep Dahiya",
     description:
-      "Novel architectures, breakthrough solutions, and technical innovations that advance the practice of software engineering."
+      "Novel architectures, governance-first AI systems, and technical innovations for regulated and high-trust environments."
   }
 };
 
@@ -156,8 +156,8 @@ export default function InnovationsPage() {
           Novel architectures and breakthrough solutions.
         </h1>
         <p className="text-base leading-7 text-neutral-600 md:text-lg">
-          Specific technical innovations that advance the field—from novel distribution
-          architectures to privacy-first AI systems and performance breakthroughs.
+          Specific technical innovations that advance the field, from governance-first AI systems
+          and privacy-preserving architectures to operational deployment breakthroughs.
         </p>
       </section>
 
