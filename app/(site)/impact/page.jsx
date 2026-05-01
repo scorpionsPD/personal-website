@@ -19,6 +19,12 @@ const awards = [
     title: "Indian Tech Society Award",
     detail: "Certificate of Recognition for outstanding contributions to the UK tech sector, recognised for exceptional talent, impactful innovation, and community leadership as an Indian technologist.",
     image: "/images/awards/indian-tech-society-award.jpeg"
+  },
+  {
+    year: "2025",
+    title: "Talsec Certified App Security Integrator",
+    detail: "Recognised for successful integration of the Talsec Runtime Application Self-Protection (RASP) SDK. Certified on April 8, 2025.",
+    image: "/images/certifications/talsec-casi-certificate.jpeg"
   }
 ];
 
@@ -61,7 +67,17 @@ const professionalImpact = [
     year: "2026",
     title: "Published Article: Rethinking Responsible Innovation in the Age of AI",
     detail:
-      "Published by The Tech Founders on building technology people can trust. Covers transparency, privacy-by-design, sustainability, and human-centered AI principles for startup founders."
+      "Published by The Tech Founders on building technology people can trust. Covers transparency, privacy-by-design, sustainability, and human-centered AI principles for startup founders.",
+    link: "https://thetechfounders.co.uk/growth/rethinking-responsible-innovation-in-the-age-of-ai/",
+    linkLabel: "Read article"
+  },
+  {
+    year: "2026",
+    title: "DZone: SaaS AI Risks and Losing Control of Data",
+    detail:
+      "Public article on how AI-enabled SaaS can weaken governance, increase data risk, and erode operational control when organisations rely on systems they do not fully own.",
+    link: "https://dzone.com/articles/saas-ai-risks-losing-control-data",
+    linkLabel: "Read article"
   }
 ];
 
@@ -74,7 +90,8 @@ const ecosystemContribution = [
 const publicContribution = [
   professionalImpact[3],
   professionalImpact[4],
-  professionalImpact[5]
+  professionalImpact[5],
+  professionalImpact[6]
 ];
 
 const advisoryRelationships = [
@@ -121,7 +138,7 @@ const builtAndShipped = [
   },
   {
     year: "2019",
-    title: "SwiftUIArchitecture (Open Source)",
+    title: "SwiftUIArchitecture",
     detail:
       "Published a real-world SwiftUI architecture reference implementation, showcasing modern patterns for state management, modular design, and maintainable UI composition.",
     link: "https://github.com/scorpionsPD/SwiftUIArchitechture",
@@ -165,6 +182,11 @@ const evidenceAtGlance = [
     metric: "Digital Trustee",
     title: "Third sector and advisory work",
     detail: "Digital Trustee and advisory work across mission-led organisations and community-focused technology initiatives."
+  },
+  {
+    metric: "Certified",
+    title: "App Security Integrator",
+    detail: "Talsec certification recognising practical mobile app security integration with RASP tooling."
   }
 ];
 

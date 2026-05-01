@@ -17,12 +17,12 @@ const conferences = [
 
 const publications = [
   {
-    year: "2025",
-    title: "Responsible Platform Design",
-    publication: "Cambridge CISL",
+    year: "2026",
+    title: "SaaS AI Risks and Losing Control of Data",
+    publication: "DZone",
     detail:
-      "Article on building digital infrastructure with sustainability and responsible design principles.",
-    link: "#"
+      "Article on how AI-enabled SaaS can reduce governance clarity, increase data exposure, and shift operational control away from the organisations that depend on it.",
+    link: "https://dzone.com/articles/saas-ai-risks-losing-control-data"
   },
   {
     year: "2024–2026",

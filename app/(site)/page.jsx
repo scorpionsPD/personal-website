@@ -132,7 +132,9 @@ export default function HomePage() {
                       alt={`${item.title} logo`}
                       width={40}
                       height={40}
-                      className="h-auto w-full object-contain"
+                      className={`h-auto w-full object-contain ${
+                        item.slug === "appdeploy" ? "mix-blend-multiply" : ""
+                      }`}
                     />
                   </div>
                 )}
