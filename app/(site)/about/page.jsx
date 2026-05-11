@@ -65,6 +65,27 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="rounded-2xl border border-neutral-200 bg-white p-6">
+        <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-400">
+              Professional Profile
+            </p>
+            <p className="mt-2 text-sm leading-7 text-neutral-600">
+              For career history, public updates, and external professional verification, view my LinkedIn profile.
+            </p>
+          </div>
+          <a
+            href="https://www.linkedin.com/in/pradeepkumar2411/"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex text-sm font-semibold text-accent hover:underline"
+          >
+            Visit LinkedIn →
+          </a>
+        </div>
+      </section>
+
     </div>
   );
 }

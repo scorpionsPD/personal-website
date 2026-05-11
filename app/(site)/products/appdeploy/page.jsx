@@ -21,9 +21,9 @@ export const metadata = {
 };
 
 const metrics = [
-  { value: "4+", label: "Organisations", detail: "Across healthcare, finance, and gambling/private sectors" },
+  { value: "3", label: "Organisations", detail: "Across healthcare, finance, and gambling/private sectors" },
   { value: "50+", label: "App Deployments", detail: "Production deployments managed through the platform" },
-  { value: "80%", label: "Cost Reduction", detail: "Compared to traditional MDM deployment approaches" },
+  { value: "Up to 80%", label: "Cost Reduction", detail: "Compared to traditional MDM deployment approaches" },
   { value: "100%", label: "Availability", detail: "Distribution platform uptime over 18 months" }
 ];
 
@@ -73,6 +73,32 @@ const technicalArchitecture = [
   }
 ];
 
+const architectureOverview = [
+  {
+    title: "Organisation Workspace",
+    description: "Admins publish internal apps, manage branding, and control which teams should receive access."
+  },
+  {
+    title: "Entitlement Control Layer",
+    description: "AppDeploy separates operational access from device ownership, enforcing who can install which app and when."
+  },
+  {
+    title: "Secure Distribution Layer",
+    description: "iOS distribution uses Apple Business Manager while Android uses controlled APK delivery under organisational governance."
+  },
+  {
+    title: "Employee Access",
+    description: "Employees receive the correct app through a branded portal with auditability and without full-device takeover."
+  }
+];
+
+const architectureHighlights = [
+  "MDM-equivalent security for enterprise app distribution",
+  "Access rules are controlled by entitlements rather than device ownership",
+  "Audit trail across versions, installs, and organisational access decisions",
+  "Architecture led and developed by me through ScotiTech"
+];
+
 const useCases = [
   {
     sector: "Healthcare",
@@ -102,8 +128,8 @@ export default function AppDeployPage() {
     <div className="flex flex-col gap-16">
       {/* Header */}
       <section className="flex flex-col gap-6">
-        <Link href="/products" className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500 hover:text-accent">
-          ← Products
+        <Link href="/work" className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500 hover:text-accent">
+          ← Work
         </Link>
         <div className="flex items-center gap-4">
           <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl p-2">
@@ -171,8 +197,7 @@ export default function AppDeployPage() {
         </h2>
         <p className="text-base leading-7 text-neutral-700">
           Led and developed by me through ScotiTech, AppDeploy is the first production system to
-          achieve MDM-equivalent security for enterprise app distribution without requiring device
-          enrollment. The architecture leverages Apple Business Manager and custom distribution
+          achieve MDM-equivalent security for enterprise app distribution. The architecture leverages Apple Business Manager and custom distribution
           protocols to separate device ownership from operational access, solving a fundamental
           tension in BYOD environments where security and privacy have historically been in
           conflict.
@@ -235,6 +260,52 @@ export default function AppDeployPage() {
         </div>
       </section>
 
+      {/* Architecture Overview */}
+      <section className="flex flex-col gap-8">
+        <div className="flex flex-col gap-2">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
+            Architecture Overview
+          </p>
+          <h2 className="font-display text-3xl text-neutral-950">
+            Public System Design
+          </h2>
+          <p className="max-w-3xl text-sm leading-7 text-neutral-600">
+            This is the simplified production architecture behind AppDeploy. It focuses on the
+            control model that matters most: how organisations manage app access securely without
+            turning personal devices into fully managed endpoints.
+          </p>
+        </div>
+
+        <div className="rounded-2xl border border-neutral-200 bg-white p-6 md:p-8">
+          <div className="grid gap-4 md:grid-cols-4">
+            {architectureOverview.map((item, index) => (
+              <div key={item.title} className="flex flex-col gap-4 md:flex-row md:items-stretch">
+                <div className="flex-1 rounded-xl border border-neutral-200 bg-neutral-50 p-5">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-accent">
+                    Step {(index + 1).toString().padStart(2, "0")}
+                  </p>
+                  <h3 className="mt-3 text-base font-semibold text-neutral-900">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-neutral-600">{item.description}</p>
+                </div>
+                {index < architectureOverview.length - 1 ? (
+                  <div className="hidden items-center justify-center md:flex">
+                    <span className="text-lg text-neutral-300">→</span>
+                  </div>
+                ) : null}
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            {architectureHighlights.map((item) => (
+              <div key={item} className="rounded-xl border border-accent/20 bg-accent/5 p-4">
+                <p className="text-sm font-medium leading-6 text-neutral-800">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Technical Architecture */}
       <section className="flex flex-col gap-8">
         <div className="flex flex-col gap-2">
@@ -242,7 +313,7 @@ export default function AppDeployPage() {
             Technical Architecture
           </p>
           <h2 className="font-display text-3xl text-neutral-950">
-            How AppDeploy Works
+            Core Architecture Layers
           </h2>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
@@ -354,8 +425,8 @@ export default function AppDeployPage() {
 
       {/* Navigation */}
       <section className="flex justify-between items-center pt-8 border-t border-neutral-200">
-        <Link href="/products" className="text-sm font-semibold text-neutral-600 hover:text-accent">
-          ← All Products
+        <Link href="/work" className="text-sm font-semibold text-neutral-600 hover:text-accent">
+          ← All Work
         </Link>
         <Link href="/products/scotitech-workspace" className="text-sm font-semibold text-accent hover:underline">
           Next: AXOS - Private AI Workspace →

@@ -119,8 +119,8 @@ export default function ScotiTechWorkspacePage() {
     <div className="flex flex-col gap-16">
       {/* Header */}
       <section className="flex flex-col gap-6">
-        <Link href="/products" className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500 hover:text-accent">
-          ← Products
+        <Link href="/work" className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500 hover:text-accent">
+          ← Work
         </Link>
         <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl p-2">
           <Image

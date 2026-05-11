@@ -8,10 +8,11 @@ const conferences = [
   },
   {
     year: "2025",
-    title: "University Guest Lecture Series",
+    title: "University Guest Lecture",
     venue: "Technical University",
     detail:
-      "Practical Use of AI: What Works, What Doesn't — an experience-led perspective on real-world AI beyond hype."
+      "Practical Use of AI: What Works, What Doesn't — an experience-led perspective on real-world AI beyond hype.",
+    link: "https://shivommbacollege.in/guest-lecture/"
   }
 ];
 

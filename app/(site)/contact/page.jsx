@@ -123,6 +123,19 @@ export default function ContactPage() {
             <p className="text-sm leading-7 text-neutral-600">
               I typically respond within 2–3 business days with next steps.
             </p>
+            <div className="pt-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-400">
+                LinkedIn
+              </p>
+              <a
+                href="https://www.linkedin.com/in/pradeepkumar2411/"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-2 inline-flex text-sm font-semibold text-accent hover:underline"
+              >
+                View professional profile →
+              </a>
+            </div>
           </div>
           <div className="flex flex-col gap-4">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-400">

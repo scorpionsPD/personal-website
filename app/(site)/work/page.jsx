@@ -5,10 +5,13 @@ const products = [
     title: "AppDeploy",
     slug: "appdeploy",
     summary: "Internal application distribution without MDM dependency or private hosting",
+    category: "Mobile Distribution",
+    description:
+      "ScotiTech product led and developed by me, maintaining enterprise app security without requiring device enrollment or MDM control.",
     metrics: {
-      adoption: "4+ organisations",
+      adoption: "3 organisations",
       deployments: "50+ app deployments",
-      costSavings: "80% reduction in deployment costs",
+      costSavings: "Up to 80% reduction in deployment costs",
       uptime: "100% distribution availability"
     },
     casestudy: {
@@ -22,12 +25,17 @@ const products = [
         "Teams gain predictable app deployment with full governance control and minimal user friction, enabling operational continuity across the organisation."
     },
     innovation: "Entitlement-led distribution architecture with full organisational control",
+    usp:
+      "MDM-equivalent security for enterprise app distribution.",
     logo: "/images/products/AppdeployLogoBlack.png"
   },
   {
     title: "AXOS - Private AI Workspace",
     slug: "scotitech-workspace",
     summary: "A private AI workspace for regulated organisations",
+    category: "AI Architecture",
+    description:
+      "ScotiTech product led and developed by me, enabling local AI execution with complete data sovereignty for compliance-bound teams.",
     metrics: {
       adoption: "2 regulated organisations",
       interactions: "100,000+ AI interactions",
@@ -45,12 +53,17 @@ const products = [
         "Knowledge remains continuously accessible under organisational control, with AI assistance running on internal infrastructure. AI becomes a capability teams control, integrated into operations."
     },
     innovation: "Secure local AI execution with complete data sovereignty",
+    usp:
+      "Governance-first architecture combining local inference, workflow controls, and auditability for regulated AI adoption.",
     logo: "/images/products/AXOS.png"
   },
   {
     title: "ElderConnect+",
     slug: "elderconnect-plus",
     summary: "Community-focused digital support for independent living",
+    category: "Care Technology",
+    description:
+      "Community-focused coordination platform helping family networks support older adults through lightweight, predictable interactions.",
     metrics: {
       users: "15+ active family networks",
       checkIns: "200+ coordinated check-ins",
@@ -68,6 +81,8 @@ const products = [
         "Routine support becomes easier to organise, issues surface earlier, and users maintain confidence in daily life as support networks gain structure and reliability."
     },
     innovation: "Applied social innovation through lightweight, reliable care coordination",
+    usp:
+      "Coordinated, low-friction support through lightweight shared visibility, replacing informal coordination with structured, predictable interactions.",
     logo: "/images/products/brand-logo.PNG"
   }
 ];
@@ -95,16 +110,16 @@ export default function WorkPage() {
     <div className="flex flex-col gap-16">
       <section className="flex flex-col gap-6">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
-          Products
+          Work
         </p>
         <h1 className="font-display text-4xl text-neutral-950 md:text-5xl">
-          Operational platforms built for reliability and control
+          Original work built for reliability, control, and long-term use
         </h1>
         <p className="text-base leading-7 text-neutral-600 md:text-lg">
-          These projects grew out of situations where standard software assumptions didn’t
-          hold — mixed device ownership, regulatory limits, and environments where systems
-          must keep running for years rather than weeks. The focus is practical systems
-          architecture and operational reliability in real-world conditions.
+          This page is the core product work on the site. Each platform grew out of a real
+          operational constraint rather than a portfolio exercise: mixed device ownership,
+          regulated AI adoption, or fragile community coordination. The emphasis is practical
+          systems architecture, technical differentiation, and production reliability.
         </p>
       </section>
 
@@ -126,11 +141,24 @@ export default function WorkPage() {
                   />
                 </div>
               )}
+              <div className="flex items-center gap-4">
+                <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent">
+                  {item.category}
+                </span>
+              </div>
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-400">
                 {(index + 1).toString().padStart(2, "0")} — {item.title}
               </p>
               <h2 className="font-display text-3xl text-neutral-950">{item.summary}</h2>
+              <p className="text-sm leading-7 text-neutral-600">{item.description}</p>
               <p className="text-sm font-semibold text-accent">{item.innovation}</p>
+            </div>
+
+            <div className="mb-8 rounded-xl border-l-4 border-accent bg-accent/5 p-4">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-neutral-500">
+                Technical Differentiation
+              </p>
+              <p className="text-sm text-neutral-700">{item.usp}</p>
             </div>
 
             {/* Adoption Metrics */}
@@ -145,8 +173,8 @@ export default function WorkPage() {
 
             <details className="text-sm text-neutral-600">
               <summary className="cursor-pointer text-xs font-semibold uppercase tracking-[0.2em] text-accent mb-6">
-                View case study
-              </summary>
+              View case study
+            </summary>
 
               <div className="mt-6 space-y-8">
                 <div className="border-l-2 border-neutral-200 pl-6">
@@ -188,7 +216,7 @@ export default function WorkPage() {
               </div>
             </details>
 
-            <a 
+            <a
               href={`/products/${item.slug}`} 
               className="mt-6 inline-flex text-sm font-semibold text-accent hover:underline"
             >

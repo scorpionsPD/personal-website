@@ -58,10 +58,12 @@ const professionalImpact = [
   },
   {
     year: "2025",
-    title: "University Guest Lecture Series",
+    title: "University Guest Lecture",
     detail:
       "Practical Use of AI: What Works, What Doesn't — an experience-led perspective on real-world AI beyond hype.",
-    image: "/images/speaking/university-lecture.jpg"
+    image: "/images/speaking/university-lecture.jpg",
+    link: "https://shivommbacollege.in/guest-lecture/",
+    linkLabel: "Read more"
   },
   {
     year: "2026",
