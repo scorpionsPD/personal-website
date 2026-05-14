@@ -22,8 +22,8 @@ export const metadata = {
 const metrics = [
   { value: "15+", label: "Family Networks", detail: "Active users coordinating care" },
   { value: "200+", label: "Check-ins Coordinated", detail: "Support interactions facilitated" },
-  { value: "4x", label: "Faster Response", detail: "Issue resolution compared to informal coordination" },
-  { value: "85%", label: "Sustained Engagement", detail: "Users active after 6 months" }
+  { value: "Improved", label: "Coordination Speed", detail: "Faster issue visibility and reduced response friction" },
+  { value: "Repeat", label: "Household Use", detail: "Ongoing use across active family networks" }
 ];
 
 const differentiation = [
@@ -188,7 +188,7 @@ export default function ElderConnectPlusPage() {
           Coordinated support through lightweight shared visibility
         </h2>
         <p className="text-base leading-7 text-neutral-700">
-          ElderConnect+ solves a coordination problem that existing tools don't address: everyday 
+          ElderConnect+ solves a coordination problem that existing tools don&apos;t address: everyday 
           support for older adults happens informally through family, neighbours, and local helpers, 
           but this informal coordination is fragile. Small needs get missed, check-ins become irregular, 
           and help becomes unreliable. The platform provides just enough structure to make informal 
@@ -214,7 +214,7 @@ export default function ElderConnectPlusPage() {
             </li>
             <li className="flex gap-3">
               <span className="text-red-500">✗</span>
-              No clear accountability for who's helping
+              No clear accountability for who&apos;s helping
             </li>
             <li className="flex gap-3">
               <span className="text-red-500">✗</span>
@@ -222,7 +222,7 @@ export default function ElderConnectPlusPage() {
             </li>
             <li className="flex gap-3">
               <span className="text-red-500">✗</span>
-              Family members far away can't see what's happening
+              Family members far away can&apos;t see what&apos;s happening
             </li>
           </ul>
         </div>
@@ -236,7 +236,7 @@ export default function ElderConnectPlusPage() {
           <ul className="space-y-3 text-sm text-neutral-600">
             <li className="flex gap-3">
               <span className="text-accent">✓</span>
-              Explicit requests that don't get buried
+              Explicit requests that don&apos;t get buried
             </li>
             <li className="flex gap-3">
               <span className="text-accent">✓</span>
@@ -382,7 +382,7 @@ export default function ElderConnectPlusPage() {
           ElderConnect+ is designed around a simple principle: older adults should be able to 
           maintain independence while getting the support they need. The platform respects 
           autonomy—users request help rather than having it imposed. It works with existing 
-          relationships rather than replacing them with professional care. And it's built for 
+          relationships rather than replacing them with professional care. And it&apos;s built for 
           the long term, recognising that support needs evolve and technology should adapt to 
           users, not the other way around.
         </p>
@@ -403,6 +403,34 @@ export default function ElderConnectPlusPage() {
           >
             Download on the App Store
           </a>
+        </div>
+      </section>
+
+      <section className="rounded-2xl border border-neutral-200 bg-neutral-50 p-8">
+        <p className="text-xs font-semibold uppercase tracking-wider text-neutral-500 mb-4">
+          Current Stage & Long-Term Vision
+        </p>
+        <h3 className="text-lg font-semibold text-neutral-900 mb-4">
+          Building toward a wider community support model
+        </h3>
+        <div className="space-y-4 text-sm leading-7 text-neutral-600">
+          <p>
+            ElderConnect+ is currently a live app and website focused on validating a simpler,
+            more reliable way for families and local support networks to coordinate everyday help
+            for older adults.
+          </p>
+          <p>
+            The long-term vision is to grow it into a broader community-support platform that can
+            operate with minimal or near-operational cost overhead, making practical help more
+            accessible for older people while keeping the model lightweight, sustainable, and
+            community-driven.
+          </p>
+          <p>
+            The aim is not to over-commercialise the service, but to build a trusted coordination
+            layer that can expand responsibly over time and provide meaningful relief to the older
+            generation through better visibility, lower friction, and more dependable local
+            support.
+          </p>
         </div>
       </section>
 

@@ -220,11 +220,11 @@ export default function AppDeployPage() {
             </li>
             <li className="flex gap-3">
               <span className="text-red-500">✗</span>
-              App stores don't support internal enterprise apps
+              App stores don&apos;t support internal enterprise apps
             </li>
             <li className="flex gap-3">
               <span className="text-red-500">✗</span>
-              Manual installation doesn't scale and lacks audit trails
+              Manual installation doesn&apos;t scale and lacks audit trails
             </li>
             <li className="flex gap-3">
               <span className="text-red-500">✗</span>

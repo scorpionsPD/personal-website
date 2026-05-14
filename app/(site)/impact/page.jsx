@@ -473,7 +473,9 @@ export default function ImpactPage() {
               key={index}
               className="rounded-2xl border border-neutral-200 bg-white p-6"
             >
-              <p className="text-sm leading-7 text-neutral-700 italic">"{item.quote}"</p>
+              <p className="text-sm leading-7 text-neutral-700 italic">
+                &ldquo;{item.quote}&rdquo;
+              </p>
               <div className="mt-4 border-t border-neutral-200 pt-4">
                 <p className="text-xs font-semibold text-neutral-900">{item.author}</p>
                 <p className="mt-1 text-xs text-neutral-500">{item.context}</p>

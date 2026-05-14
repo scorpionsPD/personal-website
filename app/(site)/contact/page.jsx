@@ -71,7 +71,7 @@ export default function ContactPage() {
           Contact
         </p>
         <h1 className="font-display text-4xl text-neutral-950 md:text-5xl">
-          Let's discuss what you're building.
+          Let&apos;s discuss what you&apos;re building.
         </h1>
         <p className="text-base leading-7 text-neutral-600 md:text-lg">
           Open to speaking, advisory work, partnerships, and mentoring.
@@ -143,7 +143,7 @@ export default function ContactPage() {
             </p>
             <div className="flex flex-col gap-2 text-sm text-neutral-600">
               <p>• Your organization and role</p>
-              <p>• Type of collaboration you're interested in</p>
+              <p>• Type of collaboration you&apos;re interested in</p>
               <p>• Brief context on your challenge or opportunity</p>
               <p>• Timeline and any specific constraints</p>
             </div>
