@@ -157,7 +157,7 @@ export function CookieConsentProvider({ children }: { children: ReactNode }) {
     [consent, hasStoredConsent, preferencesOpen]
   );
 
-  const showBanner = hydrated && !hasStoredConsent;
+  const showBanner = hydrated && !hasStoredConsent && !preferencesOpen;
 
   return (
     <CookieConsentContext.Provider value={contextValue}>
@@ -166,7 +166,7 @@ export function CookieConsentProvider({ children }: { children: ReactNode }) {
       {showBanner ? (
         <section
           aria-label="Cookie consent"
-          className="fixed inset-0 z-40 flex items-end justify-center bg-black/15 px-4 py-4 sm:items-center sm:px-6"
+          className="fixed inset-0 z-40 flex items-center justify-center bg-black/15 px-4 py-4 sm:px-6"
         >
           <div className="w-full max-w-[440px]">
             <div className="rounded-3xl border border-[#e6e6e3] bg-[#f7f7f5]/98 shadow-[0_22px_56px_rgba(28,28,28,0.16)] backdrop-blur">
@@ -225,7 +225,7 @@ export function CookieConsentProvider({ children }: { children: ReactNode }) {
       ) : null}
 
       {preferencesOpen ? (
-        <div className="fixed inset-0 z-50 flex items-end justify-center bg-black/35 px-4 py-6 sm:items-center">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/35 px-4 py-6">
           <div
             aria-modal="true"
             aria-labelledby="cookie-preferences-title"
