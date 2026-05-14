@@ -35,28 +35,14 @@ type CookieConsentContextValue = {
 
 const CookieConsentContext = createContext<CookieConsentContextValue | null>(null);
 
-function readStoredConsentRecord(): CookieConsentRecord | null {
+function readStoredConsentSnapshot(): string | null {
   if (typeof window === "undefined") {
     return null;
   }
 
   try {
-    const stored = window.localStorage.getItem(COOKIE_CONSENT_STORAGE_KEY);
-
-    if (!stored) {
-      return null;
-    }
-
-    const parsed = JSON.parse(stored);
-
-    if (!isValidCookieConsentRecord(parsed)) {
-      window.localStorage.removeItem(COOKIE_CONSENT_STORAGE_KEY);
-      return null;
-    }
-
-    return parsed;
+    return window.localStorage.getItem(COOKIE_CONSENT_STORAGE_KEY);
   } catch {
-    window.localStorage.removeItem(COOKIE_CONSENT_STORAGE_KEY);
     return null;
   }
 }
@@ -70,21 +56,53 @@ function saveRecord(record: CookieConsentRecord) {
   );
 }
 
+function subscribeToConsentStore(onStoreChange: () => void) {
+  if (typeof window === "undefined") {
+    return () => {};
+  }
+
+  const handleChange = () => {
+    onStoreChange();
+  };
+
+  window.addEventListener("storage", handleChange);
+  window.addEventListener("cookie-consent-updated", handleChange);
+
+  return () => {
+    window.removeEventListener("storage", handleChange);
+    window.removeEventListener("cookie-consent-updated", handleChange);
+  };
+}
+
 export function CookieConsentProvider({ children }: { children: ReactNode }) {
-  const initialStoredConsent = readStoredConsentRecord();
-  const [hasStoredConsent, setHasStoredConsent] = useState(Boolean(initialStoredConsent));
-  const [consent, setConsent] = useState<CookieConsentState>(
-    initialStoredConsent?.consent ?? defaultCookieConsentState
+  const storedConsentSnapshot = useSyncExternalStore(
+    subscribeToConsentStore,
+    readStoredConsentSnapshot,
+    () => null
   );
-  const [draftConsent, setDraftConsent] = useState<CookieConsentState>(
-    initialStoredConsent?.consent ?? defaultCookieConsentState
-  );
+  const storedConsentRecord = useMemo<CookieConsentRecord | null>(() => {
+    if (!storedConsentSnapshot) {
+      return null;
+    }
+
+    try {
+      const parsed = JSON.parse(storedConsentSnapshot);
+      return isValidCookieConsentRecord(parsed) ? parsed : null;
+    } catch {
+      return null;
+    }
+  }, [storedConsentSnapshot]);
+  const hasStoredConsent = Boolean(storedConsentRecord);
+  const consent = storedConsentRecord?.consent ?? defaultCookieConsentState;
+  const [draftConsent, setDraftConsent] = useState<CookieConsentState>(defaultCookieConsentState);
   const [preferencesOpen, setPreferencesOpen] = useState(false);
-  const hydrated = useSyncExternalStore(
-    () => () => {},
-    () => true,
-    () => false
-  );
+
+  useEffect(() => {
+    if (storedConsentSnapshot && !storedConsentRecord) {
+      window.localStorage.removeItem(COOKIE_CONSENT_STORAGE_KEY);
+      window.dispatchEvent(new CustomEvent("cookie-consent-updated"));
+    }
+  }, [storedConsentRecord, storedConsentSnapshot]);
 
   useEffect(() => {
     if (!preferencesOpen) {
@@ -118,9 +136,7 @@ export function CookieConsentProvider({ children }: { children: ReactNode }) {
     const record = createCookieConsentRecord(normalizedConsent);
 
     saveRecord(record);
-    setConsent(normalizedConsent);
     setDraftConsent(normalizedConsent);
-    setHasStoredConsent(true);
     setPreferencesOpen(false);
   };
 
@@ -157,7 +173,7 @@ export function CookieConsentProvider({ children }: { children: ReactNode }) {
     [consent, hasStoredConsent, preferencesOpen]
   );
 
-  const showBanner = hydrated && !hasStoredConsent && !preferencesOpen;
+  const showBanner = !hasStoredConsent && !preferencesOpen;
 
   return (
     <CookieConsentContext.Provider value={contextValue}>

@@ -3,7 +3,11 @@
 import { useCookieConsent } from "./CookieConsentProvider";
 
 export default function CookiePreferencesButton() {
-  const { openPreferences } = useCookieConsent();
+  const { hasStoredConsent, openPreferences } = useCookieConsent();
+
+  if (!hasStoredConsent) {
+    return null;
+  }
 
   return (
     <button

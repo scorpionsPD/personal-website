@@ -54,9 +54,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   <Link href="/privacy-policy" className="transition hover:text-[#1c1c1c]">
                     Privacy Policy
                   </Link>
-                  <Link href="/cookie-policy" className="transition hover:text-[#1c1c1c]">
-                    Cookie Policy
-                  </Link>
                   <p>© 2026</p>
                 </div>
               </div>
