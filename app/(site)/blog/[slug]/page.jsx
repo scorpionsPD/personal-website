@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
-import { marked } from "marked";
-import { getPostBySlug, getPostSlugs } from "../../../../lib/blog";
+import { getPostBySlug, getPostSlugs, renderPostContent } from "../../../../lib/blog";
 
 export function generateStaticParams() {
   return getPostSlugs().map((slug) => ({ slug }));
@@ -53,7 +52,7 @@ export default async function BlogPostPage({ params }) {
     notFound();
   }
 
-  const content = marked.parse(post.content);
+  const content = renderPostContent(post.content);
 
   return (
     <article className="mx-auto flex w-full max-w-3xl flex-col gap-6 pb-10">

@@ -1,29 +1,29 @@
 export const metadata = {
   title: "Privacy Policy | Pradeep Dahiya",
   description:
-    "Privacy information covering contact, analytics consent, and data handling for this website."
+    "Privacy information covering contact data, basic website operation, and how this website currently handles cookies."
 };
 
 const sections = [
   {
     title: "What this site collects",
     body:
-      "This site only collects personal information that you choose to provide directly, such as when you contact me by email. If analytics or marketing tools are added later, they will only load after you have explicitly opted into the relevant category through the consent controls."
+      "This site only collects personal information that you choose to provide directly, such as when you contact me by email. There is no newsletter signup, advertising profile, or analytics account connected to your visit at this time."
   },
   {
-    title: "How consent is handled",
+    title: "How this site currently uses cookies",
     body:
-      "Your consent choices are stored locally on your device using browser storage so the site can remember whether analytics or marketing categories may be enabled. Necessary storage is always active because it is required to remember your privacy choices."
+      "The website itself is not currently designed to set analytics, advertising, or preference cookies in your browser. Because no non-essential cookies are being used by the site code, there is no consent popup active at the moment."
   },
   {
-    title: "Third-party services",
+    title: "Technical delivery and security",
     body:
-      "No optional third-party analytics or marketing scripts are loaded until you grant consent for the relevant category. Where such services are introduced, this policy and the cookie policy will be updated to reflect the tools in use."
+      "Like most websites, the hosting and delivery infrastructure may still process basic technical information such as IP addresses, request logs, caching, and security events in order to serve pages safely and reliably. That is separate from advertising or analytics profiling."
   },
   {
-    title: "Your choices",
+    title: "If this changes later",
     body:
-      "You can update your preferences at any time using the Cookie Settings control in the site footer. You can also contact me directly if you want to ask about data handling related to a collaboration or email enquiry."
+      "If non-essential cookies, analytics tools, embedded third-party media, or marketing technologies are added in future, this policy and the cookie policy will be updated first, and any consent mechanism required under UK law will be introduced before those tools are activated."
   }
 ];
 
@@ -38,8 +38,9 @@ export default function PrivacyPolicyPage() {
           Privacy information for this website.
         </h1>
         <p className="max-w-3xl text-base leading-7 text-neutral-600 md:text-lg">
-          This policy explains how this website handles contact information, consent preferences,
-          and any optional categories that depend on your permission.
+          This policy explains what personal information this website currently handles, what it
+          does not currently do, and how that would change if non-essential tracking tools were
+          introduced later.
         </p>
       </section>
 

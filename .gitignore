@@ -10,3 +10,4 @@ pnpm-debug.log*
 .env.local
 .env.*
 .vercelnode_modules
+__pycache__/

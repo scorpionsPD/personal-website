@@ -1,24 +1,24 @@
 export const metadata = {
   title: "Cookie Policy | Pradeep Dahiya",
   description:
-    "Cookie and local-storage policy covering necessary, analytics, and marketing consent categories for this website."
+    "Cookie policy explaining that this website does not currently use non-essential cookies or client-side tracking technologies."
 };
 
 const categories = [
   {
-    title: "Necessary",
+    title: "Current position",
     body:
-      "Necessary storage is always enabled. It is used to save your cookie consent preference and to keep the consent system functioning correctly across visits."
+      "This website is not currently designed to place analytics, advertising, or preference cookies through its own site code."
   },
   {
-    title: "Analytics",
+    title: "Non-essential cookies",
     body:
-      "Analytics is optional and remains disabled unless you explicitly opt in. If analytics tools are introduced, they will only load after consent has been granted."
+      "Because no non-essential cookies are currently being used by the site itself, there is no active cookie consent banner or preference tool on the live site at this time."
   },
   {
-    title: "Marketing",
+    title: "Future changes",
     body:
-      "Marketing is optional and remains disabled unless you explicitly opt in. This category is reserved for future campaign, remarketing, or embedded third-party tracking tools."
+      "If analytics, advertising tags, embedded third-party media, or other optional storage and access technologies are introduced later, the site will be updated to request consent before those non-essential technologies are used."
   }
 ];
 
@@ -33,8 +33,8 @@ export default function CookiePolicyPage() {
           Cookie and consent policy.
         </h1>
         <p className="max-w-3xl text-base leading-7 text-neutral-600 md:text-lg">
-          This site uses a consent system for cookies and similar browser storage technologies.
-          Optional categories remain disabled unless you explicitly allow them.
+          This page explains the website&apos;s current cookie position and what would happen if
+          non-essential cookies or similar tracking technologies are added in future.
         </p>
       </section>
 
@@ -49,12 +49,13 @@ export default function CookiePolicyPage() {
 
       <section className="rounded-2xl border border-neutral-200 bg-neutral-50 p-6">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-400">
-          Preference Storage
+          Strictly necessary technologies
         </p>
         <p className="mt-3 text-sm leading-7 text-neutral-600">
-          Consent preferences are stored locally in your browser using a versioned key so the site
-          can remember your choice. You can change that choice at any time using the Cookie
-          Settings control in the footer.
+          If strictly necessary technologies are ever used for security, load balancing, or a
+          user-requested feature, they would be assessed separately from analytics or advertising
+          tools. Under UK guidance, strictly necessary technologies are treated differently from
+          non-essential tracking technologies.
         </p>
       </section>
     </div>
