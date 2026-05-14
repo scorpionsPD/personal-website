@@ -245,107 +245,110 @@ export function CookieConsentProvider({ children }: { children: ReactNode }) {
           <div
             aria-modal="true"
             aria-labelledby="cookie-preferences-title"
-            className="w-full max-w-2xl rounded-3xl border border-[#e6e6e3] bg-[#f7f7f5] p-6 shadow-2xl sm:p-8"
+            className="flex max-h-[85vh] w-full max-w-2xl flex-col overflow-hidden rounded-3xl border border-[#e6e6e3] bg-[#f7f7f5] shadow-2xl"
             role="dialog"
           >
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-400">
-                  Cookie Preferences
-                </p>
-                <h2
-                  id="cookie-preferences-title"
-                  className="mt-2 font-display text-3xl text-neutral-950"
-                >
-                  Manage consent categories
-                </h2>
-              </div>
-              {hasStoredConsent ? (
-                <button
-                  aria-label="Close cookie preferences"
-                  className="rounded-full border border-[#d7d7d2] px-3 py-2 text-sm font-semibold text-[#1c1c1c]"
-                  onClick={() => setPreferencesOpen(false)}
-                  type="button"
-                >
-                  Close
-                </button>
-              ) : null}
-            </div>
-
-            <p className="mt-4 text-sm leading-7 text-neutral-600">
-              Adjust optional categories below. Necessary storage cannot be disabled because it is
-              required to remember your privacy choices and keep the site functioning correctly.
-            </p>
-
-            <div className="mt-6 flex flex-col gap-4">
-              {cookieConsentCategories.map((category) => {
-                const isEnabled =
-                  category.key === "necessary" ? true : draftConsent[category.key];
-
-                return (
-                  <div
-                    key={category.key}
-                    className="rounded-2xl border border-[#e6e6e3] bg-white p-5"
+            <div className="overflow-y-auto p-6 sm:p-8">
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-400">
+                    Cookie Preferences
+                  </p>
+                  <h2
+                    id="cookie-preferences-title"
+                    className="mt-2 font-display text-3xl text-neutral-950"
                   >
-                    <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                      <div className="max-w-xl">
-                        <div className="flex items-center gap-3">
-                          <h3 className="text-base font-semibold text-neutral-900">
-                            {category.title}
-                          </h3>
-                          {category.required ? (
-                            <span className="rounded-full bg-neutral-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-500">
-                              Always on
-                            </span>
-                          ) : null}
+                    Manage consent categories
+                  </h2>
+                </div>
+                {hasStoredConsent ? (
+                  <button
+                    aria-label="Close cookie preferences"
+                    className="rounded-full border border-[#d7d7d2] px-3 py-2 text-sm font-semibold text-[#1c1c1c]"
+                    onClick={() => setPreferencesOpen(false)}
+                    type="button"
+                  >
+                    Close
+                  </button>
+                ) : null}
+              </div>
+
+              <p className="mt-4 text-sm leading-7 text-neutral-600">
+                Adjust optional categories below. Necessary storage cannot be disabled because it is
+                required to remember your privacy choices and keep the site functioning correctly.
+              </p>
+
+              <div className="mt-6 flex flex-col gap-4">
+                {cookieConsentCategories.map((category) => {
+                  const isEnabled =
+                    category.key === "necessary" ? true : draftConsent[category.key];
+
+                  return (
+                    <div
+                      key={category.key}
+                      className="rounded-2xl border border-[#e6e6e3] bg-white p-5"
+                    >
+                      <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                        <div className="max-w-xl">
+                          <div className="flex items-center gap-3">
+                            <h3 className="text-base font-semibold text-neutral-900">
+                              {category.title}
+                            </h3>
+                            {category.required ? (
+                              <span className="rounded-full bg-neutral-100 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-neutral-500">
+                                Always on
+                              </span>
+                            ) : null}
+                          </div>
+                          <p className="mt-2 text-sm leading-6 text-neutral-600">
+                            {category.description}
+                          </p>
                         </div>
-                        <p className="mt-2 text-sm leading-6 text-neutral-600">
-                          {category.description}
-                        </p>
+                        <button
+                          aria-checked={isEnabled}
+                          aria-disabled={category.required}
+                          className={`inline-flex h-8 w-14 items-center rounded-full border transition ${
+                            isEnabled
+                              ? "border-[#1f3d2b] bg-[#1f3d2b]"
+                              : "border-[#d7d7d2] bg-white"
+                          } ${category.required ? "cursor-not-allowed opacity-70" : ""}`}
+                          onClick={() => {
+                            if (category.required) {
+                              return;
+                            }
+
+                            setDraftConsent((current) => ({
+                              ...current,
+                              [category.key]: !current[category.key]
+                            }));
+                          }}
+                          role="switch"
+                          type="button"
+                        >
+                          <span
+                            className={`mx-1 h-6 w-6 rounded-full bg-white shadow-sm transition ${
+                              isEnabled ? "translate-x-5" : "translate-x-0"
+                            }`}
+                          />
+                        </button>
                       </div>
-                      <button
-                        aria-checked={isEnabled}
-                        aria-disabled={category.required}
-                        className={`inline-flex h-8 w-14 items-center rounded-full border transition ${
-                          isEnabled
-                            ? "border-[#1f3d2b] bg-[#1f3d2b]"
-                            : "border-[#d7d7d2] bg-white"
-                        } ${category.required ? "cursor-not-allowed opacity-70" : ""}`}
-                        onClick={() => {
-                          if (category.required) {
-                            return;
-                          }
-
-                          setDraftConsent((current) => ({
-                            ...current,
-                            [category.key]: !current[category.key]
-                          }));
-                        }}
-                        role="switch"
-                        type="button"
-                      >
-                        <span
-                          className={`mx-1 h-6 w-6 rounded-full bg-white shadow-sm transition ${
-                            isEnabled ? "translate-x-5" : "translate-x-0"
-                          }`}
-                        />
-                      </button>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
+
+              <div className="mt-6 flex flex-wrap gap-4 text-sm">
+                <Link href="/privacy-policy" className="font-semibold text-accent hover:underline">
+                  Privacy Policy
+                </Link>
+                <Link href="/cookie-policy" className="font-semibold text-accent hover:underline">
+                  Cookie Policy
+                </Link>
+              </div>
             </div>
 
-            <div className="mt-6 flex flex-wrap gap-4 text-sm">
-              <Link href="/privacy-policy" className="font-semibold text-accent hover:underline">
-                Privacy Policy
-              </Link>
-              <Link href="/cookie-policy" className="font-semibold text-accent hover:underline">
-                Cookie Policy
-              </Link>
-            </div>
-
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+            <div className="border-t border-[#e6e6e3] bg-[#f7f7f5] p-6 sm:p-8">
+              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <button
                 type="button"
                 onClick={() =>
@@ -385,6 +388,7 @@ export function CookieConsentProvider({ children }: { children: ReactNode }) {
               >
                 Save preferences
               </button>
+              </div>
             </div>
           </div>
         </div>
