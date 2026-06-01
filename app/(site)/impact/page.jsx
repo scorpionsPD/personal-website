@@ -154,6 +154,72 @@ const builtAndShipped = [
   }
 ];
 
+const mediaContent = [
+  {
+    year: "2026",
+    type: "Interview",
+    title: "From India to Scotland: Building a Startup",
+    videoId: "0IMLuoXFYK8",
+    isShort: false,
+    detail:
+      "Deep dive into entrepreneurship, building in Scotland, and navigating challenges when traditional models don't work. Real founder experience on building products outside the mainstream ecosystem.",
+    tags: ["Entrepreneurship", "Startup", "Product"]
+  }
+];
+
+const mediaShorts = [
+  {
+    year: "2026",
+    type: "YouTube Short",
+    title: "Enterprise vs SaaS Buyers: The Real Difference",
+    videoId: "wHEX6pGu27c",
+    isShort: true,
+    detail:
+      "Enterprise organizations prioritize security above all, while smaller SaaS customers want pricing and simplicity. If you're building a B2B product, this insight changes how you pitch.",
+    tags: ["EnterpriseSales", "B2BSaaS", "ProductStrategy"]
+  },
+  {
+    year: "2026",
+    type: "YouTube Short",
+    title: "Show 300% ROI and Any Client Says Yes",
+    videoId: "aubJ1IkU6cg",
+    isShort: true,
+    detail:
+      "How do you convince the first serious customer to trust a brand-new startup? Learn the ROI formula that works for both enterprise and SaaS clients. When you can demonstrate 300-400% return on investment, any organization will listen — whether they care about scale or budget.",
+    tags: ["StartupSales", "EnterpriseClients", "FounderAdvice", "ROI"]
+  },
+  {
+    year: "2026",
+    type: "YouTube Short",
+    title: "Do Bootstrap Founders Actually Pay Themselves?",
+    videoId: "7wJlxR0fA3I",
+    isShort: true,
+    detail:
+      "As a bootstrap founder in the UK, do you actually pay yourself a salary — or does everything go back into the company? Learn the reality: when you're a full-time contributor, you get paid. Bootstrap operations run lean with core team plus part-time contractors. An honest look at what bootstrapping actually looks like.",
+    tags: ["BootstrapFounder", "StartupReality", "FounderSalary", "UKStartup"]
+  },
+  {
+    year: "2026",
+    type: "YouTube Short",
+    title: "Don't Skip These 3 Checks Before Starting a Startup",
+    videoId: "88qtkP0--M4",
+    isShort: true,
+    detail:
+      "What first-time founders miss: market gap validation, paying users, and financial readiness. These 3 essential checks separate ideas that work from ideas that fail. Get clear on these before you launch.",
+    tags: ["Startup", "FounderTips", "Entrepreneurship", "StartupIndia"]
+  },
+  {
+    year: "2026",
+    type: "YouTube Short",
+    title: "Using AI at Work? Don't Paste Sensitive Data",
+    videoId: "twCFAmnDiSQ",
+    isShort: true,
+    detail:
+      "What employees should never share in public AI tools: code, client docs, pitches, and financial plans. Protect your organization's sensitive information. AI is powerful, but data privacy requires discipline.",
+    tags: ["ChatGPT", "AISafety", "DataPrivacy", "DeveloperTips"]
+  }
+];
+
 const evidenceAtGlance = [
   {
     metric: "2",
@@ -332,6 +398,67 @@ function EvidenceCards({ items }) {
   );
 }
 
+function MediaCard({ item }) {
+  return (
+    <div className="rounded-2xl border border-neutral-200 bg-white p-6">
+      <div className="flex items-center gap-3">
+        <span className="inline-block text-xs font-medium px-3 py-1 rounded-full bg-neutral-100 text-neutral-700">
+          {item.type}
+        </span>
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-400">
+          {item.year}
+        </p>
+      </div>
+      <h3 className="mt-3 text-lg font-semibold text-neutral-900">{item.title}</h3>
+      
+      <div className="mt-4">
+        {item.isShort ? (
+          <div className="overflow-hidden rounded-lg border border-neutral-200">
+            <iframe
+              width="100%"
+              height="350"
+              src={`https://www.youtube.com/embed/${item.videoId}`}
+              title={item.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="bg-neutral-50"
+            />
+          </div>
+        ) : (
+          <div className="overflow-hidden rounded-lg border border-neutral-200">
+            <iframe
+              width="100%"
+              height="350"
+              src={`https://www.youtube.com/embed/${item.videoId}`}
+              title={item.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="bg-neutral-50"
+            />
+          </div>
+        )}
+      </div>
+
+      <p className="mt-4 text-sm leading-6 text-neutral-600">{item.detail}</p>
+      
+      {item.tags && item.tags.length > 0 && (
+        <div className="mt-4 flex flex-wrap gap-2">
+          {item.tags.map((tag) => (
+            <span
+              key={tag}
+              className="text-xs px-2 py-1 bg-neutral-100 text-neutral-600 rounded"
+            >
+              #{tag}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 export default function ImpactPage() {
   return (
     <div className="flex flex-col gap-16">
@@ -428,6 +555,78 @@ export default function ImpactPage() {
             Products Shipped
           </p>
           <Timeline items={builtAndShipped} />
+        </div>
+      </section>
+
+      <section className="flex flex-col gap-8">
+        <div className="flex flex-col gap-2">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
+            Featured Interview
+          </p>
+          <h2 className="font-display text-3xl text-neutral-950">
+            In-depth conversations on entrepreneurship and building.
+          </h2>
+        </div>
+        <div className="max-w-3xl">
+          {mediaContent.map((item) => (
+            <div key={`${item.year}-${item.videoId}`} className="rounded-2xl border border-neutral-200 bg-white p-8">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="inline-block text-xs font-medium px-3 py-1 rounded-full bg-accent/10 text-accent font-semibold">
+                  {item.type}
+                </span>
+                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-400">
+                  {item.year}
+                </p>
+              </div>
+              <h3 className="text-2xl font-semibold text-neutral-900">{item.title}</h3>
+              
+              <div className="mt-6">
+                <div className="overflow-hidden rounded-lg border border-neutral-200">
+                  <iframe
+                    width="100%"
+                    height="400"
+                    src={`https://www.youtube.com/embed/${item.videoId}`}
+                    title={item.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="bg-neutral-50"
+                  />
+                </div>
+              </div>
+
+              <p className="mt-6 text-base leading-7 text-neutral-600">{item.detail}</p>
+              
+              {item.tags && item.tags.length > 0 && (
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {item.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-xs px-3 py-1 bg-neutral-100 text-neutral-600 rounded"
+                    >
+                      #{tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="flex flex-col gap-8">
+        <div className="flex flex-col gap-2">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
+            Quick Insights
+          </p>
+          <h2 className="font-display text-3xl text-neutral-950">
+            Founder tips, startup strategy, and quick lessons.
+          </h2>
+        </div>
+        <div className="grid gap-6 md:grid-cols-2">
+          {mediaShorts.map((item) => (
+            <MediaCard key={`${item.year}-${item.videoId}`} item={item} />
+          ))}
         </div>
       </section>
 

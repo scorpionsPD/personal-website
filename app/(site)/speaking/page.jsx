@@ -50,7 +50,29 @@ const workshops = [
   }
 ];
 
-const media = [];
+const media = [
+  {
+    year: "2026",
+    type: "YouTube Short",
+    title: "Enterprise vs SaaS Buyers: The Real Difference",
+    videoId: "wHEX6pGu27c",
+    isShort: true,
+    detail:
+      "Enterprise organizations prioritize security above all, while smaller SaaS customers want pricing and simplicity. If you're building a B2B product, this insight changes how you pitch.",
+    tags: ["EnterpriseSales", "B2BSaaS", "ProductStrategy"]
+  },
+  {
+    year: "2026",
+    type: "Interview",
+    title: "Apple Rejected His App, So He Built a Startup in Scotland",
+    videoId: "0IMLuoXFYK8",
+    isShort: false,
+    detail:
+      "A deep dive into entrepreneurship, building in Scotland, and navigating challenges when traditional app store models don't work. Real founder experience on building products outside the mainstream ecosystem.",
+    tags: ["Entrepreneurship", "Startup", "Product"]
+  },
+  // TODO: Add remaining 3 shorts/interviews here
+];
 
 export const metadata = {
   title: "Speaking & Publications | Pradeep Dahiya",
@@ -95,6 +117,66 @@ function TimelineItem({ item }) {
         >
           Read more →
         </a>
+      )}
+    </div>
+  );
+}
+
+function MediaItem({ item }) {
+  return (
+    <div className="relative">
+      <span className="absolute -left-[34px] mt-1 h-3 w-3 rounded-full border border-neutral-900 bg-white" />
+      <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-400">
+        {item.year}
+      </p>
+      <span className="inline-block mt-1 text-xs font-medium px-2 py-1 rounded-full bg-neutral-100 text-neutral-700">
+        {item.type}
+      </span>
+      <h3 className="mt-2 text-lg font-semibold text-neutral-900">{item.title}</h3>
+      
+      <div className="mt-4">
+        {item.isShort ? (
+          <div className="w-full max-w-xs">
+            <iframe
+              width="100%"
+              height="400"
+              src={`https://www.youtube.com/embed/${item.videoId}`}
+              title={item.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="rounded-lg"
+            />
+          </div>
+        ) : (
+          <div className="w-full max-w-2xl">
+            <iframe
+              width="100%"
+              height="400"
+              src={`https://www.youtube.com/embed/${item.videoId}`}
+              title={item.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="rounded-lg"
+            />
+          </div>
+        )}
+      </div>
+
+      <p className="mt-3 text-sm text-neutral-600">{item.detail}</p>
+      
+      {item.tags && item.tags.length > 0 && (
+        <div className="mt-3 flex flex-wrap gap-2">
+          {item.tags.map((tag) => (
+            <span
+              key={tag}
+              className="text-xs px-2 py-1 bg-neutral-100 text-neutral-600 rounded"
+            >
+              #{tag}
+            </span>
+          ))}
+        </div>
       )}
     </div>
   );
@@ -160,6 +242,22 @@ export default function SpeakingPage() {
         <div className="flex flex-col gap-10 border-l border-neutral-200 pl-6">
           {workshops.map((item) => (
             <TimelineItem key={`${item.year}-${item.title}`} item={item} />
+          ))}
+        </div>
+      </section>
+
+      <section className="flex flex-col gap-8">
+        <div className="flex flex-col gap-2">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
+            Media & Video Content
+          </p>
+          <h2 className="font-display text-3xl text-neutral-950">
+            Insights on startups, product strategy, and enterprise architecture.
+          </h2>
+        </div>
+        <div className="flex flex-col gap-12 border-l border-neutral-200 pl-6">
+          {media.map((item) => (
+            <MediaItem key={`${item.year}-${item.videoId}`} item={item} />
           ))}
         </div>
       </section>
