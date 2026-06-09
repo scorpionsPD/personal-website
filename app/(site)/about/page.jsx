@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const paragraphs = [
   "I build systems for environments where reliability, governance, and accountability matter as much as functionality.",
   "My work sits at the intersection of product architecture, operational reliability, and responsible AI adoption. I am particularly interested in the point where technical possibility meets regulatory expectation, and where organisations need deployable systems rather than abstract policy discussion.",
@@ -34,13 +36,41 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <div className="flex flex-col gap-16">
-      <section className="flex flex-col gap-6">
-        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
-          About
-        </p>
-        <h1 className="font-display text-4xl text-neutral-950 md:text-5xl">
-          Building AI systems that organisations can trust.
-        </h1>
+      <section className="grid items-start gap-10 md:grid-cols-[0.95fr_1.05fr] md:gap-14">
+        <div className="flex flex-col gap-6">
+          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
+            About
+          </p>
+          <h1 className="font-display text-4xl text-neutral-950 md:text-5xl">
+            Building AI systems that organisations can trust.
+          </h1>
+          <p className="max-w-2xl text-base leading-7 text-neutral-600 md:text-lg">
+            Founder, systems architect, and product builder focused on governance-first AI,
+            operational resilience, and deployable architecture for regulated environments.
+          </p>
+        </div>
+
+        <div className="md:justify-self-end">
+          <div className="mx-auto aspect-[4/4.75] w-full max-w-[300px] overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-100 shadow-sm md:mx-0 md:max-w-[400px]">
+            <Image
+              src="/images/about/pradeep.jpg"
+              alt="Portrait of Pradeep Dahiya"
+              width={960}
+              height={1200}
+              priority
+              className="h-full w-full object-cover object-[58%_36%]"
+            />
+          </div>
+          <div className="mx-auto mt-4 flex max-w-[300px] items-center gap-4 md:mx-0 md:max-w-[400px]">
+            <span className="h-px flex-1 bg-neutral-300" />
+            <div className="text-right">
+              <p className="text-sm font-semibold text-neutral-950">Pradeep Dahiya</p>
+              <p className="mt-1 text-xs uppercase tracking-[0.2em] text-neutral-500">
+                Founder / Systems Architect
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="max-w-3xl text-[17px] leading-8 text-neutral-700 md:text-[18px]">
