@@ -1,23 +1,13 @@
 import Link from "next/link";
 import { getAllPosts } from "../../../lib/blog";
+import { createMetadata } from "../../../lib/seo";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Blog | Pradeep Dahiya",
   description:
     "Technical essays on platform architecture, operational software, and privacy-first systems.",
-  openGraph: {
-    title: "Blog | Pradeep Dahiya",
-    description:
-      "Technical essays on platform architecture, operational software, and privacy-first systems.",
-    type: "website"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Blog | Pradeep Dahiya",
-    description:
-      "Technical essays on platform architecture, operational software, and privacy-first systems."
-  }
-};
+  path: "/blog"
+});
 
 export default function BlogPage() {
   const posts = getAllPosts();

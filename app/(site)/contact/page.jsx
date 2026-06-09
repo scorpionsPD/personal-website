@@ -1,3 +1,5 @@
+import { createMetadata } from "../../../lib/seo";
+
 const collaborationAreas = [
   {
     title: "Speaking Engagements",
@@ -45,23 +47,12 @@ const collaborationAreas = [
   }
 ];
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Contact | Pradeep Dahiya",
   description:
     "Professional contact for Pradeep Dahiya, technology architect and founder building operational software platforms.",
-  openGraph: {
-    title: "Contact | Pradeep Dahiya",
-    description:
-      "Professional contact for Pradeep Dahiya, technology architect and founder building operational software platforms.",
-    type: "website"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Contact | Pradeep Dahiya",
-    description:
-      "Professional contact for Pradeep Dahiya, technology architect and founder building operational software platforms."
-  }
-};
+  path: "/contact"
+});
 
 export default function ContactPage() {
   return (

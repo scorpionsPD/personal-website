@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { createMetadata } from "../../../lib/seo";
 
 const paragraphs = [
   "I build systems for environments where reliability, governance, and accountability matter as much as functionality.",
@@ -15,23 +16,12 @@ const paragraphs = [
   "The direction remains ongoing: building UK-origin products and technical systems that make advanced technology usable, governable, and trustworthy in practice."
 ];
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "About | Pradeep Dahiya",
   description:
     "Founder biography focused on governance-first AI systems, operational software, and regulated-environment architecture.",
-  openGraph: {
-    title: "About | Pradeep Dahiya",
-    description:
-      "Founder biography focused on governance-first AI systems, operational software, and regulated-environment architecture.",
-    type: "article"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "About | Pradeep Dahiya",
-    description:
-      "Founder biography focused on governance-first AI systems, operational software, and regulated-environment architecture."
-  }
-};
+  path: "/about"
+});
 
 export default function AboutPage() {
   return (

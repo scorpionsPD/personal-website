@@ -1,3 +1,5 @@
+import { createMetadata } from "../../../lib/seo";
+
 const innovations = [
   {
     category: "Mobile Distribution",
@@ -127,23 +129,12 @@ const innovations = [
   }
 ];
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Technical Innovations | Pradeep Dahiya",
   description:
     "Novel architectures, governance-first AI systems, and technical innovations for regulated and high-trust environments.",
-  openGraph: {
-    title: "Technical Innovations | Pradeep Dahiya",
-    description:
-      "Novel architectures, governance-first AI systems, and technical innovations for regulated and high-trust environments.",
-    type: "website"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Technical Innovations | Pradeep Dahiya",
-    description:
-      "Novel architectures, governance-first AI systems, and technical innovations for regulated and high-trust environments."
-  }
-};
+  path: "/innovations"
+});
 
 export default function InnovationsPage() {
   return (

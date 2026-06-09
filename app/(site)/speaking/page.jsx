@@ -1,3 +1,5 @@
+import { createMetadata } from "../../../lib/seo";
+
 const conferences = [
   {
     year: "2025",
@@ -74,23 +76,12 @@ const media = [
   // TODO: Add remaining 3 shorts/interviews here
 ];
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Speaking & Publications | Pradeep Dahiya",
   description:
     "Conference presentations, technical publications, workshops, and media appearances from a technology architect and thought leader.",
-  openGraph: {
-    title: "Speaking & Publications | Pradeep Dahiya",
-    description:
-      "Conference presentations, technical publications, workshops, and media appearances from a technology architect and thought leader.",
-    type: "website"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Speaking & Publications | Pradeep Dahiya",
-    description:
-      "Conference presentations, technical publications, workshops, and media appearances from a technology architect and thought leader."
-  }
-};
+  path: "/speaking"
+});
 
 function TimelineItem({ item }) {
   return (

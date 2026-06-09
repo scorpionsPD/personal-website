@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { createMetadata } from "../../../lib/seo";
 
 const awards = [
   {
@@ -289,23 +290,12 @@ const testimonials = [
   }
 ];
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Impact | Pradeep Dahiya",
   description:
     "Awards, recognition, mentoring, and shipped platforms from a technology architect and founder.",
-  openGraph: {
-    title: "Impact | Pradeep Dahiya",
-    description:
-      "Awards, recognition, mentoring, and shipped platforms from a technology architect and founder.",
-    type: "website"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Impact | Pradeep Dahiya",
-    description:
-      "Awards, recognition, mentoring, and shipped platforms from a technology architect and founder."
-  }
-};
+  path: "/impact"
+});
 
 function Timeline({ items }) {
   return (

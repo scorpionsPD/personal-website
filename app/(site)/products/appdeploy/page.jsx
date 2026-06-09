@@ -1,24 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import ExternalLinkButton from "../../../../components/ExternalLinkButton";
+import { createMetadata } from "../../../../lib/seo";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "AppDeploy | Pradeep Dahiya",
   description:
     "ScotiTech product led and developed by me for internal application distribution without MDM dependency or private hosting.",
-  openGraph: {
-    title: "AppDeploy | Pradeep Dahiya",
-    description:
-      "ScotiTech product led and developed by me for internal application distribution without MDM dependency or private hosting.",
-    type: "website"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "AppDeploy | Pradeep Dahiya",
-    description:
-      "ScotiTech product led and developed by me for internal application distribution without MDM dependency or private hosting."
-  }
-};
+  path: "/products/appdeploy"
+});
 
 const metrics = [
   { value: "3", label: "Organisations", detail: "Across healthcare, finance, and gambling/private sectors" },

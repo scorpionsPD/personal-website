@@ -1,23 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import { createMetadata } from "../../../../lib/seo";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "ElderConnect+ | Pradeep Dahiya",
   description:
     "Community-focused digital support for independent living. Coordination platform for family networks supporting older adults.",
-  openGraph: {
-    title: "ElderConnect+ | Pradeep Dahiya",
-    description:
-      "Community-focused digital support for independent living. Coordination platform for family networks supporting older adults.",
-    type: "website"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "ElderConnect+ | Pradeep Dahiya",
-    description:
-      "Community-focused digital support for independent living. Coordination platform for family networks supporting older adults."
-  }
-};
+  path: "/products/elderconnect-plus"
+});
 
 const metrics = [
   { value: "15+", label: "Family Networks", detail: "Active users coordinating care" },

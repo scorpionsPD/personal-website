@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import { Inter, Source_Serif_4 } from "next/font/google";
 import Header from "../components/Header";
+import { createMetadata, personJsonLd, siteUrl, websiteJsonLd } from "../lib/seo";
 
 const display = Source_Serif_4({
   subsets: ["latin"],
@@ -15,27 +16,39 @@ const body = Inter({
 });
 
 export const metadata = {
-  title: "Pradeep Dahiya | Systems Architect",
-  description:
-    "Operational software platforms, private infrastructure, and AI systems built for reliability and control.",
-  openGraph: {
-    title: "Pradeep Dahiya | Systems Architect",
-    description:
-      "Operational software platforms, private infrastructure, and AI systems built for reliability and control.",
-    type: "website"
-  },
-  twitter: {
-    card: "summary_large_image",
+  metadataBase: new URL(siteUrl),
+  ...createMetadata({
     title: "Pradeep Dahiya | Systems Architect",
     description:
       "Operational software platforms, private infrastructure, and AI systems built for reliability and control."
-  }
+  }),
+  applicationName: "Pradeep Dahiya",
+  authors: [{ name: "Pradeep Dahiya", url: siteUrl }],
+  creator: "Pradeep Dahiya",
+  publisher: "Pradeep Dahiya",
+  keywords: [
+    "Pradeep Dahiya",
+    "AI governance",
+    "systems architect",
+    "regulated AI",
+    "private AI infrastructure",
+    "operational software",
+    "ScotiTech",
+    "AppDeploy"
+  ],
+  category: "technology"
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  const structuredData = [personJsonLd(), websiteJsonLd()];
+
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
       <body className="bg-[#f7f7f5] text-[#1c1c1c]">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
         <div className="min-h-screen bg-[#f7f7f5]">
           <Header />
 

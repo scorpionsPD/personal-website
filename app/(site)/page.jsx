@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { createMetadata } from "../../lib/seo";
 
 const highlights = [
   {
@@ -42,23 +43,11 @@ const featuredWork = [
   }
 ];
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Pradeep Dahiya | Technology Architect & Founder",
   description:
-    "Founder and systems architect building governance-first AI platforms, private infrastructure, and operational software for regulated environments.",
-  openGraph: {
-    title: "Pradeep Dahiya | Technology Architect & Founder",
-    description:
-      "Founder and systems architect building governance-first AI platforms, private infrastructure, and operational software for regulated environments.",
-    type: "website"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Pradeep Dahiya | Technology Architect & Founder",
-    description:
-      "Founder and systems architect building governance-first AI platforms, private infrastructure, and operational software for regulated environments."
-  }
-};
+    "Founder and systems architect building governance-first AI platforms, private infrastructure, and operational software for regulated environments."
+});
 
 export default function HomePage() {
   return (

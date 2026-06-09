@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { createMetadata } from "../../../lib/seo";
 
 const products = [
   {
@@ -87,23 +88,12 @@ const products = [
   }
 ];
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Work | Pradeep Dahiya",
   description:
     "Original platforms built by a technology architect and founder, designed for reliability, control, and long-term operations.",
-  openGraph: {
-    title: "Work | Pradeep Dahiya",
-    description:
-      "Original platforms built by a technology architect and founder, designed for reliability, control, and long-term operations.",
-    type: "website"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Work | Pradeep Dahiya",
-    description:
-      "Original platforms built by a technology architect and founder, designed for reliability, control, and long-term operations."
-  }
-};
+  path: "/work"
+});
 
 export default function WorkPage() {
   return (

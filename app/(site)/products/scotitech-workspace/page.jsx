@@ -1,23 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import { createMetadata } from "../../../../lib/seo";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "AXOS - Private AI Workspace | Pradeep Dahiya",
   description:
     "ScotiTech's private AI workspace for regulated organisations, built around data sovereignty, auditability, and governance-first deployment.",
-  openGraph: {
-    title: "AXOS - Private AI Workspace | Pradeep Dahiya",
-    description:
-      "ScotiTech's private AI workspace for regulated organisations, built around data sovereignty, auditability, and governance-first deployment.",
-    type: "website"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "AXOS - Private AI Workspace | Pradeep Dahiya",
-    description:
-      "ScotiTech's private AI workspace for regulated organisations, built around data sovereignty, auditability, and governance-first deployment."
-  }
-};
+  path: "/products/scotitech-workspace"
+});
 
 const metrics = [
   { value: "2", label: "Regulated Organisations", detail: "Finance and legal" },

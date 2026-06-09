@@ -1,8 +1,11 @@
-export const metadata = {
+import { createMetadata } from "../../../lib/seo";
+
+export const metadata = createMetadata({
   title: "Cookie Policy | Pradeep Dahiya",
   description:
-    "Cookie policy explaining that this website does not currently use non-essential cookies or client-side tracking technologies."
-};
+    "Cookie policy explaining that this website does not currently use non-essential cookies or client-side tracking technologies.",
+  path: "/cookie-policy"
+});
 
 const categories = [
   {

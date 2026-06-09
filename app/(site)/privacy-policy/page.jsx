@@ -1,8 +1,11 @@
-export const metadata = {
+import { createMetadata } from "../../../lib/seo";
+
+export const metadata = createMetadata({
   title: "Privacy Policy | Pradeep Dahiya",
   description:
-    "Privacy information covering contact data, basic website operation, and how this website currently handles cookies."
-};
+    "Privacy information covering contact data, basic website operation, and how this website currently handles cookies.",
+  path: "/privacy-policy"
+});
 
 const sections = [
   {
