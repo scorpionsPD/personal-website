@@ -72,10 +72,8 @@ export default function ArticleDiscussion({ title }) {
             Add a practical perspective.
           </h2>
           <p className="mt-3 max-w-2xl text-sm leading-6 text-neutral-600">
-            If this connects with something you have built, reviewed, or seen in a
-            regulated environment, share the lesson. Strong comments here are useful
-            implementation notes, thoughtful counterpoints, or sources that make the
-            topic sharper.
+            Share a practical lesson, counterpoint, or credible source from your own
+            work in this problem space.
           </p>
         </div>
         <a
