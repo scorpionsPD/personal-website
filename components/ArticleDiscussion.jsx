@@ -62,14 +62,20 @@ export default function ArticleDiscussion({ title }) {
   }, [isConfigured]);
 
   return (
-    <aside className="rounded-2xl border border-neutral-200 bg-neutral-50 p-5">
-      <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+    <aside className="mt-10 rounded-2xl border border-neutral-200 bg-neutral-50 p-6">
+      <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-400">
-            Reader discussion
+            Field Notes
           </p>
-          <p className="mt-2 text-sm leading-6 text-neutral-600">
-            Comments and reactions are powered by GitHub Discussions.
+          <h2 className="mt-3 font-display text-2xl leading-tight text-neutral-950">
+            Add a practical perspective.
+          </h2>
+          <p className="mt-3 max-w-2xl text-sm leading-6 text-neutral-600">
+            If this connects with something you have built, reviewed, or seen in a
+            regulated environment, share the lesson. Strong comments here are useful
+            implementation notes, thoughtful counterpoints, or sources that make the
+            topic sharper.
           </p>
         </div>
         <a
@@ -78,14 +84,26 @@ export default function ArticleDiscussion({ title }) {
           rel="noreferrer"
           className="text-sm font-semibold text-accent hover:underline"
         >
-          Open on GitHub
+          Comment on GitHub
         </a>
       </div>
 
+      <div className="mt-5 flex flex-wrap gap-2 text-xs font-semibold text-neutral-600">
+        <span className="rounded-full border border-neutral-200 bg-white px-3 py-1.5">
+          Implementation lesson
+        </span>
+        <span className="rounded-full border border-neutral-200 bg-white px-3 py-1.5">
+          Counterpoint
+        </span>
+        <span className="rounded-full border border-neutral-200 bg-white px-3 py-1.5">
+          Useful source
+        </span>
+      </div>
+
       {isConfigured ? (
-        <div ref={containerRef} className="mt-5" />
+        <div ref={containerRef} className="mt-6" />
       ) : (
-        <div className="mt-5 rounded-xl border border-neutral-200 bg-white p-4 text-sm leading-6 text-neutral-600">
+        <div className="mt-6 rounded-xl border border-neutral-200 bg-white p-4 text-sm leading-6 text-neutral-600">
           Enable GitHub Discussions, install the Giscus app, then set
           <code className="mx-1 rounded bg-neutral-100 px-1.5 py-0.5 text-xs">
             NEXT_PUBLIC_GISCUS_REPO_ID

@@ -83,10 +83,10 @@ export default async function BlogPostPage({ params }) {
           </p>
         ) : null}
       </header>
+      <section className="blog-content" dangerouslySetInnerHTML={{ __html: content }} />
       <ArticleDiscussion
         title={post.data.title}
       />
-      <section className="blog-content" dangerouslySetInnerHTML={{ __html: content }} />
     </article>
   );
 }
