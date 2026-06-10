@@ -8,21 +8,6 @@ const giscusCategory = process.env.NEXT_PUBLIC_GISCUS_CATEGORY || "General";
 const giscusCategoryId = process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID || "DIC_kwDORP0ADM4C-4yu";
 const discussionsUrl = `https://github.com/${giscusRepo}/discussions`;
 
-export function ArticleDiscussionSummary({ title }) {
-  const discussionSearchUrl = `${discussionsUrl}?discussions_q=${encodeURIComponent(title)}`;
-
-  return (
-    <a
-      href={discussionSearchUrl}
-      target="_blank"
-      rel="noreferrer"
-      className="text-xs font-semibold text-accent hover:underline"
-    >
-      Join discussion
-    </a>
-  );
-}
-
 export default function ArticleDiscussion({ title }) {
   const containerRef = useRef(null);
   const isConfigured = Boolean(giscusRepoId && giscusCategoryId);
