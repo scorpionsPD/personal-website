@@ -1,6 +1,6 @@
 ---
 title: "MDM-Free Distribution: A Technical Deep-Dive"
-description: "How we built enterprise app distribution without device enrollment—architecture, security model, and production lessons."
+description: "How internal app distribution can work without full device enrollment, with access control, auditability, and a privacy-respecting architecture for BYOD environments."
 date: "2026-02-08"
 ---
 
@@ -80,3 +80,47 @@ Certificate operations use HSM-backed key storage. Audit logs use Merkle tree ve
 This architecture has become a reference implementation. Three other organizations have adopted similar patterns based on our published approach. It proves that with careful architecture, you can achieve enterprise security without compromising user privacy.
 
 The full source for the distribution protocol specification is available on request for organizations building similar systems.
+
+## Why distribution architecture matters
+
+Internal app distribution is often treated as a deployment detail. In practice, it becomes an operational control point.
+
+If an organisation cannot reliably deliver, update, revoke, and audit access to its internal applications, those applications are not fully under operational control. The app may be well built, but the distribution pathway becomes the weak link.
+
+That is especially visible in mixed-device environments:
+
+- staff use personal devices
+- contractors need temporary access
+- devices change frequently
+- MDM enrollment is too invasive or slow
+- internal apps are not suitable for public App Store release
+
+The architecture has to separate app entitlement from device ownership. That is the core shift.
+
+## Where AppDeploy fits
+
+This is the problem space behind [AppDeploy](/products/appdeploy). The goal is not to replace every MDM use case. The goal is to give organisations a controlled internal distribution layer when full device management is not appropriate.
+
+The useful pattern is entitlement-led distribution:
+
+- users authenticate to the organisation
+- app access is granted by role, group, or policy
+- installations and updates are logged
+- access can be revoked without taking control of the whole device
+- distribution remains auditable even in BYOD environments
+
+For many organisations, that is the difference between having internal apps and actually being able to operate them.
+
+## Evidence from practice
+
+I built AppDeploy around this problem because internal app distribution often becomes a hidden blocker after the application itself is ready. The product challenge was not only installation; it was entitlement, user trust, auditability, and operational control.
+
+The strongest design decision was separating organisational access from full device ownership. That let the system support BYOD and contractor-heavy environments without forcing every user into invasive device management.
+
+This is the kind of technical contribution that matters in practice: a distribution architecture that changes what organisations can safely deploy, not just another app catalogue interface.
+
+## Sources and further reading
+
+- [Apple Support: Content distribution methods for Apple devices](https://support.apple.com/guide/deployment/content-distribution-methods-dep7cef2e0ea/web)
+- [Apple Developer: Custom Apps](https://developer.apple.com/custom-apps/)
+- [NIST SP 800-53 Rev. 5: Audit and Accountability controls](https://csrc.nist.gov/Pubs/sp/800/53/r5/upd1/Final)

@@ -1,6 +1,6 @@
 ---
 title: "Why Internal Tools Fail After Scale"
-description: "A practical look at the hidden failure modes that appear once internal tools move beyond a single team."
+description: "Why internal tools fail when they become operational infrastructure, and how to design them with ownership, auditability, reliability, and governance from the start."
 date: "2026-02-16"
 ---
 
@@ -69,3 +69,42 @@ The core reason internal tools fail after scale is not technical. It’s that th
 Tools built for convenience are often fragile. Infrastructure built for continuity is different: it is explicit about dependencies, resilient to change, and clear about governance.
 
 When a tool reaches scale, the decision is simple: either redesign it as infrastructure, or prepare for a slow, expensive collapse under the weight of its own success.
+
+## What to audit before an internal tool becomes critical
+
+Before an internal tool becomes part of daily operations, teams should review it as if it were already production infrastructure.
+
+Useful questions include:
+
+- What work stops if this tool is unavailable?
+- Which systems does it depend on?
+- Who owns the tool operationally?
+- Who can change business rules inside it?
+- Are access decisions logged?
+- Can users recover from failed or partial actions?
+- Is there a clear process for policy, role, or workflow changes?
+- Does the tool expose evidence for audit, support, and incident review?
+
+These questions are not bureaucracy. They are how teams prevent a convenience tool from becoming a silent point of failure.
+
+## How this connects to operational architecture
+
+This is the same principle behind the product work on my [Work](/work) page: software should not only complete a workflow; it should preserve continuity around that workflow.
+
+For regulated or high-trust environments, internal tools need the same design posture as customer-facing products: clear ownership, role-aware access, auditability, change control, and graceful failure.
+
+When that structure is present, internal tools stop being fragile shortcuts. They become reliable operational platforms.
+
+## Evidence from practice
+
+This pattern appears repeatedly in product and platform work. A tool often begins as a small operational fix, then becomes part of a critical path once teams depend on it.
+
+The leadership responsibility is recognising that transition early. Once a tool controls access, approvals, knowledge, or customer-impacting workflows, it needs the same seriousness as external product infrastructure.
+
+That means designing for ownership, auditability, reliability, and change before the tool becomes too important to safely refactor.
+
+## Sources and further reading
+
+- [NIST SP 800-53 Rev. 5: Security and Privacy Controls for Information Systems and Organizations](https://csrc.nist.gov/Pubs/sp/800/53/r5/upd1/Final)
+- [NCSC: Principles for secure system administration](https://www.ncsc.gov.uk/collection/10-steps/asset-management)
+- [Google SRE: Service Level Objectives](https://sre.google/sre-book/service-level-objectives/)

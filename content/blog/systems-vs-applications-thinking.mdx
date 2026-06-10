@@ -1,6 +1,6 @@
 ---
 title: "Systems Thinking vs Application Thinking"
-description: "Why operational software succeeds when it is designed as a system, not just a product."
+description: "Why operational software succeeds when it is designed as a system, with dependencies, governance, reliability, auditability, and long-term ownership in mind."
 date: "2026-02-16"
 ---
 
@@ -77,5 +77,43 @@ If these are missing, the software is likely built as an application, even if it
 ## The conclusion
 
 Systems thinking is not slower. It is more deliberate. It asks different questions and optimises for different outcomes. For operational software, that difference is the line between a tool that works in a demo and a system that survives real life.
+
+## A practical checklist for systems thinking
+
+When reviewing an operational product, I look for evidence that the team understands the system around the application.
+
+Useful signals include:
+
+- documented dependencies
+- clear operational owner
+- role-based access model
+- audit trail for important actions
+- failure modes and fallback paths
+- versioned configuration
+- data export or continuity strategy
+- change management process
+- support model after launch
+
+None of these guarantee success alone. Together, they show that the product is being treated as infrastructure rather than a collection of screens.
+
+## Why this matters for regulated environments
+
+Regulated organisations cannot rely on application thinking alone. They need systems that can explain decisions, preserve evidence, and continue operating when policies, vendors, devices, or teams change.
+
+This is the shared pattern across my work on [private AI workspaces](/products/scotitech-workspace), [MDM-free app distribution](/products/appdeploy), and broader [operational platforms](/work). The product interface matters, but the surrounding control model is what makes the software trustworthy.
+
+## Evidence from practice
+
+Across AXOS, AppDeploy, and ElderConnect+, the same lesson keeps appearing: valuable products are rarely just applications. They become dependable when the architecture accounts for the operating environment around them.
+
+That includes who owns the workflow, how access is granted, what evidence is retained, what happens during failure, and how the system adapts when policies or teams change.
+
+This is the difference between building features and building infrastructure. The former can win a demo. The latter can support real operations over time.
+
+## Sources and further reading
+
+- [NIST SP 800-53 Rev. 5: Security and Privacy Controls](https://csrc.nist.gov/Pubs/sp/800/53/r5/upd1/Final)
+- [Google SRE: Embracing Risk](https://sre.google/sre-book/embracing-risk/)
+- [NCSC: Secure development and deployment guidance](https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development)
 
 When reliability matters, application thinking is not enough. Systems thinking is the design discipline that keeps critical work running.

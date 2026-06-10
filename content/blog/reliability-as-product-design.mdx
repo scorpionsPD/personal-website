@@ -1,6 +1,6 @@
 ---
 title: "Reliability as Product Design"
-description: "Why reliability should be designed as a primary feature, not treated as an engineering afterthought."
+description: "Why reliability should be designed as a product feature through clear expectations, failure paths, continuity, auditability, and user trust."
 date: "2026-02-16"
 published: false
 ---
@@ -73,3 +73,25 @@ This is why reliability must be designed, not simply engineered. When reliabilit
 Reliability is not a technical afterthought. It is a product decision that shapes trust, adoption, and long‑term value. When reliability is designed into the product—through expectations, failure paths, and continuity—the system earns the right to become operational infrastructure.
 
 That is the real goal: software that people rely on without hesitation.
+
+## How to make reliability visible
+
+Reliability becomes easier to trust when users can see the state of the system.
+
+Useful design patterns include:
+
+- explicit saved states
+- progress indicators that map to real system steps
+- retry paths that do not duplicate work
+- clear timestamps
+- reversible actions
+- visible approvals and hand-offs
+- support-friendly audit history
+
+These are product decisions, not only engineering details. They shape how users feel when the system is under pressure.
+
+## Sources and further reading
+
+- [Google SRE: Service Level Objectives](https://sre.google/sre-book/service-level-objectives/)
+- [Google SRE: Embracing Risk](https://sre.google/sre-book/embracing-risk/)
+- [NIST SP 800-53 Rev. 5](https://csrc.nist.gov/Pubs/sp/800/53/r5/upd1/Final)

@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import ArticleDiscussion from "../../../../components/ArticleDiscussion";
 import { getAllPosts, getPostBySlug, renderPostContent } from "../../../../lib/blog";
 import { absoluteUrl, createMetadata, siteUrl } from "../../../../lib/seo";
 
@@ -82,6 +83,9 @@ export default async function BlogPostPage({ params }) {
           </p>
         ) : null}
       </header>
+      <ArticleDiscussion
+        title={post.data.title}
+      />
       <section className="blog-content" dangerouslySetInnerHTML={{ __html: content }} />
     </article>
   );

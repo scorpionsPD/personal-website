@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArticleDiscussionSummary } from "../../../components/ArticleDiscussion";
 import { getAllPosts } from "../../../lib/blog";
 import { createMetadata } from "../../../lib/seo";
 
@@ -48,12 +49,17 @@ export default function BlogPage() {
                   {post.data.description || post.data.excerpt}
                 </p>
               ) : null}
-              <Link
-                href={`/blog/${post.slug}`}
-                className="mt-4 inline-flex text-sm font-semibold text-accent"
-              >
-                Read article →
-              </Link>
+              <div className="mt-4 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                <Link
+                  href={`/blog/${post.slug}`}
+                  className="inline-flex text-sm font-semibold text-accent"
+                >
+                  Read article →
+                </Link>
+                <ArticleDiscussionSummary
+                  title={post.data.title}
+                />
+              </div>
             </article>
           ))
         )}
