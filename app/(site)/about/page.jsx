@@ -72,7 +72,7 @@ export default function AboutPage() {
       <section className="grid gap-3 text-sm text-neutral-600 md:grid-cols-3">
         <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
           <p className="text-sm text-neutral-800">
-            14+ years designing production software, platform architecture, and regulated-environment systems.
+            13+ years designing production software, platform architecture, and regulated-environment systems.
           </p>
         </div>
         <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">

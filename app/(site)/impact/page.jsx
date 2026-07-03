@@ -148,7 +148,7 @@ const builtAndShipped = [
     linkLabel: "View repository"
   },
   {
-    year: "14+ years",
+    year: "13+ years",
     title: "Production systems architecture and platform innovation",
     detail:
       "Built production systems across mobile, backend, and distributed infrastructure with a focus on reliability, data sovereignty, and maintainable ownership. Led architecture decisions for long-term scalability, compliance constraints, and real-world operational uptime."
@@ -228,7 +228,7 @@ const evidenceAtGlance = [
     detail: "Recognition from Forttuna Global Excellence Awards and Indian Tech Society for innovation and technology contribution."
   },
   {
-    metric: "14+ years",
+    metric: "13+ years",
     title: "Professional software development",
     detail: "Experience spanning mobile development, backend systems, and platform architecture across enterprise and startup environments."
   },
