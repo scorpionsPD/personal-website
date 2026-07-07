@@ -38,11 +38,17 @@ const professionalImpact = [
   },
   {
     year: "2026",
-    title: "Digital Trustee (Volunteer), TravelHands",
+    title: "Tech Advisor (Volunteer), TravelHands",
     detail:
-      "Serving as a Digital Trustee for TravelHands and supporting the development of an AI-based booking journey system to improve accessibility, trust, and operational usability.",
+      "Serving as a volunteer Tech Advisor for TravelHands, an accessibility-focused organisation, and supporting the development of an AI-based booking journey system to improve trust and operational usability.",
     link: "https://www.linkedin.com/posts/pradeepkumar2411_im-pleased-to-share-that-ive-joinedtravel-activity-7432787531403784194-8dfg/",
     linkLabel: "View LinkedIn post"
+  },
+  {
+    year: "2026",
+    title: "Director (Volunteer), D'LOUMMMIES CIC",
+    detail:
+      "Appointed as a volunteer Director of D'LOUMMMIES CIC, a community-interest organisation, contributing board-level strategic oversight, governance, confidentiality, and leadership in support of its community mission."
   },
   {
     year: "2025",
@@ -84,18 +90,9 @@ const professionalImpact = [
   }
 ];
 
-const ecosystemContribution = [
-  professionalImpact[0],
-  professionalImpact[1],
-  professionalImpact[2]
-];
+const ecosystemContribution = professionalImpact.slice(0, 4);
 
-const publicContribution = [
-  professionalImpact[3],
-  professionalImpact[4],
-  professionalImpact[5],
-  professionalImpact[6]
-];
+const publicContribution = professionalImpact.slice(4);
 
 const advisoryRelationships = [
   {
@@ -248,9 +245,9 @@ const evidenceAtGlance = [
     detail: "Selected to support early-stage technology startups through technical mentorship."
   },
   {
-    metric: "Digital Trustee",
-    title: "Third sector and advisory work",
-    detail: "Digital Trustee and advisory work across mission-led organisations and community-focused technology initiatives."
+    metric: "Board Roles",
+    title: "Third sector leadership",
+    detail: "Volunteer director and tech advisory roles across mission-led organisations and community-focused technology initiatives."
   },
   {
     metric: "Certified",

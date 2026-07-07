@@ -10,12 +10,12 @@ const highlights = [
   {
     title: "Operational architecture",
     description: "Build systems for data sovereignty, auditability, and long-term ownership.",
-    metric: "12+ years production systems experience"
+    metric: "13+ years production systems experience"
   },
   {
-    title: "Founder & mentor",
-    description: "Founded ScotiTech and support emerging startups through the NASSCOM mentorship program.",
-    metric: "Revenue-generating business + mentorship impact"
+    title: "Founder, mentor & board roles",
+    description: "Founded ScotiTech while contributing through NASSCOM mentorship, volunteer trustee work, and CIC board leadership.",
+    metric: "Operating products + ecosystem contribution"
   }
 ];
 

@@ -6,6 +6,7 @@ const paragraphs = [
   "My work sits at the intersection of product architecture, operational reliability, and responsible AI adoption. I am particularly interested in the point where technical possibility meets regulatory expectation, and where organisations need deployable systems rather than abstract policy discussion.",
   "Through ScotiTech, I focus on a structural problem many organisations are now facing: AI adoption is accelerating faster than internal governance capability. Teams want the benefits of AI, but they also need traceability, risk visibility, documentation, and clear operational control.",
   "Rather than treating governance as a legal afterthought, I design it into system architecture itself. That means building products where oversight, auditability, data sovereignty, and accountability checkpoints are part of the workflow from the beginning.",
+  "Alongside product work, I also contribute in volunteer leadership roles, including as a Tech Advisor at TravelHands, an accessibility-focused organisation, and as a CIC Director supporting community-interest work. Those appointments involve strategic oversight, confidentiality, and board-level responsibility, which closely reflects the standards I bring to technical systems.",
   "Over the past decade I have worked across mobile infrastructure, private collaboration environments, internal distribution systems, and digital support platforms. Across those domains, the consistent theme has been the same: important processes fail when organisations depend on external control or weak operational structure.",
   "My products therefore follow a consistent principle — control should exist closest to the people who depend on the system.",
   "Organisations should retain direct access to internal applications through controlled distribution channels.",
@@ -80,7 +81,7 @@ export default function AboutPage() {
         </div>
         <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
           <p className="text-sm text-neutral-800">
-            Internationally recognised for innovation, mentorship, and operational system design.
+            Volunteer director and tech advisory roles alongside mentorship, innovation, and operational system design.
           </p>
         </div>
       </section>
