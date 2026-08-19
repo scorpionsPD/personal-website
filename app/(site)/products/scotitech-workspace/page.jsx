@@ -100,7 +100,8 @@ const governanceFeatures = [
 ];
 
 const axosAssets = {
-  website: "https://scotitech.com",
+  website: "https://axos.scotitech.com",
+  scotitech: "https://scotitech.com",
   logo: "/images/products/AXOS.png"
 };
 
@@ -131,7 +132,7 @@ export default function ScotiTechWorkspacePage() {
         </div>
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
           <a
-            href={axosAssets.website}
+            href={axosAssets.scotitech}
             target="_blank"
             rel="noreferrer"
             className="hover:text-accent"
@@ -145,6 +146,16 @@ export default function ScotiTechWorkspacePage() {
         <p className="text-xl text-neutral-600">
           AXOS is a ScotiTech product led and developed by me for regulated organisations.
         </p>
+        <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center">
+          <a
+            href={axosAssets.website}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center text-sm font-semibold text-accent hover:underline"
+          >
+            Visit website →
+          </a>
+        </div>
       </section>
 
       {/* Key Metrics */}
