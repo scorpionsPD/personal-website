@@ -43,7 +43,9 @@ const professionalImpact = [
     year: "2026",
     title: "Director (Volunteer), D'LOUMMMIES CIC",
     detail:
-      "Appointed as a volunteer Director of D'LOUMMMIES CIC, a community-interest organisation, contributing board-level strategic oversight, governance, confidentiality, and leadership in support of its community mission."
+      "Appointed as a volunteer Director of D'LOUMMMIES CIC, a community-interest organisation, contributing board-level strategic oversight, governance, confidentiality, and leadership in support of its community mission.",
+    link: "https://find-and-update.company-information.service.gov.uk/company/14818984/officers",
+    linkLabel: "View Companies House record"
   },
   {
     year: "2025",
