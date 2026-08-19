@@ -207,7 +207,7 @@ const quickInsightsContent = [...mediaContent, ...mediaShorts];
 const evidenceAtGlance = [
   {
     metric: "2",
-    title: "International awards and nominations",
+    title: "International awards",
     detail: "Recognition from Forttuna Global Excellence Awards and Indian Tech Society for innovation and technology contribution."
   },
   {
