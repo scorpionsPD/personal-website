@@ -11,11 +11,6 @@ const awards = [
     videoPoster: "/videos/preview.png"
   },
   {
-    year: "2026",
-    title: "FORTUNA® Global Excellence Awards - AI Innovation Leader of the Year (Nominee)",
-    detail: "Business Leaders Edition | United Kingdom | Technology Category | Nominated for AI Innovation Leader of the Year."
-  },
-  {
     year: "2023",
     title: "Indian Tech Society Award",
     detail: "Certificate of Recognition for outstanding contributions to the UK tech sector, recognised for exceptional talent, impactful innovation, and community leadership as an Indian technologist.",
@@ -41,8 +36,8 @@ const professionalImpact = [
     title: "Tech Advisor (Volunteer), TravelHands",
     detail:
       "Serving as a volunteer Tech Advisor for TravelHands, an accessibility-focused organisation, and supporting the development of an AI-based booking journey system to improve trust and operational usability.",
-    link: "https://www.linkedin.com/posts/pradeepkumar2411_im-pleased-to-share-that-ive-joinedtravel-activity-7432787531403784194-8dfg/",
-    linkLabel: "View LinkedIn post"
+    link: "https://www.travelhands.co.uk/www-travelhands-co-uk-about-us",
+    linkLabel: "Visit TravelHands"
   },
   {
     year: "2026",
@@ -93,17 +88,6 @@ const professionalImpact = [
 const ecosystemContribution = professionalImpact.slice(0, 4);
 
 const publicContribution = professionalImpact.slice(4);
-
-const advisoryRelationships = [
-  {
-    name: "Dheeraj Rathee",
-    role: "Head of AI Strategy at Sensiwise AI and Chief Technology Officer at Provide Digital",
-    detail:
-      "Provides ongoing mentorship and strategic guidance on responsible AI, governance-first product design, and regulated-environment deployment.",
-    link: "https://www.linkedin.com/in/dheerajrathee/",
-    linkLabel: "View profile"
-  }
-];
 
 const builtAndShipped = [
   {
@@ -217,6 +201,8 @@ const mediaShorts = [
     tags: ["ChatGPT", "AISafety", "DataPrivacy", "DeveloperTips"]
   }
 ];
+
+const quickInsightsContent = [...mediaContent, ...mediaShorts];
 
 const evidenceAtGlance = [
   {
@@ -484,34 +470,6 @@ export default function ImpactPage() {
       <section className="flex flex-col gap-8">
         <div className="flex flex-col gap-2">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
-            Mentorship & Advisory Relationships
-          </p>
-          <h2 className="font-display text-3xl text-neutral-950">
-            Trusted guidance around responsible AI and product direction.
-          </h2>
-        </div>
-        <div className="grid gap-6 md:grid-cols-2">
-          {advisoryRelationships.map((item) => (
-            <div key={item.name} className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
-              <h3 className="text-lg font-semibold text-neutral-900">{item.name}</h3>
-              <p className="mt-2 text-sm font-semibold text-accent">{item.role}</p>
-              <p className="mt-3 text-sm leading-7 text-neutral-600">{item.detail}</p>
-              <a
-                href={item.link}
-                className="mt-4 inline-flex text-sm font-semibold text-accent"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {item.linkLabel} →
-              </a>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="flex flex-col gap-8">
-        <div className="flex flex-col gap-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
             Recognition
           </p>
           <h2 className="font-display text-3xl text-neutral-950">
@@ -548,70 +506,14 @@ export default function ImpactPage() {
       <section className="flex flex-col gap-8">
         <div className="flex flex-col gap-2">
           <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
-            Featured Interview
-          </p>
-          <h2 className="font-display text-3xl text-neutral-950">
-            In-depth conversations on entrepreneurship and building.
-          </h2>
-        </div>
-        <div className="max-w-3xl">
-          {mediaContent.map((item) => (
-            <div key={`${item.year}-${item.videoId}`} className="rounded-2xl border border-neutral-200 bg-white p-8">
-              <div className="flex items-center gap-3 mb-4">
-                <span className="inline-block text-xs font-medium px-3 py-1 rounded-full bg-accent/10 text-accent font-semibold">
-                  {item.type}
-                </span>
-                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-400">
-                  {item.year}
-                </p>
-              </div>
-              <h3 className="text-2xl font-semibold text-neutral-900">{item.title}</h3>
-              
-              <div className="mt-6">
-                <div className="overflow-hidden rounded-lg border border-neutral-200">
-                  <iframe
-                    width="100%"
-                    height="400"
-                    src={`https://www.youtube.com/embed/${item.videoId}`}
-                    title={item.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="bg-neutral-50"
-                  />
-                </div>
-              </div>
-
-              <p className="mt-6 text-base leading-7 text-neutral-600">{item.detail}</p>
-              
-              {item.tags && item.tags.length > 0 && (
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {item.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs px-3 py-1 bg-neutral-100 text-neutral-600 rounded"
-                    >
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="flex flex-col gap-8">
-        <div className="flex flex-col gap-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
             Quick Insights
           </p>
           <h2 className="font-display text-3xl text-neutral-950">
-            Founder tips, startup strategy, and quick lessons.
+            Founder lessons, startup strategy, and practical media insights.
           </h2>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
-          {mediaShorts.map((item) => (
+          {quickInsightsContent.map((item) => (
             <MediaCard key={`${item.year}-${item.videoId}`} item={item} />
           ))}
         </div>
