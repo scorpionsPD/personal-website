@@ -1,12 +1,12 @@
 ---
-title: "MDM-Free Distribution: A Technical Deep-Dive"
+title: "App Distribution Without Full MDM: A Technical Deep-Dive"
 description: "How internal app distribution can work without full device enrollment, with access control, auditability, and a privacy-respecting architecture for BYOD environments."
 date: "2026-02-08"
 ---
 
 Enterprise mobile app distribution traditionally requires Mobile Device Management (MDM), which demands full device enrollment and control. This creates privacy concerns, deployment friction, and user resistance—especially in BYOD environments.
 
-Over the past two years, I've architected and deployed a novel approach enabling secure internal app distribution without any device enrollment. This system now serves 12+ organizations across healthcare, finance, and government sectors, managing 5,000+ devices.
+Over the past two years, I've architected and deployed an approach where self-service installs need no device enrolment at all, and silent deployment is an optional, per-device add-on. This system now runs in production as AppDeploy, with 450+ apps installed across 300+ devices in active customer workspaces.
 
 ## The Core Challenge
 
@@ -48,7 +48,7 @@ A lightweight client app handles authentication, app catalog access, version che
 
 After 18 months in production:
 
-**Cost Impact:** 70% reduction in deployment costs vs traditional MDM
+**Cost impact:** a flat plan for distribution, with per-device pricing only for the devices that need silent deployment — rather than per-device pricing for every device, as traditional MDM requires
 **User Adoption:** 95% opt-in rate (vs ~60% for MDM enrollment)
 **Security Incidents:** Zero unauthorized installations or data breaches
 **Compliance:** Successfully passed HIPAA, SOC2, and ISO27001 audits

@@ -5,15 +5,15 @@ const products = [
   {
     title: "AppDeploy",
     slug: "appdeploy",
-    summary: "Internal application distribution without MDM dependency or private hosting",
+    summary: "Private app distribution built around Apple Business, with optional remote deployment",
     category: "Mobile Distribution",
     description:
-      "ScotiTech product led and developed by me, maintaining enterprise app security without requiring device enrollment or MDM control.",
+      "ScotiTech product led and developed by me — a branded distribution workspace built around Apple Business, with optional silent deployment to enrolled devices.",
     metrics: {
-      adoption: "3 organisations",
-      deployments: "50+ app deployments",
-      costSavings: "Up to 80% reduction in deployment costs",
-      uptime: "100% distribution availability"
+      customerWorkspaces: "2 active",
+      appsInstalled: "450+",
+      devicesReached: "300+",
+      availabilitySLO: "99.9%"
     },
     casestudy: {
       dependency:
@@ -27,7 +27,7 @@ const products = [
     },
     innovation: "Entitlement-led distribution architecture with full organisational control",
     usp:
-      "MDM-equivalent security for enterprise app distribution.",
+      "Controlled app rollout without a full device-management suite.",
     logo: "/images/products/AppdeployLogoBlack.png"
   },
   {
@@ -38,10 +38,10 @@ const products = [
     description:
       "ScotiTech product led and developed by me, enabling local AI execution with complete data sovereignty for compliance-bound teams.",
     metrics: {
-      adoption: "2 regulated organisations",
-      interactions: "100,000+ AI interactions",
+      currentStage: "Private evaluation",
+      deployment: "Self-hosted, enterprise-only",
       dataSovereignty: "100% on-premise processing",
-      uptime: "100% platform availability"
+      governance: "Published DPA & Trust Centre"
     },
     casestudy: {
       dependency:
@@ -68,8 +68,8 @@ const products = [
     metrics: {
       users: "15+ active family networks",
       checkIns: "200+ coordinated check-ins",
-      responseTime: "4x faster issue resolution",
-      retention: "85% sustained engagement"
+      coordination: "Faster issue resolution",
+      engagement: "Sustained family engagement"
     },
     casestudy: {
       dependency:

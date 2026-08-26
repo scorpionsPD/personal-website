@@ -32,7 +32,7 @@ const publications = [
     title: "Technical Blog on Operational Platforms",
     publication: "Personal blog",
     detail:
-      "Series of articles on MDM-free distribution, self-hosted infrastructure, and operational platform design.",
+      "Series of articles on entitlement-led app distribution, self-hosted infrastructure, and operational platform design.",
     link: "/blog"
   }
 ];
@@ -263,7 +263,7 @@ export default function SpeakingPage() {
           </h2>
           <p className="text-sm leading-7 text-neutral-600">
             Available for technical lectures, mentorship programs, and discussions on
-            operational platform architecture, MDM-free distribution, and self-hosted systems.
+            operational platform architecture, private app distribution, and self-hosted systems.
           </p>
           <a
             href="/contact"

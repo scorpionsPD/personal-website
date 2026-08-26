@@ -7,7 +7,7 @@ const collaborationAreas = [
       "Talks and panels on platform architecture, privacy-first AI, and operational systems.",
     topics: [
       "Privacy-First AI Architectures",
-      "MDM-Free Mobile Distribution",
+      "Private App Distribution (Apple Business)",
       "Self-Hosted Platform Design",
       "Building for Regulated Environments"
     ]

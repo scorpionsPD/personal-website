@@ -3,16 +3,16 @@ import { createMetadata } from "../../../lib/seo";
 const innovations = [
   {
     category: "Mobile Distribution",
-    title: "MDM-Free Enterprise App Distribution",
+    title: "Entitlement-Led Private App Distribution",
     year: "2024",
     problem:
       "Traditional Mobile Device Management requires full device control, creating privacy concerns and deployment friction in regulated environments.",
     innovation:
-      "Developed novel architecture leveraging Apple Business Manager and private APK hosting to enable secure enterprise app distribution without device enrollment. Combines code signing, certificate pinning, and custom distribution protocols.",
+      "Developed an architecture built around Apple Business Manager and signed app hosting: a branded portal where self-service installs need no enrolment, with optional MDM-based silent deployment for organisation-owned devices.",
     technicalBreakthrough:
-      "First production implementation of zero-touch enterprise distribution maintaining security equivalent to MDM while eliminating device control requirements.",
+      "Separates the two concerns most platforms couple — app entitlement (portal, no enrolment) and device management (optional, per-device) — so organisations buy control only where they need it.",
     impact:
-      "Adopted by 12+ organizations across healthcare, finance, and government. Reduced deployment costs by 70% while improving security posture.",
+      "Live in production as AppDeploy: 2 active customer workspaces, 450+ apps installed, 300+ devices reached, against a published 99.9% availability SLO.",
     technologies: ["Swift", "Kotlin", "Apple Business Manager", "Certificate Pinning", "Custom CDN"]
   },
   {
@@ -26,7 +26,7 @@ const innovations = [
     technicalBreakthrough:
       "Novel architecture pattern combining containerized LLM inference with workflow orchestration, accountability checkpoints, and cryptographic audit trails—enabling regulation-aligned AI deployment in air-gapped and compliance-bound environments.",
     impact:
-      "Enabled AI adoption in 8 organizations previously blocked by compliance requirements. Processing 100,000+ interactions with complete data sovereignty.",
+      "Shipping as AXOS, in private evaluation with enterprise teams in regulated sectors — 100% on-premise processing, with a published DPA and Trust Centre.",
     technologies: ["Local LLMs", "Docker", "Workflow Engine", "Cryptographic Audit", "Redis"]
   },
   {
@@ -40,7 +40,7 @@ const innovations = [
     technicalBreakthrough:
       "Composable microservices architecture with shared identity layer, unified search index, and event-driven synchronization—all deployable on-premise.",
     impact:
-      "Replaced multiple SaaS subscriptions for 6 organizations. 99.7% uptime over 18 months. Complete data residency compliance.",
+      "Now shipping as the AXOS workspace: mail, drive, calendar, chat, video, tasks and knowledge inside one self-hosted security boundary, offered enterprise-only.",
     technologies: ["Microservices", "PostgreSQL", "Elasticsearch", "Message Queue", "Docker Swarm"]
   },
   {
@@ -52,9 +52,9 @@ const innovations = [
     innovation:
       "Implemented blockchain-inspired append-only audit system with cryptographic verification, enabling tamper-proof logs without blockchain overhead.",
     technicalBreakthrough:
-      "Merkle tree-based verification with periodic commitment to external timestamping service—providing cryptographic proof without distributed consensus.",
+      "Append-only design with checksummed export packs verifiable outside the platform — tamper-evidence without blockchain overhead.",
     impact:
-      "Integrated across all platforms. Enabled HIPAA and SOC2 compliance with verifiable audit trails. Used in forensic investigations.",
+      "Shipping in AppDeploy as org-scoped, append-only audit logs and checksummed Evidence Packs that an auditor can verify independently of the platform.",
     technologies: ["Merkle Trees", "Cryptographic Hashing", "Timestamping", "Immutable Storage"]
   },
   {
@@ -66,9 +66,9 @@ const innovations = [
     innovation:
       "Built Git-like system for prompt libraries with branching, merging, peer review, and automated testing before production deployment.",
     technicalBreakthrough:
-      "First implementation of CI/CD principles for AI prompts—including automated quality testing, A/B comparison, and gradual rollout.",
+      "CI/CD discipline applied to AI prompts — automated quality testing, A/B comparison, and gradual rollout.",
     impact:
-      "Improved AI output consistency by 40%. Enabled teams to collaborate on prompts safely. 98% first-pass approval rate.",
+      "The pattern behind AXOS's approved knowledge sources: prompts reviewed and versioned before they reach production, so teams collaborate on AI behaviour safely.",
     technologies: ["Git Internals", "Testing Framework", "A/B Testing", "Analytics Pipeline"]
   },
   {
@@ -82,7 +82,7 @@ const innovations = [
     technicalBreakthrough:
       "Custom CRDT implementations optimized for mobile constraints—achieving sub-100ms sync resolution with predictable battery impact.",
     impact:
-      "Powered 15+ mobile applications. Eliminated sync conflicts entirely. Enabled true offline-first architecture.",
+      "Built across mobile client work before ScotiTech; the offline-first patterns now inform how AppDeploy reconciles per-device state.",
     technologies: ["CRDTs", "Operational Transform", "SQLite", "Background Sync"]
   },
   {
@@ -96,7 +96,7 @@ const innovations = [
     technicalBreakthrough:
       "State machine-based orchestration enabling per-tenant canary deployment with automatic failure detection and rollback—zero customer impact.",
     impact:
-      "Deployed 200+ updates across multi-tenant platform with zero downtime incidents. Reduced deployment risk by 95%.",
+      "The rollout pattern now shipping in AppDeploy as rollout rings: progressive per-tenant deployment with automatic failure-stop and one-click rollback.",
     technologies: ["Kubernetes", "Service Mesh", "Health Monitoring", "State Machines"]
   },
   {
