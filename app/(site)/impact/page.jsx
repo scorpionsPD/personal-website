@@ -8,7 +8,9 @@ const awards = [
     detail: "Technology | United Kingdom | Business Leaders | 2025 Global Edition.",
     image: "/images/awards/forttuna-award.JPG",
     video: "/videos/forttuna-award.mp4",
-    videoPoster: "/videos/preview.png"
+    videoPoster: "/videos/preview.png",
+    link: "https://awards.forttuna.com/winner?profile=pradeep-dahiya-winner-global-2025",
+    linkLabel: "View winner profile"
   },
   {
     year: "2023",
@@ -366,6 +368,16 @@ function EvidenceCards({ items }) {
                 className="h-48 w-full bg-neutral-50 object-contain"
               />
             </div>
+          )}
+          {item.link && (
+            <a
+              href={item.link}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-4 inline-flex text-sm font-semibold text-accent hover:underline"
+            >
+              {item.linkLabel} →
+            </a>
           )}
         </div>
       ))}
