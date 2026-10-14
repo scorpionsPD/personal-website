@@ -6,104 +6,104 @@ import { createMetadata } from "../../../../lib/seo";
 export const metadata = createMetadata({
   title: "AppDeploy | Pradeep Dahiya",
   description:
-    "ScotiTech product led and developed by me for internal application distribution without MDM dependency or private hosting.",
+    "ScotiTech product led and developed by me: Apple device management and private app distribution for iPhone, iPad and Mac, built on Apple Business.",
   path: "/products/appdeploy"
 });
 
 const metrics = [
   { value: "3", label: "Organisations", detail: "Across healthcare, finance, and gambling/private sectors" },
   { value: "50+", label: "App Deployments", detail: "Production deployments managed through the platform" },
-  { value: "Up to 80%", label: "Cost Reduction", detail: "Compared to traditional MDM deployment approaches" },
+  { value: "£1", label: "Per Device a Month", detail: "After the first 5 devices free, with every feature included" },
   { value: "100%", label: "Availability", detail: "Distribution platform uptime over 18 months" }
 ];
 
 const differentiation = [
   {
-    category: "vs. Traditional MDM",
-    ours: "No device enrollment required. Users maintain personal device privacy.",
-    theirs: "Requires full device control. Invasive for BYOD environments."
+    category: "vs. Separate Device and App Tools",
+    ours: "Device management, a branded app store and release controls in one workspace, at one per-device price.",
+    theirs: "Separate products and bills, with no shared view of devices and the apps on them."
   },
   {
     category: "vs. App Store Distribution",
-    ours: "Instant deployment. No review delays. Full control over app lifecycle.",
-    theirs: "Review delays. Limited to consumer apps. No enterprise governance."
+    ours: "Private and Custom Apps reach the right people with no public listing and no review delay.",
+    theirs: "Review delays, a public listing, and no control over who installs."
   },
   {
-    category: "vs. Manual Installation",
-    ours: "Automated distribution with entitlement management at scale.",
-    theirs: "Doesn't scale. Error-prone. No audit trail or access control."
+    category: "vs. Manual Device Setup",
+    ours: "Zero-touch setup: company devices configure themselves out of the box.",
+    theirs: "Hand-built devices, inconsistent settings, and no audit trail."
   },
   {
-    category: "vs. Private Hosting Solutions",
-    ours: "Turnkey platform. No infrastructure management required.",
-    theirs: "Requires DevOps expertise. Ongoing maintenance burden."
+    category: "vs. Spreadsheet Audits",
+    ours: "Owners, encryption, updates and daily history, ready for SOC 2 and ISO 27001 auditors and Vanta.",
+    theirs: "Evidence assembled by hand the week before the audit."
   }
 ];
 
 const technicalArchitecture = [
   {
-    layer: "Entitlement Layer",
-    description: "Organisational access control separated from device ownership. Users are entitled to apps based on role, not device status.",
-    technologies: ["Custom entitlement protocol", "Certificate-based identity", "Role-based access"]
+    layer: "Device Layer",
+    description: "Enrolment, configuration and remote actions for iPhone, iPad and Mac, from zero-touch setup to Return to Service.",
+    technologies: ["Apple MDM", "Declarative Device Management", "Automated Device Enrollment", "APNs"]
   },
   {
     layer: "Distribution Layer",
-    description: "Secure app delivery leveraging Apple Business Manager and custom APK hosting without requiring device enrollment.",
-    technologies: ["Apple Business Manager integration", "Private APK hosting", "CDN distribution"]
+    description: "Silent installs of Apple Business, Custom and App Store apps on company devices, plus a branded app store that needs no enrolment.",
+    technologies: ["Apple Business integration", "Apps and Books", "Branded app store", "Release Guard"]
   },
   {
     layer: "Security Layer",
-    description: "Enterprise-grade security without MDM dependency. Code signing, certificate pinning, and tamper detection.",
-    technologies: ["Code signing", "Certificate pinning", "Integrity verification"]
+    description: "Tenant isolation enforced by the database, sealed secrets, FileVault and Activation Lock codes held in escrow, and step-up or two-person approval for destructive actions.",
+    technologies: ["PostgreSQL row-level security", "AES-256-GCM", "Key escrow", "Step-up MFA"]
   },
   {
     layer: "Governance Layer",
-    description: "Complete audit trail and lifecycle management. Track who has access to what, when, and why.",
-    technologies: ["Audit logging", "Version management", "Access analytics"]
+    description: "Append-only audit trail, daily compliance history, an asset register and device evidence mapped to SOC 2, ISO 27001 and Cyber Essentials.",
+    technologies: ["Audit logging", "Compliance history", "Evidence Packs", "Vanta integration"]
   }
 ];
 
 const architectureOverview = [
   {
-    title: "Organisation Workspace",
-    description: "Admins publish internal apps, manage branding, and control which teams should receive access."
+    title: "Apple Business",
+    description: "Devices, apps and licences stay in Apple Business. AppDeploy syncs them on a schedule."
   },
   {
-    title: "Entitlement Control Layer",
-    description: "AppDeploy separates operational access from device ownership, enforcing who can install which app and when."
+    title: "Policy Layer",
+    description: "Admins set baselines, update deadlines and app access once, for every device."
   },
   {
-    title: "Secure Distribution Layer",
-    description: "iOS distribution uses Apple Business Manager while Android uses controlled APK delivery under organisational governance."
+    title: "Delivery Layer",
+    description: "Apps install silently on company devices, or through the branded app store with no enrolment."
   },
   {
-    title: "Employee Access",
-    description: "Employees receive the correct app through a branded portal with auditability and without full-device takeover."
+    title: "Evidence Layer",
+    description: "Every device reports its owner, health, encryption and updates, kept as daily history."
   }
 ];
 
 const architectureHighlights = [
-  "MDM-equivalent security for enterprise app distribution",
-  "Access rules are controlled by entitlements rather than device ownership",
-  "Audit trail across versions, installs, and organisational access decisions",
+  "Apple MDM and declarative management for iPhone, iPad and Mac",
+  "Row-level security on every tenant table, enforced by the database",
+  "FileVault recovery keys and Activation Lock codes held in escrow under their own keys",
   "Architecture led and developed by me through ScotiTech"
 ];
 
 const useCases = [
   {
-    sector: "Healthcare",
-    challenge: "Clinical staff use personal devices but hospital apps contain patient data. MDM is invasive; manual installs don't scale.",
-    solution: "AppDeploy enables secure distribution to personal devices without enrollment, maintaining HIPAA compliance through app-level controls."
+    sector: "Companies with Private Apps",
+    challenge: "Staff need internal apps on company and personal phones, and IT needs to know who has which version.",
+    solution: "A branded app store for any device, silent installs on company devices, and Release Guard checks on every new build."
   },
   {
-    sector: "Financial Services",
-    challenge: "Field advisors need mobile apps but resist MDM on personal phones. Compliance requires controlled distribution.",
-    solution: "Entitlement-based access lets advisors use personal devices while maintaining regulatory audit trails."
+    sector: "Startups",
+    challenge: "A growing team of Macs and iPhones, no IT person, and a SOC 2 or ISO 27001 audit on the way.",
+    solution: "Zero-touch setup, FileVault and update deadlines from day one, with device evidence sent straight to Vanta. Free for the first 5 devices."
   },
   {
-    sector: "Government & Public Sector",
-    challenge: "Mixed device environments with strict security requirements. Traditional MDM creates procurement and privacy barriers.",
-    solution: "Zero-enrollment distribution meets security requirements while respecting device ownership boundaries."
+    sector: "Agencies & Apple IT Firms",
+    challenge: "Clients need their apps and devices managed, but a heavy tool eats the margin.",
+    solution: "Refer clients to AppDeploy or resell it with your own support, from a free partner workspace."
   }
 ];
 
@@ -142,7 +142,7 @@ export default function AppDeployPage() {
         </div>
         <div className="flex items-center gap-4">
           <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent">
-            Mobile Distribution
+            Apple Devices &amp; Private Apps
           </span>
           <span className="text-xs font-semibold uppercase tracking-wider text-neutral-400">
             Production since 2024
@@ -162,7 +162,8 @@ export default function AppDeployPage() {
           AppDeploy
         </h1>
         <p className="text-xl text-neutral-600">
-          AppDeploy is a ScotiTech product led and developed by me for controlled internal app distribution.
+          AppDeploy is a ScotiTech product led and developed by me for Apple device management and
+          private app distribution across iPhone, iPad and Mac.
         </p>
       </section>
 
@@ -183,14 +184,13 @@ export default function AppDeployPage() {
           Technical Differentiation (USP)
         </p>
         <h2 className="font-display text-2xl text-neutral-950 mb-4">
-          First production implementation of zero-touch enterprise distribution
+          One workspace for Apple devices, private apps and release controls
         </h2>
         <p className="text-base leading-7 text-neutral-700">
-          Led and developed by me through ScotiTech, AppDeploy is the first production system to
-          achieve MDM-equivalent security for enterprise app distribution. The architecture leverages Apple Business Manager and custom distribution
-          protocols to separate device ownership from operational access, solving a fundamental
-          tension in BYOD environments where security and privacy have historically been in
-          conflict.
+          Led and developed by me through ScotiTech, AppDeploy brings device management, private app
+          distribution and release controls together on top of Apple Business. Organisations manage
+          iPhone, iPad and Mac, give staff their own branded app store, and keep audit-ready evidence of
+          every device and every release, from one console and at one per-device price.
         </p>
       </section>
 
@@ -201,24 +201,24 @@ export default function AppDeployPage() {
             The Problem
           </p>
           <h3 className="text-lg font-semibold text-neutral-900 mb-4">
-            Enterprise app distribution requires compromise
+            Apple devices and private apps take too many tools
           </h3>
           <ul className="space-y-3 text-sm text-neutral-600">
             <li className="flex gap-3">
               <span className="text-red-500">✗</span>
-              MDM requires invasive device control that users resist
+              Company devices are set up by hand, one at a time
             </li>
             <li className="flex gap-3">
               <span className="text-red-500">✗</span>
-              App stores don&apos;t support internal enterprise apps
+              Private apps reach staff through scattered links and codes
             </li>
             <li className="flex gap-3">
               <span className="text-red-500">✗</span>
-              Manual installation doesn&apos;t scale and lacks audit trails
+              Leavers keep devices, licences and access for too long
             </li>
             <li className="flex gap-3">
               <span className="text-red-500">✗</span>
-              Private hosting requires ongoing infrastructure management
+              Audit evidence lives in spreadsheets
             </li>
           </ul>
         </div>
@@ -227,24 +227,24 @@ export default function AppDeployPage() {
             The Solution
           </p>
           <h3 className="text-lg font-semibold text-neutral-900 mb-4">
-            Entitlement-led distribution architecture
+            One workspace on top of Apple Business
           </h3>
           <ul className="space-y-3 text-sm text-neutral-600">
             <li className="flex gap-3">
               <span className="text-accent">✓</span>
-              No device enrollment—users keep control of their devices
+              Zero-touch setup for iPhone, iPad and Mac through Apple Business
             </li>
             <li className="flex gap-3">
               <span className="text-accent">✓</span>
-              Full enterprise governance with role-based entitlements
+              A branded app store, with silent installs on company devices
             </li>
             <li className="flex gap-3">
               <span className="text-accent">✓</span>
-              Automated deployment with complete audit trail
+              Offboarding in one flow, with device secrets held in escrow
             </li>
             <li className="flex gap-3">
               <span className="text-accent">✓</span>
-              Turnkey platform—no infrastructure to manage
+              SOC 2, ISO 27001 and Cyber Essentials device evidence, sent to Vanta
             </li>
           </ul>
         </div>
@@ -261,8 +261,8 @@ export default function AppDeployPage() {
           </h2>
           <p className="max-w-3xl text-sm leading-7 text-neutral-600">
             This is the simplified production architecture behind AppDeploy. It focuses on the
-            control model that matters most: how organisations manage app access securely without
-            turning personal devices into fully managed endpoints.
+            control model that matters most: how organisations manage company Apple devices and
+            private apps from one place, and prove it afterwards.
           </p>
         </div>
 
@@ -384,7 +384,7 @@ export default function AppDeployPage() {
           Technology Stack
         </p>
         <div className="flex flex-wrap gap-3">
-          {["Swift", "Kotlin", "Apple Business Manager", "Certificate Pinning", "Custom CDN", "PostgreSQL", "Redis", "Docker"].map((tech) => (
+          {["Node.js", "React", "TypeScript", "PostgreSQL", "Redis", "Docker", "Apple MDM", "Declarative Device Management", "APNs", "Apple Business"].map((tech) => (
             <span key={tech} className="rounded-full bg-white border border-neutral-200 px-4 py-2 text-sm font-medium text-neutral-700">
               {tech}
             </span>
@@ -397,11 +397,12 @@ export default function AppDeployPage() {
           Product Access
         </p>
         <h3 className="text-lg font-semibold text-neutral-900 mb-4">
-          Live distribution platform
+          Live platform
         </h3>
         <p className="text-sm leading-7 text-neutral-600">
-          AppDeploy is available as a live platform for organisations that need controlled internal
-          application distribution without relying on device enrollment or public app store workflows.
+          AppDeploy is live for organisations that manage company iPhones, iPads and Macs or distribute
+          private apps. The first 5 devices are free, then £1 per device a month with every feature
+          included; a branded app store with release controls is £29 a month.
         </p>
         <div className="mt-6 flex flex-wrap gap-4">
           <ExternalLinkButton

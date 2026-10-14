@@ -2,6 +2,20 @@ import { createMetadata } from "../../../lib/seo";
 
 const innovations = [
   {
+    category: "Device Management",
+    title: "One Control Layer for Apple Devices, Private Apps and Audit Evidence",
+    year: "2026",
+    problem:
+      "Growing companies run Apple devices, private apps and audit evidence through separate tools, so every joiner, leaver, release and audit repeats manual work.",
+    innovation:
+      "Extended AppDeploy into full device management for iPhone, iPad and Mac on Apple MDM and declarative management, sharing one workspace, one permission model and one audit trail with the branded app store and release controls.",
+    technicalBreakthrough:
+      "Device state, app state and evidence live in one tenant-isolated model, so the same record drives zero-touch setup, silent installs, one-flow offboarding and the compliance history an auditor reads.",
+    impact:
+      "Live in AppDeploy: zero-touch setup, security baselines, FileVault and Activation Lock escrow, SOC 2, ISO 27001 and Cyber Essentials device evidence and a Vanta integration, at £1 per device after the first 5 free.",
+    technologies: ["Apple MDM", "Declarative Device Management", "PostgreSQL row-level security", "Key escrow", "Vanta API"]
+  },
+  {
     category: "Mobile Distribution",
     title: "Entitlement-Led Private App Distribution",
     year: "2024",

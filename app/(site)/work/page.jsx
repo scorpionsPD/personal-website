@@ -5,10 +5,10 @@ const products = [
   {
     title: "AppDeploy",
     slug: "appdeploy",
-    summary: "Private app distribution built around Apple Business, with optional remote deployment",
-    category: "Mobile Distribution",
+    summary: "Apple device management and private app distribution, built on Apple Business",
+    category: "Devices & Distribution",
     description:
-      "ScotiTech product led and developed by me — a branded distribution workspace built around Apple Business, with optional silent deployment to enrolled devices.",
+      "ScotiTech product led and developed by me: one workspace to manage iPhone, iPad and Mac, deliver private apps through a branded app store, and keep audit-ready device evidence.",
     metrics: {
       customerWorkspaces: "2 active",
       appsInstalled: "450+",
@@ -17,17 +17,17 @@ const products = [
     },
     casestudy: {
       dependency:
-        "Internal mobile apps were delivered through app stores, MDM policies, or manual installs, all of which depend on external control and device ownership.",
+        "Companies ran their Apple devices, private apps and audit evidence through separate tools, manual set-up and spreadsheets.",
       breaks:
-        "Organisations invest in internal applications to control operations, yet depend on external distribution systems that introduce fragility.",
+        "Every joiner, leaver, release and audit meant repeating manual work across those tools, with no single record of what each device had.",
       system:
-        "Led and developed by me through ScotiTech, AppDeploy creates a controlled entitlement layer between the organisation and its applications — separating device ownership from operational access and restoring governance over distribution.",
+        "Led and developed by me through ScotiTech, AppDeploy puts device management, private app distribution and release controls on top of Apple Business, in one workspace at one per-device price.",
       outcome:
-        "Teams gain predictable app deployment with full governance control and minimal user friction, enabling operational continuity across the organisation."
+        "Devices set themselves up, apps reach the right people, leavers are offboarded in one flow, and every device and release leaves evidence an auditor can check."
     },
-    innovation: "Entitlement-led distribution architecture with full organisational control",
+    innovation: "One control layer for Apple devices, private apps and audit evidence",
     usp:
-      "Controlled app rollout without a full device-management suite.",
+      "Device management, a branded app store and compliance evidence at one per-device price.",
     logo: "/images/products/AppdeployLogoBlack.png"
   },
   {

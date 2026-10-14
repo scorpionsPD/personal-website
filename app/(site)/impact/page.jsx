@@ -95,6 +95,14 @@ const publicContribution = professionalImpact.slice(4);
 
 const builtAndShipped = [
   {
+    year: "2026",
+    title: "AppDeploy: Apple device management and private app distribution in one workspace",
+    detail:
+      "Extended AppDeploy from private app distribution into full device management for iPhone, iPad and Mac: zero-touch setup, security baselines, FileVault and Activation Lock escrow, SOC 2, ISO 27001 and Cyber Essentials device evidence, Vanta integration and one-flow offboarding, at £1 per device after the first 5 free.",
+    link: "https://appdeploy.scotitech.com",
+    linkLabel: "Visit AppDeploy"
+  },
+  {
     year: "2025",
     title: "AppDeploy: Internal application distribution without MDM dependency or private hosting",
     detail:

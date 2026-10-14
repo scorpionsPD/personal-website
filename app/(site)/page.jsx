@@ -23,8 +23,8 @@ const featuredWork = [
   {
     title: "AppDeploy",
     slug: "appdeploy",
-    focus: "Access-Controlled Mobile Distribution",
-    result: "AppDeploy is a ScotiTech product led and developed by me. It keeps organisations operational when traditional app distribution fails by providing a controlled internal distribution layer where organisations retain direct authority over access, availability, and lifecycle of their applications.",
+    focus: "Apple Device Management & Private Apps",
+    result: "AppDeploy is a ScotiTech product led and developed by me. It gives organisations one workspace to manage iPhone, iPad and Mac, deliver private apps through their own branded app store, and keep audit-ready evidence of every device and release.",
     logo: "/images/products/AppdeployLogoBlack.png"
   },
   {
