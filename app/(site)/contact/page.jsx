@@ -1,147 +1,89 @@
+import { ButtonLink, Container, PageIntro } from "../../../components/ui";
+import { person, products } from "../../../lib/site";
 import { createMetadata } from "../../../lib/seo";
 
-const collaborationAreas = [
+const reasons = [
   {
-    title: "Speaking Engagements",
-    description:
-      "Talks and panels on platform architecture, privacy-first AI, and operational systems.",
-    topics: [
-      "Privacy-First AI Architectures",
-      "Private App Distribution (Apple Business)",
-      "Self-Hosted Platform Design",
-      "Building for Regulated Environments"
-    ]
+    title: "Speaking and events",
+    body: "Talks and panels on private AI, Apple device management, app distribution and building a product company."
   },
   {
-    title: "Technical Advisory",
-    description:
-      "Architecture reviews, platform strategy, and delivery planning for teams building internal systems or moving off SaaS.",
-    areas: [
-      "Platform Architecture Design",
-      "Security & Compliance Strategy",
-      "Migration Planning & Execution",
-      "Technical Due Diligence"
-    ]
+    title: "Advice and reviews",
+    body: "Architecture reviews and product strategy for teams building internal systems or bringing work in-house."
   },
   {
-    title: "Innovation Partnerships",
-    description:
-      "Hands‑on collaboration on platforms for teams facing complex operational or compliance challenges.",
-    focus: [
-      "Regulated Industry Solutions",
-      "Privacy-Preserving AI Systems",
-      "Custom Distribution Platforms",
-      "Governance-First Architecture"
-    ]
+    title: "Partnerships",
+    body: "Working together on products for teams with real operational or compliance constraints."
   },
   {
-    title: "Mentoring & Training",
-    description:
-      "Support for engineering leaders and technical founders through reviews, workshops, and guidance.",
-    offerings: [
-      "1:1 Architecture Mentoring",
-      "Team Workshops & Training",
-      "Code & Design Reviews",
-      "Platform Strategy Sessions"
-    ]
+    title: "Mentoring",
+    body: "Support for technical founders and engineering leads: reviews, workshops and one-to-one guidance."
   }
 ];
 
 export const metadata = createMetadata({
   title: "Contact | Pradeep Dahiya",
   description:
-    "Professional contact for Pradeep Dahiya, technology architect and founder building operational software platforms.",
+    "Get in touch with Pradeep Dahiya, founder of ScotiTech, about speaking, advice, partnerships or mentoring.",
   path: "/contact"
 });
 
 export default function ContactPage() {
   return (
-    <div className="flex flex-col gap-16">
-      <section className="flex flex-col gap-6">
-        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
-          Contact
-        </p>
-        <h1 className="font-display text-4xl text-neutral-950 md:text-5xl">
-          Let&apos;s discuss what you&apos;re building.
-        </h1>
-        <p className="text-base leading-7 text-neutral-600 md:text-lg">
-          Open to speaking, advisory work, partnerships, and mentoring.
-        </p>
-      </section>
-
-      <section className="flex flex-col gap-8">
-        <div className="flex flex-col gap-2">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
-            Collaboration Areas
-          </p>
-          <h2 className="font-display text-3xl text-neutral-950">
-            Ways we can work together.
-          </h2>
+    <>
+      <PageIntro
+        eyebrow="Contact"
+        title="Let's talk."
+        lead="Open to speaking, advice, partnerships and mentoring. Email is the quickest way to reach me."
+      >
+        <div className="mt-9 flex flex-wrap gap-3">
+          <ButtonLink href={`mailto:${person.email}`}>{person.email}</ButtonLink>
+          <ButtonLink href={person.linkedin} variant="secondary">
+            LinkedIn ↗
+          </ButtonLink>
         </div>
-        <div className="grid gap-6 md:grid-cols-2">
-          {collaborationAreas.map((area) => (
-            <div
-              key={area.title}
-              className="rounded-2xl border border-neutral-200 bg-neutral-50 p-6"
-            >
-              <h3 className="text-lg font-semibold text-neutral-900">{area.title}</h3>
-              <p className="mt-3 text-sm leading-6 text-neutral-600">{area.description}</p>
-              <div className="mt-4 flex flex-col gap-2">
-                {(area.topics || area.areas || area.focus || area.offerings).map((item) => (
-                  <div key={item} className="flex items-start gap-2">
-                    <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-accent"></span>
-                    <span className="text-xs text-neutral-600">{item}</span>
-                  </div>
-                ))}
+        <p className="mt-5 text-[15px] text-muted">I usually reply within two to three working days.</p>
+      </PageIntro>
+
+      <section className="border-t border-line bg-surface py-20 md:py-24">
+        <Container>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {reasons.map((item) => (
+              <div key={item.title} className="rounded-[22px] border border-line bg-canvas p-6">
+                <h2 className="text-[18px] font-semibold text-strong">{item.title}</h2>
+                <p className="mt-2 text-[15px] leading-6">{item.body}</p>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
 
-      <section className="rounded-3xl border border-neutral-200 bg-white p-10">
-        <div className="grid gap-8 md:grid-cols-2">
-          <div className="flex flex-col gap-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-400">
-              Email
-            </p>
-            <a
-              href="mailto:pradeepdahiya@hotmail.com"
-              className="inline-flex text-lg font-semibold text-accent hover:underline"
-            >
-              pradeepdahiya@hotmail.com
-            </a>
-            <p className="text-sm leading-7 text-neutral-600">
-              I typically respond within 2–3 business days with next steps.
-            </p>
-            <div className="pt-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-400">
-                LinkedIn
+          <div className="mt-14 grid gap-10 md:grid-cols-2">
+            <div>
+              <p className="text-[13px] font-semibold uppercase tracking-[0.12em] text-muted">Helpful to include</p>
+              <ul className="mt-4 space-y-2.5 text-[16px]">
+                <li>Your organisation and role</li>
+                <li>What you would like to work on together</li>
+                <li>A little context on the challenge or opportunity</li>
+                <li>Your timeline and any constraints</li>
+              </ul>
+            </div>
+            <div>
+              <p className="text-[13px] font-semibold uppercase tracking-[0.12em] text-muted">About a product?</p>
+              <p className="mt-4 text-[16px] leading-7">
+                For a demo, pricing or support, the product teams are the fastest route:
               </p>
-              <a
-                href="https://www.linkedin.com/in/pradeepkumar2411/"
-                target="_blank"
-                rel="noreferrer"
-                className="mt-2 inline-flex text-sm font-semibold text-accent hover:underline"
-              >
-                View professional profile →
-              </a>
+              <ul className="mt-3 space-y-2 text-[16px]">
+                {products.map((product) => (
+                  <li key={product.id}>
+                    <a href={product.url} className="font-medium text-brand hover:text-brand-strong">
+                      {product.name}: {product.urlLabel} ↗
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
-          <div className="flex flex-col gap-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-400">
-              What to Include
-            </p>
-            <div className="flex flex-col gap-2 text-sm text-neutral-600">
-              <p>• Your organization and role</p>
-              <p>• Type of collaboration you&apos;re interested in</p>
-              <p>• Brief context on your challenge or opportunity</p>
-              <p>• Timeline and any specific constraints</p>
-            </div>
-          </div>
-        </div>
+        </Container>
       </section>
-
-    </div>
+    </>
   );
 }

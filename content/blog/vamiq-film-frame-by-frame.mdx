@@ -1,0 +1,59 @@
+---
+title: "We built a film engine to make a 75-second film"
+description: "Vamiq's launch film has no video editor behind it. Every frame is a web page, rendered on a Mac with nothing to install."
+date: "2026-10-22"
+type: "story"
+kicker: "Craft"
+order: 1
+image: "/images/stories/film-app-store-devices-1600.webp"
+imageAlt: "A frame from the Vamiq film: a branded company app store on an iPad and an iPhone, in a sample workspace"
+---
+
+Every frame of Vamiq's launch film is a web page.
+
+There is no video editor behind it, no motion template and no screen recording. A small engine opens each scene in a browser that nobody sees, moves time forward by one thirtieth of a second, takes a picture and hands it straight to the video encoder. It does that 2,250 times for 75 seconds of film.
+
+## The first attempt was a slideshow
+
+Our first marketing videos were what most small teams make: screenshots, captions, a synthetic voice and some music. They were accurate, and they were clearly slideshows.
+
+I had a different standard in my head. I wanted a calm film on a warm canvas, with large serif lines, real product screens floating in soft light, and slow camera moves that give you time to read what is on screen.
+
+You cannot get there by recording your screen. Screen recordings jitter and cursors wander. The moment you want the camera to push in slowly over a table of devices, you are fighting the recording instead of directing it.
+
+## Every scene is a web page
+
+So we turned the problem around. Each scene is an ordinary HTML page, built from the product's real screens in a sample workspace. A short timeline script describes everything that moves:
+
+- when a title fades in, word by word;
+- where the camera pushes in, and how fast;
+- when the cursor clicks, and what gets typed into a field;
+- when a status changes from *Queued* to *Installed (confirmed)*;
+- when a highlight sweeps across a row.
+
+The timeline is the single source of truth, so the film is deterministic. Render it twice and you get the same frames. Render only seconds 12 to 18 and they match the full film exactly, music included.
+
+![A chapter line from the Vamiq film: "Check each release before it ships"](/images/stories/film-chapter-line-1600.webp)
+
+## The renderer
+
+The renderer is a small Swift command-line tool. It steps through the timeline one frame at a time in an off-screen WebKit view, and feeds each frame directly into Apple's H.264 or HEVC encoder. No frame is ever written to disk.
+
+A few details made the difference:
+
+- **Supersampling.** Each frame is painted at 3840 × 2160 and scaled down to 1080p, so small interface text stays sharp.
+- **No banding.** The scale-down runs at 16 bits per channel and is dithered to 8, so the soft gradients of the canvas stay smooth instead of breaking into stripes.
+- **Sound that sits right.** The music bed is built for the whole film and levelled to −14 LUFS, so even a partial render lines up with the music.
+- **Checks on the output.** The tool scans the finished film for flicker and stalls, and a text-recognition pass reads the words on sampled frames, so a typo or a stray label cannot hide in a single frame.
+
+It uses only what ships with macOS and Xcode: Swift, WebKit, AVFoundation, Core Graphics and Accelerate. There was nothing to install, and it all runs on a Mac.
+
+![A frame from the Vamiq film: one app installing across a team's devices](/images/stories/film-deployment-table-1600.webp)
+
+## What came out
+
+The result is *Vamiq in 75 seconds*. Each release is checked before it ships, released to the right team, published in the company's own branded app store and ready on a new starter's iPhone. It has music and no narration. The same engine made the 14-second loop at the top of the vamiq.app home page.
+
+Because a scene is just a web page, changing the film is as easy as changing a website. When we tightened the labels across the site on 21 October, the new cut of the film was ready the same day.
+
+You can watch it at [vamiq.app/film](https://vamiq.app/film).

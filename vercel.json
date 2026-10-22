@@ -1,0 +1,89 @@
+{
+  "redirects": [
+    {
+      "source": "/products/elderconnect-plus",
+      "destination": "/work",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/elderconnect-plus/:path*",
+      "destination": "/work",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/appdeploy",
+      "destination": "/products/vamiq",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/appdeploy/:path*",
+      "destination": "/products/vamiq",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/scotitech-workspace",
+      "destination": "/products/axos",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/scotitech-workspace/:path*",
+      "destination": "/products/axos",
+      "statusCode": 301
+    },
+    {
+      "source": "/products",
+      "destination": "/work",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/",
+      "destination": "/work",
+      "statusCode": 301
+    },
+    {
+      "source": "/innovations",
+      "destination": "/work",
+      "statusCode": 301
+    },
+    {
+      "source": "/innovations/:path*",
+      "destination": "/work",
+      "statusCode": 301
+    },
+    {
+      "source": "/speaking",
+      "destination": "/impact",
+      "statusCode": 301
+    },
+    {
+      "source": "/speaking/:path*",
+      "destination": "/impact",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/software-for-ageing-populations",
+      "destination": "/blog",
+      "statusCode": 301
+    }
+  ],
+  "headers": [
+    {
+      "source": "/media/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/og/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        }
+      ]
+    }
+  ]
+}

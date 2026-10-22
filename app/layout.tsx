@@ -1,26 +1,14 @@
 import "./globals.css";
 import type { ReactNode } from "react";
-import Link from "next/link";
-import { Inter, Source_Serif_4 } from "next/font/google";
 import Header from "../components/Header";
-import { createMetadata, personJsonLd, siteUrl, websiteJsonLd } from "../lib/seo";
-
-const display = Source_Serif_4({
-  subsets: ["latin"],
-  variable: "--font-display"
-});
-
-const body = Inter({
-  subsets: ["latin"],
-  variable: "--font-body"
-});
+import Footer from "../components/Footer";
+import { createMetadata, personJsonLd, SITE_DESCRIPTION, siteUrl, websiteJsonLd } from "../lib/seo";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
   ...createMetadata({
-    title: "Pradeep Dahiya | Systems Architect",
-    description:
-      "Operational software platforms, private infrastructure, and AI systems built for reliability and control."
+    title: "Pradeep Dahiya | Founder of ScotiTech, building Vamiq, OnQ and AXOS",
+    description: SITE_DESCRIPTION
   }),
   applicationName: "Pradeep Dahiya",
   authors: [{ name: "Pradeep Dahiya", url: siteUrl }],
@@ -28,48 +16,43 @@ export const metadata = {
   publisher: "Pradeep Dahiya",
   keywords: [
     "Pradeep Dahiya",
-    "AI governance",
-    "systems architect",
-    "regulated AI",
-    "private AI infrastructure",
-    "operational software",
     "ScotiTech",
-    "Vamiq"
+    "Vamiq",
+    "OnQ",
+    "AXOS",
+    "Apple device management",
+    "private app store",
+    "private AI"
   ],
   category: "technology"
+};
+
+export const viewport = {
+  themeColor: "#f4f2ec"
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   const structuredData = [personJsonLd(), websiteJsonLd()];
 
   return (
-    <html lang="en" className={`${display.variable} ${body.variable}`}>
-      <body className="bg-[#f7f7f5] text-[#1c1c1c]">
+    <html lang="en-GB">
+      <body className="bg-canvas text-body">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
-        <div className="min-h-screen bg-[#f7f7f5]">
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-ink focus:px-4 focus:py-2 focus:text-on-ink"
+        >
+          Skip to content
+        </a>
+        <div className="flex min-h-screen flex-col">
           <Header />
-
-          <main className="mx-auto flex w-full max-w-[840px] flex-1 flex-col px-6 py-24">
+          <main id="main" className="flex-1">
             {children}
           </main>
-
-          <footer className="border-t border-[#e6e6e3] bg-[#f7f7f5]">
-            <div className="mx-auto flex max-w-[840px] flex-col gap-4 px-6 py-6 text-xs text-[#6b6b6b] md:flex-row md:items-center md:justify-between">
-              <p>Solving operational complexity through thoughtful systems design.</p>
-              <div className="flex flex-wrap items-center gap-4">
-                <Link href="/privacy-policy" className="transition hover:text-[#1c1c1c]">
-                  Privacy Policy
-                </Link>
-                <Link href="/cookie-policy" className="transition hover:text-[#1c1c1c]">
-                  Cookie Policy
-                </Link>
-                <p>© 2026</p>
-              </div>
-            </div>
-          </footer>
+          <Footer />
         </div>
       </body>
     </html>

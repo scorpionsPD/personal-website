@@ -1,220 +1,163 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Container, PageIntro, ProductFrame, SectionHeading, TextLink } from "../../../components/ui";
+import { openSource, products, vamiqMedia } from "../../../lib/site";
 import { createMetadata } from "../../../lib/seo";
-
-const products = [
-  {
-    title: "Vamiq",
-    slug: "appdeploy",
-    summary: "Apple device management and private app distribution, built on Apple Business",
-    category: "Devices & Distribution",
-    description:
-      "ScotiTech product led and developed by me: one workspace to manage iPhone, iPad and Mac, deliver private apps through a branded app store, and keep audit-ready device evidence.",
-    metrics: {
-      customerWorkspaces: "2 active",
-      appsInstalled: "450+",
-      devicesReached: "300+",
-      availabilitySLO: "99.9%"
-    },
-    casestudy: {
-      dependency:
-        "Companies ran their Apple devices, private apps and audit evidence through separate tools, manual set-up and spreadsheets.",
-      breaks:
-        "Every joiner, leaver, release and audit meant repeating manual work across those tools, with no single record of what each device had.",
-      system:
-        "Led and developed by me through ScotiTech, Vamiq puts device management, private app distribution and release controls on top of Apple Business, in one workspace, with separate device and Distribution plans.",
-      outcome:
-        "Devices set themselves up, apps reach the right people, leavers are offboarded in one flow, and every device and release leaves evidence an auditor can check."
-    },
-    innovation: "One control layer for Apple devices, private apps and audit evidence",
-    usp:
-      "Device management, a branded app store and release evidence in one workspace.",
-    logo: "/images/products/vamiq-logo.png"
-  },
-  {
-    title: "AXOS - Private AI Workspace",
-    slug: "scotitech-workspace",
-    summary: "A private AI workspace for regulated organisations",
-    category: "AI Architecture",
-    description:
-      "ScotiTech product led and developed by me, enabling local AI execution with complete data sovereignty for compliance-bound teams.",
-    metrics: {
-      currentStage: "Private evaluation",
-      deployment: "Self-hosted, enterprise-only",
-      dataSovereignty: "100% on-premise processing",
-      governance: "Published DPA & Trust Centre"
-    },
-    casestudy: {
-      dependency:
-        "Institutional knowledge lives inside SaaS tools and external AI platforms that organisations do not control.",
-      breaks:
-        "Teams are forced to push confidential documents into external SaaS and AI tools to get value, which trains third-party models and compromises data control. Critical knowledge leaves the organisation instead of staying on-premise.",
-      system:
-        "Led and developed by me through ScotiTech, AXOS creates a self‑controlled environment where communication, documents, and knowledge remain under organisational ownership. AI runs inside infrastructure boundaries rather than outside them.",
-      outcome:
-        "Knowledge remains continuously accessible under organisational control, with AI assistance running on internal infrastructure. AI becomes a capability teams control, integrated into operations."
-    },
-    innovation: "Secure local AI execution with complete data sovereignty",
-    usp:
-      "Governance-first architecture combining local inference, workflow controls, and auditability for regulated AI adoption.",
-    logo: "/images/products/AXOS.png"
-  },
-  {
-    title: "ElderConnect+",
-    slug: "elderconnect-plus",
-    summary: "Community-focused digital support for independent living",
-    category: "Care Technology",
-    description:
-      "Community-focused coordination platform helping family networks support older adults through lightweight, predictable interactions.",
-    metrics: {
-      users: "15+ active family networks",
-      checkIns: "200+ coordinated check-ins",
-      coordination: "Faster issue resolution",
-      engagement: "Sustained family engagement"
-    },
-    casestudy: {
-      dependency:
-        "Everyday support for older adults depends on informal, inconsistent coordination between family, neighbours, and helpers.",
-      breaks:
-        "Small needs are missed, check‑ins are irregular, and help becomes unreliable, especially after gaps in use or when people are distributed across locations.",
-      system:
-        "ElderConnect+ provides a shared, low‑friction layer for requests and acknowledgements, keeping interactions explicit and predictable without forcing users into complex workflows.",
-      outcome:
-        "Routine support becomes easier to organise, issues surface earlier, and users maintain confidence in daily life as support networks gain structure and reliability."
-    },
-    innovation: "Applied social innovation through lightweight, reliable care coordination",
-    usp:
-      "Coordinated, low-friction support through lightweight shared visibility, replacing informal coordination with structured, predictable interactions.",
-    logo: "/images/products/brand-logo.PNG"
-  }
-];
 
 export const metadata = createMetadata({
   title: "Work | Pradeep Dahiya",
   description:
-    "Original platforms built by a technology architect and founder, designed for reliability, control, and long-term operations.",
+    "What Pradeep Dahiya builds at ScotiTech: Vamiq for Apple devices and private apps, OnQ for live queues and AXOS, a private AI workspace.",
   path: "/work"
 });
 
+const visuals = {
+  vamiq: {
+    label: "vamiq.app",
+    src: vamiqMedia.poster.src,
+    width: vamiqMedia.poster.width,
+    height: vamiqMedia.poster.height,
+    alt: vamiqMedia.poster.alt
+  },
+  onq: {
+    src: "/images/onq/onq-poster-1200.webp",
+    width: 1200,
+    height: 1697,
+    alt: "The OnQ counter poster with App Store and Google Play download codes"
+  },
+  axos: {
+    label: "AXOS Workspace",
+    src: "/images/axos/axos-workspace-1200.webp",
+    width: 1200,
+    height: 772,
+    alt: "The AXOS workspace: mail, drive, calendar, chat, video, tasks and contacts in one place"
+  }
+};
+
+const principles = [
+  {
+    title: "Software should survive operations, not demos.",
+    body: "A demo measures what is possible. Months of real use measure whether it is right."
+  },
+  {
+    title: "Constraints are the design.",
+    body: "Compliance rules, ownership and deployment boundaries are not obstacles. They decide the architecture."
+  },
+  {
+    title: "Good systems remove decisions.",
+    body: "If people have to keep managing the software, the software is not finished."
+  }
+];
+
 export default function WorkPage() {
   return (
-    <div className="flex flex-col gap-16">
-      <section className="flex flex-col gap-6">
-        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
-          Work
-        </p>
-        <h1 className="font-display text-4xl text-neutral-950 md:text-5xl">
-          Original work built for reliability, control, and long-term use
-        </h1>
-        <p className="text-base leading-7 text-neutral-600 md:text-lg">
-          This page is the core product work on the site. Each platform grew out of a real
-          operational constraint rather than a portfolio exercise: mixed device ownership,
-          regulated AI adoption, or fragile community coordination. The emphasis is practical
-          systems architecture, technical differentiation, and production reliability.
-        </p>
+    <>
+      <PageIntro
+        eyebrow="Work"
+        title="Products I build, and why."
+        lead="Each product grew out of a real problem I kept seeing: companies losing control of their devices and apps, organisations sending their work to someone else's AI, and people losing their evenings to a queue."
+      />
+
+      <section className="pb-8">
+        <Container className="space-y-6">
+          {products.map((product, index) => {
+            const visual = visuals[product.id];
+            const portrait = visual.height > visual.width;
+            return (
+              <article
+                key={product.id}
+                className="grid overflow-hidden rounded-[26px] border border-line bg-surface md:grid-cols-2"
+              >
+                <div className={`flex flex-col p-8 md:p-12 ${index % 2 === 1 ? "md:order-2" : ""}`}>
+                  <div className="flex items-center gap-3">
+                    <Image
+                      src={product.logo}
+                      alt=""
+                      width={44}
+                      height={44}
+                      className="h-11 w-11 rounded-[11px] bg-canvas p-0.5"
+                    />
+                    <div>
+                      <h2 className="text-[21px] font-semibold text-strong">{product.name}</h2>
+                      <p className="text-[14px] text-muted">{product.kind}</p>
+                    </div>
+                  </div>
+                  <p className="mt-8 font-display text-[28px] leading-[1.15] text-strong md:text-[34px]">
+                    {product.line}
+                  </p>
+                  <p className="mt-4 text-[17px] leading-7">{product.summary}</p>
+                  <div className="mt-auto flex flex-wrap gap-x-6 gap-y-3 pt-8">
+                    <TextLink href={product.href}>About {product.name}</TextLink>
+                    <TextLink href={product.url}>{product.urlLabel}</TextLink>
+                  </div>
+                </div>
+                <div
+                  className={`flex items-end justify-center bg-canvas ${
+                    portrait ? "px-10 pt-10" : "pl-8 pt-10 md:pl-12 md:pt-12"
+                  } ${index % 2 === 1 ? "md:order-1" : ""}`}
+                >
+                  {portrait ? (
+                    <div className="w-full max-w-[300px] overflow-hidden rounded-t-[16px] border border-b-0 border-line shadow-card">
+                      <Image
+                        src={visual.src}
+                        width={visual.width}
+                        height={visual.height}
+                        alt={visual.alt}
+                        className="h-[340px] w-full object-cover object-top"
+                      />
+                    </div>
+                  ) : (
+                    <ProductFrame label={visual.label} className="w-full rounded-b-none rounded-r-none border-b-0 border-r-0">
+                      <Image src={visual.src} width={visual.width} height={visual.height} alt={visual.alt} className="h-auto w-full" />
+                    </ProductFrame>
+                  )}
+                </div>
+              </article>
+            );
+          })}
+        </Container>
       </section>
 
-      <section className="flex flex-col gap-12">
-        {products.map((item, index) => (
-          <article
-            key={item.title}
-            className="border-b border-neutral-200 pb-12"
-          >
-            <div className="flex flex-col gap-3 mb-8">
-              {item.logo && (
-                <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl p-2">
-                  <Image
-                    src={item.logo}
-                    alt={`${item.title} logo`}
-                    width={48}
-                    height={48}
-                    className="h-auto w-full object-contain"
-                  />
-                </div>
-              )}
-              <div className="flex items-center gap-4">
-                <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-accent">
-                  {item.category}
-                </span>
-              </div>
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-400">
-                {(index + 1).toString().padStart(2, "0")} — {item.title}
-              </p>
-              <h2 className="font-display text-3xl text-neutral-950">{item.summary}</h2>
-              <p className="text-sm leading-7 text-neutral-600">{item.description}</p>
-              <p className="text-sm font-semibold text-accent">{item.innovation}</p>
-            </div>
-
-            <div className="mb-8 rounded-xl border-l-4 border-accent bg-accent/5 p-4">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-neutral-500">
-                Technical Differentiation
-              </p>
-              <p className="text-sm text-neutral-700">{item.usp}</p>
-            </div>
-
-            {/* Adoption Metrics */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-              {Object.entries(item.metrics).map(([key, value]) => (
-                <div key={key} className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
-                  <p className="text-lg font-semibold text-accent">{value}</p>
-                  <p className="text-xs text-neutral-500 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</p>
-                </div>
+      <section className="py-20 md:py-28">
+        <Container className="grid gap-14 md:grid-cols-2 md:gap-16">
+          <div>
+            <SectionHeading eyebrow="How I build" title="Three rules I keep coming back to." />
+            <ul className="mt-8 divide-y divide-line border-y border-line">
+              {principles.map((item) => (
+                <li key={item.title} className="py-5">
+                  <p className="font-display text-[22px] leading-snug text-strong">{item.title}</p>
+                  <p className="mt-2 text-[16px] leading-7">{item.body}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <SectionHeading eyebrow="Open source" title="Code anyone can read." />
+            <div className="mt-8 space-y-4">
+              {openSource.map((item) => (
+                <a
+                  key={item.title}
+                  href={item.link}
+                  className="group block rounded-[22px] border border-line bg-surface p-6 transition hover:shadow-soft"
+                >
+                  <p className="text-[18px] font-semibold text-strong group-hover:text-brand-strong">
+                    {item.title} <span aria-hidden="true" className="text-brand">↗</span>
+                  </p>
+                  <p className="mt-2 text-[16px] leading-7">{item.detail}</p>
+                  <p className="mt-3 text-[13px] text-muted">{item.link.replace("https://", "")}</p>
+                </a>
               ))}
             </div>
-
-            <details className="text-sm text-neutral-600">
-              <summary className="cursor-pointer text-xs font-semibold uppercase tracking-[0.2em] text-accent mb-6">
-              View case study
-            </summary>
-
-              <div className="mt-6 space-y-8">
-                <div className="border-l-2 border-neutral-200 pl-6">
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500 mb-2">
-                    1. The Fragile Dependency
-                  </p>
-                  <p className="text-sm leading-7 text-neutral-700">
-                    {item.casestudy.dependency}
-                  </p>
-                </div>
-
-                <div className="border-l-2 border-neutral-200 pl-6">
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500 mb-2">
-                    2. What Breaks in Real Life
-                  </p>
-                  <p className="text-sm leading-7 text-neutral-700">
-                    {item.casestudy.breaks}
-                  </p>
-                </div>
-
-                <div className="border-l-2 border-neutral-200 pl-6">
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-neutral-500 mb-2">
-                    3. System Architecture
-                  </p>
-                  <p className="text-sm leading-7 text-neutral-700">
-                    {item.casestudy.system}
-                  </p>
-                </div>
-
-                <div className="border-l-2 border-accent pl-6 bg-neutral-50/50 py-4 -mx-6 px-6">
-                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent mb-2">
-                    4. Operational Outcome
-                  </p>
-                  <p className="text-sm leading-7 text-neutral-800 font-medium">
-                    {item.casestudy.outcome}
-                  </p>
-                </div>
-
-              </div>
-            </details>
-
-            <a
-              href={`/products/${item.slug}`} 
-              className="mt-6 inline-flex text-sm font-semibold text-accent hover:underline"
-            >
-              View full product details →
-            </a>
-          </article>
-        ))}
+            <p className="mt-8 text-[16px] leading-7">
+              Want the story behind the work? Read the{" "}
+              <Link href="/blog" className="font-medium text-brand underline underline-offset-4">
+                stories from the build
+              </Link>
+              .
+            </p>
+          </div>
+        </Container>
       </section>
-    </div>
+    </>
   );
 }

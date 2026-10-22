@@ -6,7 +6,7 @@ date: "2026-02-08"
 
 Enterprise mobile app distribution traditionally requires Mobile Device Management (MDM), which demands full device enrollment and control. This creates privacy concerns, deployment friction, and user resistance—especially in BYOD environments.
 
-Over the past two years, I've architected and deployed an approach where self-service installs need no device enrolment at all, and silent deployment is an optional, per-device add-on. This system now runs in production as AppDeploy, with 450+ apps installed across 300+ devices in active customer workspaces.
+Over the past two years, I've architected and deployed an approach where self-service installs need no device enrolment at all, and silent deployment is an optional, per-device add-on. This approach now runs in production as Vamiq (formerly AppDeploy).
 
 ## The Core Challenge
 
@@ -97,9 +97,9 @@ That is especially visible in mixed-device environments:
 
 The architecture has to separate app entitlement from device ownership. That is the core shift.
 
-## Where AppDeploy fits
+## Where Vamiq fits
 
-This is the problem space behind [AppDeploy](/products/appdeploy). The goal is not to replace every MDM use case. The goal is to give organisations a controlled internal distribution layer when full device management is not appropriate.
+This is the problem space behind [Vamiq](/products/vamiq) (formerly AppDeploy). The goal is not to replace every MDM use case. The goal is to give organisations a controlled internal distribution layer when full device management is not appropriate.
 
 The useful pattern is entitlement-led distribution:
 
@@ -113,7 +113,7 @@ For many organisations, that is the difference between having internal apps and 
 
 ## Evidence from practice
 
-I built AppDeploy around this problem because internal app distribution often becomes a hidden blocker after the application itself is ready. The product challenge was not only installation; it was entitlement, user trust, auditability, and operational control.
+I built Vamiq around this problem because internal app distribution often becomes a hidden blocker after the application itself is ready. The product challenge was not only installation; it was entitlement, user trust, auditability, and operational control.
 
 The strongest design decision was separating organisational access from full device ownership. That let the system support BYOD and contractor-heavy environments without forcing every user into invasive device management.
 

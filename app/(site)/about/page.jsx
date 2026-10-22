@@ -1,112 +1,153 @@
 import Image from "next/image";
+import { ButtonLink, Container, SectionHeading, TextLink } from "../../../components/ui";
+import { person, portraits, roles } from "../../../lib/site";
 import { createMetadata } from "../../../lib/seo";
-
-const paragraphs = [
-  "I build systems for environments where reliability, governance, and accountability matter as much as functionality.",
-  "My work sits at the intersection of product architecture, operational reliability, and responsible AI adoption. I am particularly interested in the point where technical possibility meets regulatory expectation, and where organisations need deployable systems rather than abstract policy discussion.",
-  "Through ScotiTech, I focus on a structural problem many organisations are now facing: AI adoption is accelerating faster than internal governance capability. Teams want the benefits of AI, but they also need traceability, risk visibility, documentation, and clear operational control.",
-  "Rather than treating governance as a legal afterthought, I design it into system architecture itself. That means building products where oversight, auditability, data sovereignty, and accountability checkpoints are part of the workflow from the beginning.",
-  "Alongside product work, I also contribute in volunteer leadership roles, including as a Tech Advisor at TravelHands, an accessibility-focused organisation, and as a CIC Director supporting community-interest work. Those appointments involve strategic oversight, confidentiality, and board-level responsibility, which closely reflects the standards I bring to technical systems.",
-  "Over the past decade I have worked across mobile infrastructure, private collaboration environments, internal distribution systems, and digital support platforms. Across those domains, the consistent theme has been the same: important processes fail when organisations depend on external control or weak operational structure.",
-  "My products therefore follow a consistent principle — control should exist closest to the people who depend on the system.",
-  "Organisations should retain direct access to internal applications through controlled distribution channels.",
-  "Teams should keep knowledge and AI workflows inside governance boundaries they can actually manage.",
-  "Families and communities should be able to rely on digital coordination systems that reduce fragility rather than add complexity.",
-  "This is less about novelty for its own sake and more about deployable architecture that continues to work under real-world constraints.",
-  "I am especially interested in healthcare, finance, public-sector, and contract-bound environments where data exposure, audit readiness, and operational trust are non-negotiable.",
-  "The direction remains ongoing: building UK-origin products and technical systems that make advanced technology usable, governable, and trustworthy in practice."
-];
 
 export const metadata = createMetadata({
   title: "About | Pradeep Dahiya",
   description:
-    "Founder biography focused on governance-first AI systems, operational software, and regulated-environment architecture.",
+    "Pradeep Dahiya founded ScotiTech after more than thirteen years building production software, much of it for Apple platforms. He builds Vamiq, OnQ and AXOS.",
   path: "/about"
 });
 
+const beliefs = [
+  {
+    title: "A company should decide what reaches its people's devices.",
+    body: "That is Vamiq: a company's own app store and device management, under its own control."
+  },
+  {
+    title: "An organisation's knowledge should stay inside its walls.",
+    body: "That is AXOS: a private workspace where the AI runs on the organisation's own infrastructure."
+  },
+  {
+    title: "Your time should be yours, even in a queue.",
+    body: "That is OnQ: see the wait, join from anywhere, and turn up when it is your turn."
+  }
+];
+
 export default function AboutPage() {
   return (
-    <div className="flex flex-col gap-16">
-      <section className="grid items-start gap-10 md:grid-cols-[0.95fr_1.05fr] md:gap-14">
-        <div className="flex flex-col gap-6">
-          <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
-            About
-          </p>
-          <h1 className="font-display text-4xl text-neutral-950 md:text-5xl">
-            Building AI systems that organisations can trust.
-          </h1>
-          <p className="max-w-2xl text-base leading-7 text-neutral-600 md:text-lg">
-            Founder, systems architect, and product builder focused on governance-first AI,
-            operational resilience, and deployable architecture for regulated environments.
-          </p>
-        </div>
-
-        <div className="md:justify-self-end">
-          <div className="mx-auto aspect-[4/4.75] w-full max-w-[300px] overflow-hidden rounded-2xl border border-neutral-200 bg-neutral-100 shadow-sm md:mx-0 md:max-w-[400px]">
+    <>
+      <section>
+        <Container className="grid items-center gap-12 pb-16 pt-14 md:grid-cols-[1.1fr_0.9fr] md:gap-16 md:pb-24 md:pt-24">
+          <div>
+            <p className="eyebrow">About</p>
+            <h1 className="mt-4 font-display text-[44px] leading-[1.05] tracking-[-0.01em] text-strong md:text-[68px]">
+              I build software people can rely on, and control.
+            </h1>
+            <p className="mt-6 max-w-xl text-[18px] leading-8 md:text-[20px]">
+              I&apos;m Pradeep Dahiya, founder of ScotiTech. I set the direction for our products, design
+              their architecture, and work directly with the people who use them.
+            </p>
+          </div>
+          <div className="mx-auto w-full max-w-[420px] overflow-hidden rounded-[22px] border border-line shadow-card md:max-w-none">
             <Image
-              src="/images/about/pradeep.jpg"
-              alt="Portrait of Pradeep Dahiya"
-              width={960}
-              height={1200}
+              src={portraits.desk.src}
+              width={portraits.desk.width}
+              height={portraits.desk.height}
+              alt={portraits.desk.alt}
               priority
-              className="h-full w-full object-cover object-[58%_36%]"
+              className="h-auto w-full"
             />
           </div>
-          <div className="mx-auto mt-4 flex max-w-[300px] items-center gap-4 md:mx-0 md:max-w-[400px]">
-            <span className="h-px flex-1 bg-neutral-300" />
-            <div className="text-right">
-              <p className="text-sm font-semibold text-neutral-950">Pradeep Dahiya</p>
-              <p className="mt-1 text-xs uppercase tracking-[0.2em] text-neutral-500">
-                Founder / Systems Architect
-              </p>
-            </div>
-          </div>
-        </div>
+        </Container>
       </section>
 
-      <section className="max-w-3xl text-[17px] leading-8 text-neutral-700 md:text-[18px]">
-        {paragraphs.map((text, index) => (
-          <p key={index} className={index > 0 ? "mt-6" : ""}>{text}</p>
-        ))}
-      </section>
-
-      <section className="grid gap-3 text-sm text-neutral-600 md:grid-cols-3">
-        <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
-          <p className="text-sm text-neutral-800">
-            13+ years designing production software, platform architecture, and regulated-environment systems.
-          </p>
-        </div>
-        <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
-          <p className="text-sm text-neutral-800">Founder of ScotiTech, focused on governance-first AI adoption.</p>
-        </div>
-        <div className="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
-          <p className="text-sm text-neutral-800">
-            Volunteer director and tech advisory roles alongside mentorship, innovation, and operational system design.
-          </p>
-        </div>
-      </section>
-
-      <section className="rounded-2xl border border-neutral-200 bg-white p-6">
-        <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-400">
-              Professional Profile
+      <section className="border-t border-line bg-surface py-20 md:py-28">
+        <Container width="prose">
+          <p className="eyebrow">My story</p>
+          <div className="mt-6 space-y-6 text-[19px] leading-[1.75] text-body">
+            <p>
+              I have spent more than thirteen years building production software, much of it for
+              iPhone and iPad. I have led iOS teams, shipped enterprise apps in Swift and Objective-C,
+              and spent a long time on the unglamorous questions that decide whether software
+              survives: how it reaches people, who controls it, and what happens when something
+              around it changes.
             </p>
-            <p className="mt-2 text-sm leading-7 text-neutral-600">
-              For career history, public updates, and external professional verification, view my LinkedIn profile.
+            <p>
+              The same problem kept coming back. Building the app was rarely the hard part. Getting it
+              safely onto the right devices, and staying in control once it was there, was.
+            </p>
+            <p>
+              I founded ScotiTech in 2024 to build software around that problem. It began with private
+              app distribution, the product now called{" "}
+              <a href="/products/vamiq" className="font-medium text-brand underline underline-offset-4">
+                Vamiq
+              </a>
+              , and grew into device management for iPhone, iPad and Mac. Along the way we built{" "}
+              <a href="/products/axos" className="font-medium text-brand underline underline-offset-4">
+                AXOS
+              </a>
+              , a private AI workspace, and{" "}
+              <a href="/products/onq" className="font-medium text-brand underline underline-offset-4">
+                OnQ
+              </a>
+              , which takes the waiting out of walk-in queues.
+            </p>
+            <p>
+              I like to work in the open where I can. I write about what we ship, including the
+              decisions behind it, and I keep the claims on this site to things you can check.
             </p>
           </div>
-          <a
-            href="https://www.linkedin.com/in/pradeepkumar2411/"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex text-sm font-semibold text-accent hover:underline"
-          >
-            Visit LinkedIn →
-          </a>
-        </div>
+        </Container>
       </section>
 
-    </div>
+      <section className="py-20 md:py-28">
+        <Container>
+          <SectionHeading eyebrow="What I believe" title="Control belongs with the people who depend on the system." />
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {beliefs.map((item) => (
+              <div key={item.title} className="rounded-[22px] border border-line bg-surface p-7">
+                <p className="font-display text-[22px] leading-snug text-strong">{item.title}</p>
+                <p className="mt-3 text-[16px] leading-7">{item.body}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="border-t border-line bg-surface py-20 md:py-28">
+        <Container className="grid gap-12 md:grid-cols-[0.9fr_1.1fr] md:gap-16">
+          <SectionHeading
+            eyebrow="Beyond ScotiTech"
+            title="Boards, advice and mentoring."
+            lead="Volunteer roles where I bring the same care for governance and good systems."
+          />
+          <ul className="divide-y divide-line border-y border-line">
+            {roles.map((role) => (
+              <li key={role.title} className="grid gap-2 py-6 sm:grid-cols-[72px_1fr]">
+                <span className="text-[14px] text-muted">{role.year}</span>
+                <div>
+                  <p className="text-[18px] font-semibold text-strong">{role.title}</p>
+                  <p className="mt-1 text-[16px] leading-7">{role.detail}</p>
+                  {role.link && (
+                    <TextLink href={role.link} className="mt-2">
+                      {role.linkLabel}
+                    </TextLink>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+
+      <section className="py-20 md:py-24">
+        <Container className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
+          <div className="max-w-xl">
+            <h2 className="font-display text-[30px] leading-tight text-strong md:text-[38px]">Career history and recommendations</h2>
+            <p className="mt-3 text-[17px] leading-7">My full career history is on LinkedIn, and awards, talks and recommendations are on the recognition page.</p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <ButtonLink href={person.linkedin} variant="ink">
+              LinkedIn ↗
+            </ButtonLink>
+            <ButtonLink href="/impact" variant="secondary">
+              Recognition
+            </ButtonLink>
+          </div>
+        </Container>
+      </section>
+    </>
   );
 }

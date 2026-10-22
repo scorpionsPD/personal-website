@@ -27,7 +27,7 @@ const categories = [
 
 export default function CookiePolicyPage() {
   return (
-    <div className="flex flex-col gap-12">
+    <div className="mx-auto flex w-full max-w-[980px] flex-col gap-12 px-5 pb-24 pt-16 md:px-8 md:pt-24">
       <section className="flex flex-col gap-6">
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
           Cookie Policy

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>Share cards</title>
+<style>
+  :root { --canvas:#f4f2ec; --surface:#fcfbf8; --ink:#0b1f1e; --body:#3b4a48; --muted:#66736f; --line:#e3dfd5; --brand:#0f766e; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; background: var(--canvas); }
+  body { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; color: var(--body); }
+  .card { position: relative; width: 1200px; height: 630px; display: grid; grid-template-columns: 1fr 470px; gap: 40px; padding: 64px 64px 56px 72px; }
+  .glow { position: absolute; right: -180px; top: -200px; width: 760px; height: 760px; border-radius: 50%; background: radial-gradient(closest-side, rgba(15,118,110,.16), rgba(15,118,110,0)); }
+  .copy { position: relative; display: flex; flex-direction: column; }
+  .eyebrow { font-size: 18px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--brand); }
+  h1 { margin-top: 22px; font-family: ui-serif, "New York", "Iowan Old Style", Georgia, serif; font-weight: 500; font-size: 74px; line-height: 1.02; letter-spacing: -.02em; color: var(--ink); }
+  h1.small { font-size: 58px; line-height: 1.06; }
+  p.sub { margin-top: 24px; font-size: 27px; line-height: 1.4; color: var(--body); max-width: 560px; }
+  .foot { margin-top: auto; display: flex; align-items: center; gap: 14px; font-size: 21px; color: var(--muted); }
+  .foot img { width: 34px; height: 34px; border-radius: 8px; }
+  .foot b { color: var(--ink); font-weight: 600; }
+  .visual { position: relative; display: flex; align-items: center; justify-content: center; }
+  .portrait { width: 400px; height: 510px; border-radius: 26px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 30px 70px rgba(11,31,30,.16); }
+  .portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+  .frame { width: 560px; margin-right: -150px; border-radius: 16px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); box-shadow: 0 30px 80px rgba(15,118,110,.22); }
+  .frame .bar { height: 30px; display: flex; gap: 7px; align-items: center; padding: 0 12px; border-bottom: 1px solid var(--line); background: #f7f5ef; }
+  .frame .bar i { width: 10px; height: 10px; border-radius: 50%; background: #d9d4c8; }
+  .frame img { display: block; width: 100%; }
+  .poster { width: 330px; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 30px 70px rgba(11,31,30,.16); transform: rotate(2.5deg); }
+  .poster img { display: block; width: 100%; }
+  .icon { position: absolute; left: 6px; bottom: 70px; width: 120px; height: 120px; border-radius: 28px; box-shadow: 0 20px 40px rgba(11,31,30,.22); }
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="glow"></div>
+  <div class="copy">
+    <p class="eyebrow" id="eyebrow"></p>
+    <h1 id="title"></h1>
+    <p class="sub" id="sub"></p>
+    <div class="foot"><img id="footicon" alt="" hidden><span id="foot"><b>pradeepdahiya.com</b></span></div>
+  </div>
+  <div class="visual" id="visual"></div>
+</div>
+<script>
+  const cards = {
+    home: {
+      eyebrow: "Founder, ScotiTech",
+      title: "Pradeep Dahiya",
+      sub: "Building Vamiq, OnQ and AXOS: software that gives people control.",
+      visual: '<div class="portrait"><img src="../public/images/about/pradeep-dahiya-800.webp" alt=""></div>'
+    },
+    vamiq: {
+      eyebrow: "Vamiq · by Pradeep Dahiya",
+      title: "Your Apple devices and your own apps, in one place.",
+      small: true,
+      sub: "Device management and a branded app store for iPhone, iPad and Mac.",
+      icon: "../public/images/products/vamiq-logo.png",
+      visual: '<div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="../public/media/vamiq/vamiq-hero-poster-20261021.webp" alt=""></div>'
+    },
+    onq: {
+      eyebrow: "OnQ · by Pradeep Dahiya",
+      title: "See the wait. Join from anywhere.",
+      small: true,
+      sub: "Live queues for local shops. On the App Store and Google Play.",
+      icon: "../public/images/onq/onq-icon-512.png",
+      visual: '<div class="poster"><img src="../public/images/onq/onq-poster-1200.webp" alt=""></div>'
+    },
+    axos: {
+      eyebrow: "AXOS · by Pradeep Dahiya",
+      title: "Your entire workspace. Private by design.",
+      small: true,
+      sub: "Mail, files, chat and tasks with private AI, on your own infrastructure.",
+      icon: "../public/images/products/AXOS.png",
+      visual: '<div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="../public/images/axos/axos-command-centre-1200.webp" alt=""></div>'
+    },
+    writing: {
+      eyebrow: "Writing · Pradeep Dahiya",
+      title: "Stories from the build.",
+      sub: "Short, true stories from shipping Vamiq, OnQ and AXOS, and essays on control.",
+      visual: '<div class="frame"><div class="bar"><i></i><i></i><i></i></div><img src="../public/images/stories/film-app-store-devices-1600.webp" alt=""></div>'
+    }
+  };
+  const key = new URLSearchParams(location.search).get("card") || "home";
+  const c = cards[key];
+  document.getElementById("eyebrow").textContent = c.eyebrow;
+  const t = document.getElementById("title");
+  t.textContent = c.title;
+  if (c.small) t.classList.add("small");
+  document.getElementById("sub").textContent = c.sub;
+  document.getElementById("visual").innerHTML = c.visual;
+  if (c.icon) { const i = document.getElementById("footicon"); i.src = c.icon; i.hidden = false; }
+</script>
+</body>
+</html>

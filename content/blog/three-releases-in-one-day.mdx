@@ -1,0 +1,53 @@
+---
+title: "Three releases in one day, and a guard on every page"
+description: "On 21 October we shipped three releases of the Vamiq website, at 09:48, 13:35 and 21:42. An automatic check made sure none of them cost us a single search result."
+date: "2026-10-22"
+type: "story"
+kicker: "Shipping"
+order: 2
+---
+
+Wednesday 21 October started with a release at 09:48 and ended with another at 21:42. A third went out in between, at 13:35. All three went to vamiq.app and passed every check, and none of them broke a page that search engines already knew about.
+
+Here is what shipped, and why I am comfortable moving that fast.
+
+## 09:48, Release J: show the product
+
+The home page now opens on the real product: a framed window from a sample workspace, where one app installs across a team's iPhones and iPads in a 14-second loop. Beside it, "Watch the film" opens a 75-second tour, which we made [frame by frame on a Mac](/blog/vamiq-film-frame-by-frame).
+
+The pricing page got clearer, with a cost table. Four new pages answer specific questions people search for. Every page got its own share card, so a link posted anywhere shows the right picture.
+
+## 13:35, Release J.1: say it with confidence
+
+That morning I read our own site the way a buyer would, and I did not like how often it apologised. J.1 rewrote it to be [confident and still true](/blog/confident-not-confessional). It also brought a new headline, the one I had been circling for days:
+
+> Your Apple devices and your own apps, managed in one place.
+
+## 21:42, Release J.2: build the pages properly
+
+Twelve selling pages were rebuilt as designed pages, each with a photo hero, cards, steps, questions and answers, and a clear next step.
+
+Vamiq also gained a public help centre at [vamiq.app/docs](https://vamiq.app/docs): a hub and six new articles, with every sentence checked against what the product actually does. The guides inside the app now read from the same source, so the help a customer sees in the product and the help they find on the web cannot drift apart.
+
+## The guard: a baseline for every page
+
+Rebuilding twelve pages in one evening is exactly how websites lose their search rankings. A title changes here, a canonical link disappears there, a main heading gets reworded, and three weeks later the traffic quietly drops.
+
+So before J.2 we took a fingerprint of all 39 pages: the address, title, description, canonical link, main heading and structured data of each one. After the build, an automatic check compared every page against that baseline. Any difference failed the release, unless it was on a short list of changes we had planned:
+
+- the new home page title and description;
+- the new help-centre pages;
+- one older page merged into a better one, with a single permanent redirect.
+
+The check also counted words. Each of the twelve rebuilt pages kept between 99.4% and 100% of its text. The design was new and the substance was the same, so search engines see an upgrade, not a different site. The sitemap grew from 39 addresses to 45.
+
+## How three releases in a day stays calm
+
+Speed comes from making each release boring.
+
+- **One gate, every time.** Type checks, the build, the full test suite (1,140 front-end tests passed on the last release), a scan for secrets, and a claims check that every product statement on the site is one we can stand behind.
+- **A private test copy first.** Each release ran on a private copy of the site before it went anywhere near production.
+- **A way back.** Before each release we took a backup and had a rollback ready that takes about two minutes. We did not need it.
+- **Checks after, not just before.** Once a release was live, every page, redirect and file was checked again.
+
+None of that is glamorous. It is the reason the glamorous parts, a new hero, a film and twelve new pages, could ship on a Wednesday without anyone holding their breath.

@@ -14,11 +14,12 @@ export default function ArticleDiscussion({ title }) {
   const discussionSearchUrl = `${discussionsUrl}?discussions_q=${encodeURIComponent(title)}`;
 
   useEffect(() => {
-    if (!isConfigured || !containerRef.current) {
+    const container = containerRef.current;
+    if (!isConfigured || !container) {
       return;
     }
 
-    containerRef.current.innerHTML = "";
+    container.innerHTML = "";
 
     const script = document.createElement("script");
     script.src = "https://giscus.app/client.js";
@@ -33,68 +34,48 @@ export default function ArticleDiscussion({ title }) {
     script.setAttribute("data-reactions-enabled", "1");
     script.setAttribute("data-emit-metadata", "0");
     script.setAttribute("data-input-position", "bottom");
-    script.setAttribute("data-theme", "preferred_color_scheme");
+    script.setAttribute("data-theme", "light");
     script.setAttribute("data-lang", "en");
     script.setAttribute("data-loading", "lazy");
 
-    containerRef.current.appendChild(script);
+    container.appendChild(script);
 
     return () => {
-      if (containerRef.current) {
-        containerRef.current.innerHTML = "";
-      }
+      container.innerHTML = "";
     };
   }, [isConfigured]);
 
   return (
-    <aside className="mt-10 rounded-2xl border border-neutral-200 bg-neutral-50 p-6">
+    <aside className="mt-16 rounded-[22px] border border-line bg-surface p-6 md:p-8">
       <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-400">
-            Field Notes
-          </p>
-          <h2 className="mt-3 font-display text-2xl leading-tight text-neutral-950">
+          <p className="eyebrow">Discussion</p>
+          <h2 className="mt-3 font-display text-[26px] leading-tight text-strong">
             Add a practical perspective.
           </h2>
-          <p className="mt-3 max-w-2xl text-sm leading-6 text-neutral-600">
-            Share a practical lesson, counterpoint, or credible source from your own
-            work in this problem space.
+          <p className="mt-2 max-w-xl text-[15px] leading-6 text-body">
+            A lesson, a counterpoint or a good source from your own work. Comments use GitHub
+            Discussions.
           </p>
         </div>
         <a
           href={discussionSearchUrl}
           target="_blank"
           rel="noreferrer"
-          className="text-sm font-semibold text-accent hover:underline"
+          className="shrink-0 text-[15px] font-medium text-brand hover:text-brand-strong"
         >
-          Comment on GitHub
+          Open on GitHub ↗
         </a>
-      </div>
-
-      <div className="mt-5 flex flex-wrap gap-2 text-xs font-semibold text-neutral-600">
-        <span className="rounded-full border border-neutral-200 bg-white px-3 py-1.5">
-          Implementation lesson
-        </span>
-        <span className="rounded-full border border-neutral-200 bg-white px-3 py-1.5">
-          Counterpoint
-        </span>
-        <span className="rounded-full border border-neutral-200 bg-white px-3 py-1.5">
-          Useful source
-        </span>
       </div>
 
       {isConfigured ? (
         <div ref={containerRef} className="mt-6" />
       ) : (
-        <div className="mt-6 rounded-xl border border-neutral-200 bg-white p-4 text-sm leading-6 text-neutral-600">
+        <div className="mt-6 rounded-xl border border-line bg-canvas p-4 text-[14px] leading-6 text-body">
           Enable GitHub Discussions, install the Giscus app, then set
-          <code className="mx-1 rounded bg-neutral-100 px-1.5 py-0.5 text-xs">
-            NEXT_PUBLIC_GISCUS_REPO_ID
-          </code>
+          <code className="mx-1 rounded bg-sunken px-1.5 py-0.5 text-xs">NEXT_PUBLIC_GISCUS_REPO_ID</code>
           and
-          <code className="mx-1 rounded bg-neutral-100 px-1.5 py-0.5 text-xs">
-            NEXT_PUBLIC_GISCUS_CATEGORY_ID
-          </code>
+          <code className="mx-1 rounded bg-sunken px-1.5 py-0.5 text-xs">NEXT_PUBLIC_GISCUS_CATEGORY_ID</code>
           to show the live comment box here.
         </div>
       )}
