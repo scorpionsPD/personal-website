@@ -46,7 +46,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-40 -top-40 h-[620px] w-[620px] rounded-full bg-[radial-gradient(closest-side,rgba(15,118,110,0.13),rgba(15,118,110,0))]"
+          className="pointer-events-none absolute -right-40 -top-40 h-[620px] w-[620px] rounded-full bg-[radial-gradient(closest-side,rgba(45,180,165,0.16),rgba(45,180,165,0))]"
         />
         <Container className="relative grid items-center gap-12 pb-20 pt-14 md:grid-cols-[1.25fr_0.75fr] md:gap-16 md:pb-28 md:pt-24">
           <div>
@@ -152,7 +152,7 @@ export default function HomePage() {
               <ol className="mt-7 grid gap-3 sm:grid-cols-3">
                 {onqSteps.map((step, index) => (
                   <li key={step} className="rounded-2xl border border-line bg-surface px-4 py-3.5">
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-onq text-[12px] font-semibold text-white">
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-onq text-[12px] font-semibold text-ink">
                       {index + 1}
                     </span>
                     <span className="mt-2 block text-[14px] font-medium leading-5 text-strong">{step}</span>
@@ -341,7 +341,7 @@ export default function HomePage() {
       </section>
 
       {/* Contact */}
-      <section className="bg-ink py-20 text-on-ink md:py-24">
+      <section className="border-t border-line bg-band py-20 text-on-ink md:py-24">
         <Container className="flex flex-col gap-10 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
             <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[#5eead4]">Contact</p>
@@ -356,7 +356,7 @@ export default function HomePage() {
             <ButtonLink href={`mailto:${person.email}`} variant="light">
               Email me
             </ButtonLink>
-            <ButtonLink href={person.linkedin} variant="ink" className="border border-white/20">
+            <ButtonLink href={person.linkedin} variant="secondary">
               LinkedIn ↗
             </ButtonLink>
           </div>

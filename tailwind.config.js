@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-// "Warm paper" tokens, shared with vamiq.app and scotitech.com (October 2026).
+// Dark teal-ink tokens: the deep ink of vamiq.app and scotitech.com as the page,
+// with warm off-white type and a brighter teal accent (October 2026).
 const sans = [
   "ui-sans-serif",
   "-apple-system",
@@ -31,22 +32,23 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        canvas: "#f4f2ec",
-        surface: "#fcfbf8",
-        sunken: "#ebe7de",
-        ink: { DEFAULT: "#0b1f1e", soft: "#12302e" },
-        strong: "#0b1f1e",
-        body: "#3b4a48",
-        muted: "#66736f",
+        canvas: "#0b1514",
+        surface: "#101e1c",
+        sunken: "#172826",
+        band: "#0e2826",
+        ink: { DEFAULT: "#040a09", soft: "#0b1514" },
+        strong: "#eef4f2",
+        body: "#bccac6",
+        muted: "#8a9c98",
         "on-ink": "#eef4f2",
         "on-ink-muted": "#a9bcb8",
-        line: { DEFAULT: "#e3dfd5", strong: "#cbc6ba" },
-        brand: { DEFAULT: "#0f766e", strong: "#0b5d57", soft: "#e2efeb" },
+        line: { DEFAULT: "#213330", strong: "#2f4540" },
+        brand: { DEFAULT: "#5ccdbd", strong: "#8be3d6", soft: "#123330" },
         grade: "#002d35",
-        vamiq: "#0f766e",
-        axos: "#2f5d86",
-        onq: { DEFAULT: "#46698f", amber: "#e6a84a" },
-        accent: "#0f766e"
+        vamiq: "#5ccdbd",
+        axos: "#7aa8d6",
+        onq: { DEFAULT: "#82a9d2", amber: "#e6a84a" },
+        accent: "#5ccdbd"
       },
       fontFamily: {
         sans,
@@ -54,9 +56,9 @@ module.exports = {
         display: serif
       },
       boxShadow: {
-        soft: "0 1px 2px rgba(11,31,30,0.04), 0 8px 24px rgba(11,31,30,0.05)",
-        card: "0 2px 4px rgba(11,31,30,0.04), 0 18px 40px rgba(11,31,30,0.08)",
-        lift: "0 8px 16px rgba(11,31,30,0.06), 0 30px 60px rgba(11,31,30,0.14)"
+        soft: "0 1px 2px rgba(0,0,0,0.25), 0 8px 24px rgba(0,0,0,0.25)",
+        card: "0 2px 4px rgba(0,0,0,0.3), 0 18px 40px rgba(0,0,0,0.35)",
+        lift: "0 8px 16px rgba(0,0,0,0.35), 0 30px 60px rgba(0,0,0,0.5)"
       },
       maxWidth: {
         page: "1200px",

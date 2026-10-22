@@ -42,7 +42,7 @@ export default function AxosPage() {
       <section className="relative overflow-hidden">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-[40%] h-[640px] w-[1100px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(47,93,134,0.13),rgba(47,93,134,0))]"
+          className="pointer-events-none absolute left-1/2 top-[40%] h-[640px] w-[1100px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(100,150,210,0.16),rgba(100,150,210,0))]"
         />
         <Container className="relative pb-16 pt-14 text-center md:pb-24 md:pt-20">
           <Link href="/work" className="text-[14px] text-muted hover:text-strong">

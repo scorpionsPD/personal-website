@@ -2,18 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-/* "Warm paper": one canvas, deep-teal ink, one teal accent and the
-   platform's own fonts, as on vamiq.app and scotitech.com. */
+/* Dark teal-ink: the deep ink of vamiq.app and scotitech.com as the page,
+   warm off-white type, one bright teal accent and the platform's own fonts. */
 :root {
-  --canvas: #f4f2ec;
-  --surface: #fcfbf8;
-  --ink: #0b1f1e;
-  --strong: #0b1f1e;
-  --body: #3b4a48;
-  --muted: #66736f;
-  --line: #e3dfd5;
-  --brand: #0f766e;
-  --accent: #0f766e;
+  color-scheme: dark;
+  --canvas: #0b1514;
+  --surface: #101e1c;
+  --sunken: #172826;
+  --ink: #040a09;
+  --strong: #eef4f2;
+  --body: #bccac6;
+  --muted: #8a9c98;
+  --line: #213330;
+  --brand: #5ccdbd;
+  --accent: #5ccdbd;
   --font-display: ui-serif, "New York", "Iowan Old Style", Charter, Georgia, Cambria,
     "Times New Roman", serif;
   --font-body: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -41,8 +43,8 @@ body {
 }
 
 ::selection {
-  background: #cfe6e0;
-  color: var(--ink);
+  background: #1f4d47;
+  color: var(--strong);
 }
 
 :focus-visible {
@@ -92,7 +94,7 @@ body {
   border-radius: 14px;
   background: var(--surface);
   border: 1px solid var(--line);
-  box-shadow: 0 2px 4px rgba(11, 31, 30, 0.04), 0 30px 80px rgba(15, 118, 110, 0.16);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 30px 80px rgba(45, 180, 165, 0.14);
   overflow: hidden;
 }
 
@@ -103,14 +105,14 @@ body {
   height: 30px;
   padding: 0 12px;
   border-bottom: 1px solid var(--line);
-  background: #f7f5ef;
+  background: #13231f;
 }
 
 .product-frame__bar i {
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: #d9d4c8;
+  background: #2f4540;
 }
 
 .product-frame__bar span {
@@ -199,7 +201,7 @@ body {
 
 .blog-content code {
   border-radius: 0.375rem;
-  background: #ebe7de;
+  background: var(--sunken);
   padding: 0.125rem 0.375rem;
   font-size: 0.85em;
 }
@@ -209,7 +211,7 @@ body {
   overflow-x: auto;
   border-radius: 1rem;
   border: 1px solid var(--line);
-  background: #f7f5ef;
+  background: var(--surface);
   padding: 1rem;
   font-size: 0.875rem;
 }

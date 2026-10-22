@@ -35,10 +35,10 @@ export function SectionHeading({ eyebrow, title, lead, className = "" }) {
 }
 
 const buttonStyles = {
-  primary: "bg-brand text-white hover:bg-brand-strong",
+  primary: "bg-brand text-ink hover:bg-brand-strong",
   secondary: "border border-line-strong bg-surface text-strong hover:border-strong",
-  ink: "bg-ink text-on-ink hover:bg-ink-soft",
-  light: "bg-white text-strong hover:bg-on-ink"
+  ink: "bg-strong text-canvas hover:bg-white",
+  light: "bg-white text-ink hover:bg-on-ink"
 };
 
 export function ButtonLink({ href, children, variant = "primary", className = "", ...rest }) {
@@ -86,7 +86,7 @@ export function TextLink({ href, children, className = "", tone = "brand" }) {
 
 export function StoreButtons({ className = "" }) {
   const base =
-    "inline-flex min-h-[52px] flex-col justify-center rounded-xl bg-ink px-5 text-left text-on-ink transition hover:bg-ink-soft";
+    "inline-flex min-h-[52px] flex-col justify-center rounded-xl bg-ink px-5 text-left text-on-ink ring-1 ring-white/20 transition hover:bg-black hover:ring-white/40";
   return (
     <div className={`flex flex-wrap gap-3 ${className}`}>
       <a href={onqLinks.appStore} className={base} aria-label="Download OnQ on the App Store">
@@ -117,7 +117,7 @@ export function ProductFrame({ label, children, className = "" }) {
 
 export function PhoneFrame({ src, width, height, alt, className = "", priority = false }) {
   return (
-    <div className={`overflow-hidden rounded-[30px] border-[6px] border-ink bg-ink shadow-lift ${className}`}>
+    <div className={`overflow-hidden rounded-[30px] border-[6px] border-ink bg-ink shadow-lift ring-1 ring-white/15 ${className}`}>
       <Image src={src} width={width} height={height} alt={alt} priority={priority} className="h-auto w-full rounded-[24px]" />
     </div>
   );

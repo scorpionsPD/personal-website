@@ -55,7 +55,7 @@ export default function OnQPage() {
       <section className="relative overflow-hidden">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-48 -top-24 h-[640px] w-[640px] rounded-full bg-[radial-gradient(closest-side,rgba(70,105,143,0.16),rgba(70,105,143,0))]"
+          className="pointer-events-none absolute -right-48 -top-24 h-[640px] w-[640px] rounded-full bg-[radial-gradient(closest-side,rgba(110,150,200,0.18),rgba(110,150,200,0))]"
         />
         <Container className="relative grid items-center gap-12 pb-20 pt-14 md:grid-cols-[1.1fr_0.9fr] md:gap-16 md:pb-28 md:pt-20">
           <div>
@@ -97,7 +97,7 @@ export default function OnQPage() {
           <ol className="mt-12 grid gap-5 md:grid-cols-3">
             {steps.map((step, index) => (
               <li key={step.title} className="rounded-[22px] border border-line bg-canvas p-7">
-                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-onq text-[14px] font-semibold text-white">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-onq text-[14px] font-semibold text-ink">
                   {index + 1}
                 </span>
                 <h3 className="mt-5 text-[19px] font-semibold text-strong">{step.title}</h3>

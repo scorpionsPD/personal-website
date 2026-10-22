@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <title>Share cards</title>
 <style>
-  :root { --canvas:#f4f2ec; --surface:#fcfbf8; --ink:#0b1f1e; --body:#3b4a48; --muted:#66736f; --line:#e3dfd5; --brand:#0f766e; }
+  :root { --canvas:#0b1514; --surface:#101e1c; --ink:#eef4f2; --body:#bccac6; --muted:#8a9c98; --line:#213330; --brand:#5ccdbd; }
   * { box-sizing: border-box; margin: 0; }
   html, body { width: 1200px; height: 630px; overflow: hidden; background: var(--canvas); }
   body { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; color: var(--body); }
   .card { position: relative; width: 1200px; height: 630px; display: grid; grid-template-columns: 1fr 470px; gap: 40px; padding: 64px 64px 56px 72px; }
-  .glow { position: absolute; right: -180px; top: -200px; width: 760px; height: 760px; border-radius: 50%; background: radial-gradient(closest-side, rgba(15,118,110,.16), rgba(15,118,110,0)); }
+  .glow { position: absolute; right: -180px; top: -200px; width: 760px; height: 760px; border-radius: 50%; background: radial-gradient(closest-side, rgba(45,180,165,.2), rgba(45,180,165,0)); }
   .copy { position: relative; display: flex; flex-direction: column; }
   .eyebrow { font-size: 18px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--brand); }
   h1 { margin-top: 22px; font-family: ui-serif, "New York", "Iowan Old Style", Georgia, serif; font-weight: 500; font-size: 74px; line-height: 1.02; letter-spacing: -.02em; color: var(--ink); }
@@ -19,15 +19,15 @@
   .foot img { width: 34px; height: 34px; border-radius: 8px; }
   .foot b { color: var(--ink); font-weight: 600; }
   .visual { position: relative; display: flex; align-items: center; justify-content: center; }
-  .portrait { width: 400px; height: 510px; border-radius: 26px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 30px 70px rgba(11,31,30,.16); }
+  .portrait { width: 400px; height: 510px; border-radius: 26px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 30px 70px rgba(0,0,0,.5); }
   .portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
-  .frame { width: 560px; margin-right: -150px; border-radius: 16px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); box-shadow: 0 30px 80px rgba(15,118,110,.22); }
-  .frame .bar { height: 30px; display: flex; gap: 7px; align-items: center; padding: 0 12px; border-bottom: 1px solid var(--line); background: #f7f5ef; }
-  .frame .bar i { width: 10px; height: 10px; border-radius: 50%; background: #d9d4c8; }
+  .frame { width: 560px; margin-right: -150px; border-radius: 16px; overflow: hidden; background: var(--surface); border: 1px solid var(--line); box-shadow: 0 30px 80px rgba(45,180,165,.18); }
+  .frame .bar { height: 30px; display: flex; gap: 7px; align-items: center; padding: 0 12px; border-bottom: 1px solid var(--line); background: #13231f; }
+  .frame .bar i { width: 10px; height: 10px; border-radius: 50%; background: #2f4540; }
   .frame img { display: block; width: 100%; }
-  .poster { width: 330px; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 30px 70px rgba(11,31,30,.16); transform: rotate(2.5deg); }
+  .poster { width: 330px; border-radius: 18px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 30px 70px rgba(0,0,0,.5); transform: rotate(2.5deg); }
   .poster img { display: block; width: 100%; }
-  .icon { position: absolute; left: 6px; bottom: 70px; width: 120px; height: 120px; border-radius: 28px; box-shadow: 0 20px 40px rgba(11,31,30,.22); }
+  .icon { position: absolute; left: 6px; bottom: 70px; width: 120px; height: 120px; border-radius: 28px; box-shadow: 0 20px 40px rgba(0,0,0,.5); }
   [hidden] { display: none !important; }
 </style>
 </head>

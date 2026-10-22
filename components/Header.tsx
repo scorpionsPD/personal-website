@@ -48,7 +48,7 @@ export default function Header() {
           ))}
           <Link
             href="/contact"
-            className="ml-3 rounded-full bg-ink px-4 py-2 text-[14px] font-medium text-on-ink transition hover:bg-ink-soft"
+            className="ml-3 rounded-full bg-strong px-4 py-2 text-[14px] font-medium text-canvas transition hover:bg-white"
           >
             Get in touch
           </Link>

@@ -95,7 +95,7 @@ export default function VamiqPage() {
       <section className="relative overflow-hidden">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-[38%] h-[640px] w-[1100px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(15,118,110,0.12),rgba(15,118,110,0))]"
+          className="pointer-events-none absolute left-1/2 top-[38%] h-[640px] w-[1100px] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,rgba(45,180,165,0.15),rgba(45,180,165,0))]"
         />
         <Container className="relative pb-16 pt-14 text-center md:pb-24 md:pt-20">
           <Link href="/work" className="text-[14px] text-muted hover:text-strong">
@@ -172,7 +172,7 @@ export default function VamiqPage() {
         </Container>
       </section>
 
-      <section id="film" className="scroll-mt-20 bg-ink py-20 text-on-ink md:py-28">
+      <section id="film" className="scroll-mt-20 border-y border-line bg-band py-20 text-on-ink md:py-28">
         <Container width="mid">
           <p className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[#5eead4]">The film</p>
           <h2 className="mt-3 font-display text-[32px] leading-[1.12] text-white md:text-[44px]">

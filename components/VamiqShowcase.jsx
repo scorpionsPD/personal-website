@@ -17,7 +17,7 @@ export default function VamiqShowcase({ className = "" }) {
           label={vamiqMedia.poster.alt}
         />
       </ProductFrame>
-      <div className="absolute bottom-0 right-0 w-[24%] min-w-[92px] max-w-[200px] overflow-hidden rounded-[22px] border-[5px] border-ink bg-ink shadow-lift md:rounded-[28px] md:border-[7px]">
+      <div className="absolute bottom-0 right-0 w-[24%] min-w-[92px] max-w-[200px] overflow-hidden rounded-[22px] border-[5px] border-ink bg-ink shadow-lift ring-1 ring-white/15 md:rounded-[28px] md:border-[7px]">
         <Image
           src={vamiqMedia.phone.src}
           width={vamiqMedia.phone.width}

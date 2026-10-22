@@ -92,7 +92,7 @@ export default function WorkPage() {
                   } ${index % 2 === 1 ? "md:order-1" : ""}`}
                 >
                   {portrait ? (
-                    <div className="w-full max-w-[260px] overflow-hidden rounded-t-[30px] border-[6px] border-b-0 border-ink bg-ink shadow-card">
+                    <div className="w-full max-w-[260px] overflow-hidden rounded-t-[30px] border-[6px] border-b-0 border-ink bg-ink shadow-card ring-1 ring-white/15">
                       <Image
                         src={visual.src}
                         width={visual.width}

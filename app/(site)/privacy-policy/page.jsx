@@ -34,13 +34,13 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="mx-auto flex w-full max-w-[980px] flex-col gap-12 px-5 pb-24 pt-16 md:px-8 md:pt-24">
       <section className="flex flex-col gap-6">
-        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-muted">
           Privacy Policy
         </p>
-        <h1 className="font-display text-4xl text-neutral-950 md:text-5xl">
+        <h1 className="font-display text-4xl text-strong md:text-5xl">
           Privacy information for this website.
         </h1>
-        <p className="max-w-3xl text-base leading-7 text-neutral-600 md:text-lg">
+        <p className="max-w-3xl text-base leading-7 text-body md:text-lg">
           This policy explains what personal information this website currently handles, what it
           does not currently do, and how that would change if non-essential tracking tools were
           introduced later.
@@ -49,18 +49,18 @@ export default function PrivacyPolicyPage() {
 
       <section className="flex flex-col gap-6">
         {sections.map((section) => (
-          <div key={section.title} className="rounded-2xl border border-neutral-200 bg-white p-6">
-            <h2 className="font-display text-2xl text-neutral-950">{section.title}</h2>
-            <p className="mt-3 text-sm leading-7 text-neutral-600">{section.body}</p>
+          <div key={section.title} className="rounded-2xl border border-line bg-surface p-6">
+            <h2 className="font-display text-2xl text-strong">{section.title}</h2>
+            <p className="mt-3 text-sm leading-7 text-body">{section.body}</p>
           </div>
         ))}
       </section>
 
-      <section className="rounded-2xl border border-neutral-200 bg-neutral-50 p-6">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-neutral-400">
+      <section className="rounded-2xl border border-line bg-surface p-6">
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-muted">
           Contact
         </p>
-        <p className="mt-3 text-sm leading-7 text-neutral-600">
+        <p className="mt-3 text-sm leading-7 text-body">
           Privacy enquiries can be sent to{" "}
           <a
             href="mailto:pradeepdahiya@hotmail.com"
