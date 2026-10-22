@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { onqLinks } from "../lib/site";
 
@@ -110,6 +111,14 @@ export function ProductFrame({ label, children, className = "" }) {
         <span>{label}</span>
       </div>
       {children}
+    </div>
+  );
+}
+
+export function PhoneFrame({ src, width, height, alt, className = "", priority = false }) {
+  return (
+    <div className={`overflow-hidden rounded-[30px] border-[6px] border-ink bg-ink shadow-lift ${className}`}>
+      <Image src={src} width={width} height={height} alt={alt} priority={priority} className="h-auto w-full rounded-[24px]" />
     </div>
   );
 }

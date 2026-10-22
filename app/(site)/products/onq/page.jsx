@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Container, JsonLd, SectionHeading, StoreButtons, TextLink } from "../../../../components/ui";
-import { onqLinks, products } from "../../../../lib/site";
-import { breadcrumbJsonLd, createMetadata, productJsonLd } from "../../../../lib/seo";
+import { Container, JsonLd, PhoneFrame, SectionHeading, StoreButtons, TextLink } from "../../../../components/ui";
+import { onqLinks, onqScreens, products } from "../../../../lib/site";
+import { absoluteUrl, breadcrumbJsonLd, createMetadata, productJsonLd } from "../../../../lib/seo";
 
 const onq = products.find((item) => item.id === "onq");
 
@@ -42,6 +42,7 @@ export default function OnQPage() {
             applicationCategory: "LifestyleApplication",
             operatingSystem: "iOS, Android",
             installUrl: [onqLinks.appStore, onqLinks.googlePlay],
+            screenshot: onqScreens.map((screen) => absoluteUrl(screen.src)),
             offers: { "@type": "Offer", price: "0", priceCurrency: "GBP" }
           }),
           breadcrumbJsonLd([
@@ -81,17 +82,11 @@ export default function OnQPage() {
           </div>
 
           <figure className="mx-auto w-full max-w-[420px]">
-            <div className="overflow-hidden rounded-[18px] border border-line bg-surface shadow-card">
-              <Image
-                src="/images/onq/onq-poster-1200.webp"
-                width={1200}
-                height={1697}
-                alt="The OnQ counter poster: see the wait, join from anywhere, with App Store and Google Play download codes"
-                className="h-auto w-full"
-                priority
-              />
+            <div className="relative aspect-[420/540]">
+              <PhoneFrame {...onqScreens[1]} className="absolute bottom-0 left-0 w-[46%]" />
+              <PhoneFrame {...onqScreens[0]} className="absolute right-0 top-0 w-[54%]" priority />
             </div>
-            <figcaption className="mt-3 text-[13px] text-muted">The poster participating shops put on the counter.</figcaption>
+            <figcaption className="mt-4 text-[13px] text-muted">Real screens from the OnQ iPhone app.</figcaption>
           </figure>
         </Container>
       </section>
@@ -136,6 +131,20 @@ export default function OnQPage() {
               <div className="mt-8">
                 <TextLink href={onqLinks.site}>OnQ for shop owners</TextLink>
               </div>
+              <figure className="mt-10 flex items-end gap-5">
+                <div className="w-[150px] shrink-0 overflow-hidden rounded-[12px] border border-line bg-surface shadow-soft">
+                  <Image
+                    src="/images/onq/onq-poster-1200.webp"
+                    width={1200}
+                    height={1697}
+                    alt="The OnQ counter poster: see the wait, join from anywhere, with App Store and Google Play download codes"
+                    className="h-auto w-full"
+                  />
+                </div>
+                <figcaption className="text-[14px] leading-6 text-muted">
+                  The counter poster shops put up, with codes for the App Store and Google Play.
+                </figcaption>
+              </figure>
             </div>
           </div>
         </Container>

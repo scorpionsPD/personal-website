@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Container, PageIntro, ProductFrame, SectionHeading, TextLink } from "../../../components/ui";
-import { openSource, products, vamiqMedia } from "../../../lib/site";
+import { onqScreens, openSource, products, vamiqMedia } from "../../../lib/site";
 import { createMetadata } from "../../../lib/seo";
 
 export const metadata = createMetadata({
@@ -19,12 +19,7 @@ const visuals = {
     height: vamiqMedia.poster.height,
     alt: vamiqMedia.poster.alt
   },
-  onq: {
-    src: "/images/onq/onq-poster-1200.webp",
-    width: 1200,
-    height: 1697,
-    alt: "The OnQ counter poster with App Store and Google Play download codes"
-  },
+  onq: onqScreens[0],
   axos: {
     label: "AXOS Workspace",
     src: "/images/axos/axos-workspace-1200.webp",
@@ -97,13 +92,13 @@ export default function WorkPage() {
                   } ${index % 2 === 1 ? "md:order-1" : ""}`}
                 >
                   {portrait ? (
-                    <div className="w-full max-w-[300px] overflow-hidden rounded-t-[16px] border border-b-0 border-line shadow-card">
+                    <div className="w-full max-w-[260px] overflow-hidden rounded-t-[30px] border-[6px] border-b-0 border-ink bg-ink shadow-card">
                       <Image
                         src={visual.src}
                         width={visual.width}
                         height={visual.height}
                         alt={visual.alt}
-                        className="h-[340px] w-full object-cover object-top"
+                        className="h-[340px] w-full rounded-t-[24px] object-cover object-top"
                       />
                     </div>
                   ) : (
