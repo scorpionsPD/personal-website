@@ -3,7 +3,7 @@ import { createMetadata } from "../../../lib/seo";
 
 const products = [
   {
-    title: "AppDeploy",
+    title: "Vamiq",
     slug: "appdeploy",
     summary: "Apple device management and private app distribution, built on Apple Business",
     category: "Devices & Distribution",
@@ -21,14 +21,14 @@ const products = [
       breaks:
         "Every joiner, leaver, release and audit meant repeating manual work across those tools, with no single record of what each device had.",
       system:
-        "Led and developed by me through ScotiTech, AppDeploy puts device management, private app distribution and release controls on top of Apple Business, in one workspace at one per-device price.",
+        "Led and developed by me through ScotiTech, Vamiq puts device management, private app distribution and release controls on top of Apple Business, in one workspace, with separate device and Distribution plans.",
       outcome:
         "Devices set themselves up, apps reach the right people, leavers are offboarded in one flow, and every device and release leaves evidence an auditor can check."
     },
     innovation: "One control layer for Apple devices, private apps and audit evidence",
     usp:
-      "Device management, a branded app store and compliance evidence at one per-device price.",
-    logo: "/images/products/AppdeployLogoBlack.png"
+      "Device management, a branded app store and release evidence in one workspace.",
+    logo: "/images/products/vamiq-logo.png"
   },
   {
     title: "AXOS - Private AI Workspace",

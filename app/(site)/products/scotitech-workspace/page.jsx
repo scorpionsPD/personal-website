@@ -362,7 +362,7 @@ export default function ScotiTechWorkspacePage() {
       {/* Navigation */}
       <section className="flex justify-between items-center pt-8 border-t border-neutral-200">
         <Link href="/products/appdeploy" className="text-sm font-semibold text-neutral-600 hover:text-accent">
-          ← AppDeploy
+          ← Vamiq
         </Link>
         <Link href="/products/elderconnect-plus" className="text-sm font-semibold text-accent hover:underline">
           Next: ElderConnect+ →

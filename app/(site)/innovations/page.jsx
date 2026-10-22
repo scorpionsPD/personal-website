@@ -8,12 +8,12 @@ const innovations = [
     problem:
       "Growing companies run Apple devices, private apps and audit evidence through separate tools, so every joiner, leaver, release and audit repeats manual work.",
     innovation:
-      "Extended AppDeploy into full device management for iPhone, iPad and Mac on Apple MDM and declarative management, sharing one workspace, one permission model and one audit trail with the branded app store and release controls.",
+      "Extended Vamiq into full device management for iPhone, iPad and Mac on Apple MDM and declarative management, sharing one workspace, one permission model and one audit trail with the branded app store and release controls.",
     technicalBreakthrough:
       "Device state, app state and evidence live in one tenant-isolated model, so the same record drives zero-touch setup, silent installs, one-flow offboarding and the compliance history an auditor reads.",
     impact:
-      "Live in AppDeploy: zero-touch setup, security baselines, FileVault and Activation Lock escrow, SOC 2, ISO 27001 and Cyber Essentials device evidence and a Vanta integration, at £1 per device after the first 5 free.",
-    technologies: ["Apple MDM", "Declarative Device Management", "PostgreSQL row-level security", "Key escrow", "Vanta API"]
+      "Live in Vamiq: zero-touch setup, security baselines, device records, security policies and checksummed release Evidence Packs. The first five managed Apple devices are free, then £1 per additional device per month; Distribution is priced separately.",
+    technologies: ["Apple MDM", "Declarative Device Management", "PostgreSQL row-level security", "Key escrow", "Evidence Packs"]
   },
   {
     category: "Mobile Distribution",
@@ -26,7 +26,7 @@ const innovations = [
     technicalBreakthrough:
       "Separates the two concerns most platforms couple — app entitlement (portal, no enrolment) and device management (optional, per-device) — so organisations buy control only where they need it.",
     impact:
-      "Live in production as AppDeploy: 2 active customer workspaces, 450+ apps installed, 300+ devices reached, against a published 99.9% availability SLO.",
+      "Live in production as Vamiq: 2 active customer workspaces, 450+ apps installed, 300+ devices reached, against a published 99.9% availability SLO.",
     technologies: ["Swift", "Kotlin", "Apple Business Manager", "Certificate Pinning", "Custom CDN"]
   },
   {
@@ -68,7 +68,7 @@ const innovations = [
     technicalBreakthrough:
       "Append-only design with checksummed export packs verifiable outside the platform — tamper-evidence without blockchain overhead.",
     impact:
-      "Shipping in AppDeploy as org-scoped, append-only audit logs and checksummed Evidence Packs that an auditor can verify independently of the platform.",
+      "Shipping in Vamiq as org-scoped, append-only audit logs and checksummed Evidence Packs that an auditor can verify independently of the platform.",
     technologies: ["Merkle Trees", "Cryptographic Hashing", "Timestamping", "Immutable Storage"]
   },
   {
@@ -96,7 +96,7 @@ const innovations = [
     technicalBreakthrough:
       "Custom CRDT implementations optimized for mobile constraints—achieving sub-100ms sync resolution with predictable battery impact.",
     impact:
-      "Built across mobile client work before ScotiTech; the offline-first patterns now inform how AppDeploy reconciles per-device state.",
+      "Built across mobile client work before ScotiTech; the offline-first patterns now inform how Vamiq reconciles per-device state.",
     technologies: ["CRDTs", "Operational Transform", "SQLite", "Background Sync"]
   },
   {
@@ -110,7 +110,7 @@ const innovations = [
     technicalBreakthrough:
       "State machine-based orchestration enabling per-tenant canary deployment with automatic failure detection and rollback—zero customer impact.",
     impact:
-      "The rollout pattern now shipping in AppDeploy as rollout rings: progressive per-tenant deployment with automatic failure-stop and one-click rollback.",
+      "Vamiq provides Release Guard build checks, Risk Forecast before rollout, installation status and checksummed release Evidence Packs.",
     technologies: ["Kubernetes", "Service Mesh", "Health Monitoring", "State Machines"]
   },
   {

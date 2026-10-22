@@ -96,19 +96,19 @@ const publicContribution = professionalImpact.slice(4);
 const builtAndShipped = [
   {
     year: "2026",
-    title: "AppDeploy: Apple device management and private app distribution in one workspace",
+    title: "Vamiq: Apple device management and private app distribution in one workspace",
     detail:
-      "Extended AppDeploy from private app distribution into full device management for iPhone, iPad and Mac: zero-touch setup, security baselines, FileVault and Activation Lock escrow, SOC 2, ISO 27001 and Cyber Essentials device evidence, Vanta integration and one-flow offboarding, at £1 per device after the first 5 free.",
-    link: "https://appdeploy.scotitech.com",
-    linkLabel: "Visit AppDeploy"
+      "Extended Vamiq from private app distribution into full device management for iPhone, iPad and Mac: zero-touch setup, security baselines, device records, security policies, installation status and release evidence. The first five managed Apple devices are free, then £1 per additional device per month. Distribution is priced separately.",
+    link: "https://vamiq.app",
+    linkLabel: "Visit Vamiq"
   },
   {
     year: "2025",
-    title: "AppDeploy: Internal application distribution without MDM dependency or private hosting",
+    title: "AppDeploy (now Vamiq): Internal application distribution without MDM dependency or private hosting",
     detail:
-      "Led and developed AppDeploy through ScotiTech as a novel approach to enterprise app distribution without device enrollment, solving deployment friction in regulated environments. Shipped with paid pilots proving market demand.",
-    link: "https://appdeploy.scotitech.com",
-    linkLabel: "Visit AppDeploy"
+      "Led and developed AppDeploy, now Vamiq, through ScotiTech as an approach to enterprise app distribution without device enrollment, solving deployment friction in regulated environments. Shipped with paid pilots proving market demand.",
+    link: "https://vamiq.app",
+    linkLabel: "Visit Vamiq"
   },
   {
     year: "2025",
@@ -230,7 +230,7 @@ const evidenceAtGlance = [
   {
     metric: "Multiple",
     title: "Production platforms deployed",
-    detail: "Built and shipped operational systems including AppDeploy, AXOS, and ElderConnect+ serving real organizations."
+    detail: "Built and shipped operational systems including Vamiq, AXOS, and ElderConnect+ serving real organizations."
   },
   {
     metric: "Founder",

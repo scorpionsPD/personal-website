@@ -4,29 +4,29 @@ import ExternalLinkButton from "../../../../components/ExternalLinkButton";
 import { createMetadata } from "../../../../lib/seo";
 
 export const metadata = createMetadata({
-  title: "AppDeploy | Pradeep Dahiya",
+  title: "Vamiq | Pradeep Dahiya",
   description:
     "ScotiTech product led and developed by me: Apple device management and private app distribution for iPhone, iPad and Mac, built on Apple Business.",
   path: "/products/appdeploy"
 });
 
 const metrics = [
-  { value: "3", label: "Organisations", detail: "Across healthcare, finance, and gambling/private sectors" },
-  { value: "50+", label: "App Deployments", detail: "Production deployments managed through the platform" },
-  { value: "£1", label: "Per Device a Month", detail: "After the first 5 devices free, with every feature included" },
-  { value: "100%", label: "Availability", detail: "Distribution platform uptime over 18 months" }
+  { value: "5", label: "Devices Free", detail: "No time limit and no card required" },
+  { value: "£1", label: "Per Additional Device / Month", detail: "Beyond the free five, or £10 per device per year" },
+  { value: "£29", label: "Distribution / Month", detail: "Per workspace, or £219 per year; device charges separate" },
+  { value: "14 days", label: "All-Feature Trial", detail: "No card; moves to Free afterwards without an automatic charge" }
 ];
 
 const differentiation = [
   {
     category: "vs. Separate Device and App Tools",
-    ours: "Device management, a branded app store and release controls in one workspace, at one per-device price.",
+    ours: "Device management, a branded app store and release controls in one workspace, with separate device and Distribution plans.",
     theirs: "Separate products and bills, with no shared view of devices and the apps on them."
   },
   {
     category: "vs. App Store Distribution",
-    ours: "Private and Custom Apps reach the right people with no public listing and no review delay.",
-    theirs: "Review delays, a public listing, and no control over who installs."
+    ours: "Deliver private apps to approved teams through supported Apple distribution routes and a branded store.",
+    theirs: "Public distribution serves a broad audience; internal apps also need team access and installation records."
   },
   {
     category: "vs. Manual Device Setup",
@@ -35,7 +35,7 @@ const differentiation = [
   },
   {
     category: "vs. Spreadsheet Audits",
-    ours: "Owners, encryption, updates and daily history, ready for SOC 2 and ISO 27001 auditors and Vanta.",
+    ours: "Review device records, daily compliance history and checksummed release evidence in one workspace.",
     theirs: "Evidence assembled by hand the week before the audit."
   }
 ];
@@ -43,12 +43,12 @@ const differentiation = [
 const technicalArchitecture = [
   {
     layer: "Device Layer",
-    description: "Enrolment, configuration and remote actions for iPhone, iPad and Mac, from zero-touch setup to Return to Service.",
+    description: "Enrolment, configuration and remote actions for iPhone, iPad and Mac, with supported automated setup and device actions based on platform and enrolment.",
     technologies: ["Apple MDM", "Declarative Device Management", "Automated Device Enrollment", "APNs"]
   },
   {
     layer: "Distribution Layer",
-    description: "Silent installs of Apple Business, Custom and App Store apps on company devices, plus a branded app store that needs no enrolment.",
+    description: "App assignment and installation status on enrolled Apple devices, plus a branded private app store that can be used separately. Installation requirements depend on the Apple distribution route.",
     technologies: ["Apple Business integration", "Apps and Books", "Branded app store", "Release Guard"]
   },
   {
@@ -58,15 +58,15 @@ const technicalArchitecture = [
   },
   {
     layer: "Governance Layer",
-    description: "Append-only audit trail, daily compliance history, an asset register and device evidence mapped to SOC 2, ISO 27001 and Cyber Essentials.",
-    technologies: ["Audit logging", "Compliance history", "Evidence Packs", "Vanta integration"]
+    description: "Append-only audit trail, daily compliance history, an asset register and checksummed release Evidence Packs for review.",
+    technologies: ["Audit logging", "Compliance history", "Evidence Packs", "Release records"]
   }
 ];
 
 const architectureOverview = [
   {
     title: "Apple Business",
-    description: "Devices, apps and licences stay in Apple Business. AppDeploy syncs them on a schedule."
+    description: "Devices, apps and licences stay in Apple Business. Vamiq syncs them on a schedule."
   },
   {
     title: "Policy Layer",
@@ -74,7 +74,7 @@ const architectureOverview = [
   },
   {
     title: "Delivery Layer",
-    description: "Apps install silently on company devices, or through the branded app store with no enrolment."
+    description: "Assign apps to enrolled company devices and offer approved private apps through the branded store. Apple account and installation requirements apply."
   },
   {
     title: "Evidence Layer",
@@ -93,27 +93,27 @@ const useCases = [
   {
     sector: "Companies with Private Apps",
     challenge: "Staff need internal apps on company and personal phones, and IT needs to know who has which version.",
-    solution: "A branded app store for any device, silent installs on company devices, and Release Guard checks on every new build."
+    solution: "A branded app store for any device, app assignment on enrolled company devices, and Release Guard checks on every new build."
   },
   {
     sector: "Startups",
     challenge: "A growing team of Macs and iPhones, no IT person, and a SOC 2 or ISO 27001 audit on the way.",
-    solution: "Zero-touch setup, FileVault and update deadlines from day one, with device evidence sent straight to Vanta. Free for the first 5 devices."
+    solution: "Zero-touch setup, FileVault and update deadlines from day one, with device records and daily compliance history. Free for the first 5 devices."
   },
   {
     sector: "Agencies & Apple IT Firms",
     challenge: "Clients need their apps and devices managed, but a heavy tool eats the margin.",
-    solution: "Refer clients to AppDeploy or resell it with your own support, from a free partner workspace."
+    solution: "Refer clients to Vamiq or resell it with your own support, from a free partner workspace."
   }
 ];
 
 const appDeployLinks = {
-  website: "https://appdeploy.scotitech.com",
+  website: "https://vamiq.app",
   scotitech: "https://scotitech.com",
-  logo: "/images/products/AppdeployLogoBlack.png"
+  logo: "/images/products/vamiq-logo.png"
 };
 
-export default function AppDeployPage() {
+export default function VamiqPage() {
   return (
     <div className="flex flex-col gap-16">
       {/* Header */}
@@ -125,7 +125,7 @@ export default function AppDeployPage() {
           <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl p-2">
             <Image
               src={appDeployLinks.logo}
-              alt="AppDeploy logo"
+              alt="Vamiq logo"
               width={48}
               height={48}
               className="h-auto w-full object-contain"
@@ -145,7 +145,7 @@ export default function AppDeployPage() {
             Apple Devices &amp; Private Apps
           </span>
           <span className="text-xs font-semibold uppercase tracking-wider text-neutral-400">
-            Production since 2024
+            Live product
           </span>
         </div>
         <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-500">
@@ -159,10 +159,10 @@ export default function AppDeployPage() {
           </a>
         </p>
         <h1 className="font-display text-4xl text-neutral-950 md:text-5xl">
-          AppDeploy
+          Vamiq
         </h1>
         <p className="text-xl text-neutral-600">
-          AppDeploy is a ScotiTech product led and developed by me for Apple device management and
+          Vamiq, formerly AppDeploy, is a ScotiTech product led and developed by me for Apple device management and
           private app distribution across iPhone, iPad and Mac.
         </p>
       </section>
@@ -187,10 +187,10 @@ export default function AppDeployPage() {
           One workspace for Apple devices, private apps and release controls
         </h2>
         <p className="text-base leading-7 text-neutral-700">
-          Led and developed by me through ScotiTech, AppDeploy brings device management, private app
+          Led and developed by me through ScotiTech, Vamiq brings device management, private app
           distribution and release controls together on top of Apple Business. Organisations manage
           iPhone, iPad and Mac, give staff their own branded app store, and keep audit-ready evidence of
-          every device and every release, from one console and at one per-device price.
+          every device and every release, from one console, with separate device and Distribution plans.
         </p>
       </section>
 
@@ -236,7 +236,7 @@ export default function AppDeployPage() {
             </li>
             <li className="flex gap-3">
               <span className="text-accent">✓</span>
-              A branded app store, with silent installs on company devices
+              A branded app store, with app assignment on enrolled company devices
             </li>
             <li className="flex gap-3">
               <span className="text-accent">✓</span>
@@ -244,7 +244,7 @@ export default function AppDeployPage() {
             </li>
             <li className="flex gap-3">
               <span className="text-accent">✓</span>
-              SOC 2, ISO 27001 and Cyber Essentials device evidence, sent to Vanta
+              Device records, compliance history and checksummed release Evidence Packs
             </li>
           </ul>
         </div>
@@ -260,7 +260,7 @@ export default function AppDeployPage() {
             Public System Design
           </h2>
           <p className="max-w-3xl text-sm leading-7 text-neutral-600">
-            This is the simplified production architecture behind AppDeploy. It focuses on the
+            This is the simplified production architecture behind Vamiq. It focuses on the
             control model that matters most: how organisations manage company Apple devices and
             private apps from one place, and prove it afterwards.
           </p>
@@ -330,7 +330,7 @@ export default function AppDeployPage() {
             Competitive Differentiation
           </p>
           <h2 className="font-display text-3xl text-neutral-950">
-            Why AppDeploy is Different
+            Why Vamiq is Different
           </h2>
         </div>
         <div className="overflow-x-auto">
@@ -338,7 +338,7 @@ export default function AppDeployPage() {
             <thead>
               <tr className="border-b border-neutral-200">
                 <th className="py-4 pr-4 text-left font-semibold text-neutral-900">Comparison</th>
-                <th className="py-4 px-4 text-left font-semibold text-accent">AppDeploy</th>
+                <th className="py-4 px-4 text-left font-semibold text-accent">Vamiq</th>
                 <th className="py-4 pl-4 text-left font-semibold text-neutral-500">Alternative</th>
               </tr>
             </thead>
@@ -362,7 +362,7 @@ export default function AppDeployPage() {
             Use Cases
           </p>
           <h2 className="font-display text-3xl text-neutral-950">
-            Where AppDeploy Excels
+            Where Vamiq Excels
           </h2>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
@@ -400,16 +400,17 @@ export default function AppDeployPage() {
           Live platform
         </h3>
         <p className="text-sm leading-7 text-neutral-600">
-          AppDeploy is live for organisations that manage company iPhones, iPads and Macs or distribute
-          private apps. The first 5 devices are free, then £1 per device a month with every feature
-          included; a branded app store with release controls is £29 a month.
+          Vamiq is live for organisations that manage company iPhones, iPads and Macs or distribute
+          private apps. The first five devices are free; each additional device is £1 a month or £10 a year.
+          Distribution adds the branded app store and release controls for £29 per workspace a month
+          or £219 a year, with or without managed devices. Prices are in GBP before applicable tax.
         </p>
         <div className="mt-6 flex flex-wrap gap-4">
           <ExternalLinkButton
             href={appDeployLinks.website}
             className="inline-flex items-center rounded-full bg-accent px-4 py-2 text-sm font-semibold text-white transition hover:opacity-90"
           >
-            Visit AppDeploy
+            Visit Vamiq
           </ExternalLinkButton>
         </div>
       </section>

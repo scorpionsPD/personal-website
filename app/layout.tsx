@@ -34,7 +34,7 @@ export const metadata = {
     "private AI infrastructure",
     "operational software",
     "ScotiTech",
-    "AppDeploy"
+    "Vamiq"
   ],
   category: "technology"
 };

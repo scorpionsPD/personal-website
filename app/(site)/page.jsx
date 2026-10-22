@@ -5,7 +5,7 @@ const highlights = [
   {
     title: "AI governance systems",
     description: "Design AI products with accountability, traceability, and deployment control built in.",
-    metric: "ScotiTech, AXOS, and AppDeploy in production"
+    metric: "ScotiTech, AXOS, and Vamiq in production"
   },
   {
     title: "Operational architecture",
@@ -21,11 +21,11 @@ const highlights = [
 
 const featuredWork = [
   {
-    title: "AppDeploy",
+    title: "Vamiq",
     slug: "appdeploy",
     focus: "Apple Device Management & Private Apps",
-    result: "AppDeploy is a ScotiTech product led and developed by me. It gives organisations one workspace to manage iPhone, iPad and Mac, deliver private apps through their own branded app store, and keep audit-ready evidence of every device and release.",
-    logo: "/images/products/AppdeployLogoBlack.png"
+    result: "Vamiq is a ScotiTech product led and developed by me. It gives organisations one workspace to manage iPhone, iPad and Mac, deliver private apps through their own branded app store, and keep audit-ready evidence of every device and release.",
+    logo: "/images/products/vamiq-logo.png"
   },
   {
     title: "AXOS - Private AI Workspace",
