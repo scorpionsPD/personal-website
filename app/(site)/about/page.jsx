@@ -62,7 +62,8 @@ export default function AboutPage() {
               iPhone and iPad. I have led iOS teams, shipped enterprise apps in Swift and Objective-C,
               and spent a long time on the unglamorous questions that decide whether software
               survives: how it reaches people, who controls it, and what happens when something
-              around it changes.
+              around it changes. I hold an MSc in Advanced Software Engineering from the University
+              of Strathclyde.
             </p>
             <p>
               The same problem kept coming back. Building the app was rarely the hard part. Getting it
