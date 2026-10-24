@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="max-w-xs">
           <p className="font-display text-xl text-strong">{person.name}</p>
           <p className="mt-3 text-[15px] leading-6 text-muted">
-            Founder of ScotiTech. Building Vamiq, OnQ and AXOS.
+            Founder &amp; Software Architect, ScotiTech. Building Vamiq, OnQ and AXOS.
           </p>
         </div>
 

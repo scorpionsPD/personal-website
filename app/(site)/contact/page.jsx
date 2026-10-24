@@ -24,7 +24,7 @@ const reasons = [
 export const metadata = createMetadata({
   title: "Contact | Pradeep Dahiya",
   description:
-    "Get in touch with Pradeep Dahiya, founder of ScotiTech, about speaking, advice, partnerships or mentoring.",
+    "Get in touch with Pradeep Dahiya, founder and software architect of ScotiTech, about speaking, advice, partnerships or mentoring.",
   path: "/contact"
 });
 

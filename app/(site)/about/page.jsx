@@ -36,7 +36,7 @@ export default function AboutPage() {
               I build software people can rely on, and control.
             </h1>
             <p className="mt-6 max-w-xl text-[18px] leading-8 md:text-[20px]">
-              I&apos;m Pradeep Dahiya, founder of ScotiTech. I set the direction for our products, design
+              I&apos;m Pradeep Dahiya, founder and software architect of ScotiTech. I set the direction for our products, design
               their architecture, and work directly with the people who use them.
             </p>
           </div>

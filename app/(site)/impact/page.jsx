@@ -6,7 +6,7 @@ import { createMetadata } from "../../../lib/seo";
 export const metadata = createMetadata({
   title: "Recognition, talks and writing | Pradeep Dahiya",
   description:
-    "Awards, talks, published articles, volunteer roles and recommendations for Pradeep Dahiya, founder of ScotiTech.",
+    "Awards, talks, published articles, volunteer roles and recommendations for Pradeep Dahiya, founder and software architect of ScotiTech.",
   path: "/impact"
 });
 

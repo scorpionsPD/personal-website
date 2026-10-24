@@ -7,7 +7,7 @@ import { createMetadata, personJsonLd, SITE_DESCRIPTION, siteUrl, websiteJsonLd 
 export const metadata = {
   metadataBase: new URL(siteUrl),
   ...createMetadata({
-    title: "Pradeep Dahiya | Founder of ScotiTech, building Vamiq, OnQ and AXOS",
+    title: "Pradeep Dahiya | Founder & Software Architect, ScotiTech",
     description: SITE_DESCRIPTION
   }),
   applicationName: "Pradeep Dahiya",

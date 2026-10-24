@@ -7,9 +7,9 @@ import { awards, person, portraits, products, talks, vamiqMedia } from "../../li
 import { createMetadata, siteUrl } from "../../lib/seo";
 
 export const metadata = createMetadata({
-  title: "Pradeep Dahiya | Founder of ScotiTech, building Vamiq, OnQ and AXOS",
+  title: "Pradeep Dahiya | Founder & Software Architect, ScotiTech",
   description:
-    "Pradeep Dahiya is the founder of ScotiTech. He builds Vamiq for Apple device management and private apps, OnQ for live queues, and AXOS, a private AI workspace."
+    "Pradeep Dahiya is founder and software architect of ScotiTech. He builds Vamiq for Apple device management and private apps, OnQ for live queues, and AXOS, a private AI workspace."
 });
 
 const [vamiq, onq, axos] = products;
@@ -88,7 +88,7 @@ export default function HomePage() {
               />
             </div>
             <figcaption className="mt-4 flex items-center justify-between text-[13px] text-muted">
-              <span>Founder, ScotiTech Solutions</span>
+              <span>Founder &amp; Software Architect, ScotiTech Solutions</span>
               <a href={person.linkedin} className="font-medium text-brand hover:text-brand-strong">
                 LinkedIn ↗
               </a>
