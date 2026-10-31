@@ -3,25 +3,30 @@ import { createMetadata } from "../../../lib/seo";
 export const metadata = createMetadata({
   title: "Cookie Policy | Pradeep Dahiya",
   description:
-    "Cookie policy explaining that this website does not currently use non-essential cookies or client-side tracking technologies.",
+    "This website sets no cookies. Visitor counts are cookieless, store nothing on your device and show totals only.",
   path: "/cookie-policy"
 });
 
 const categories = [
   {
-    title: "Current position",
+    title: "No cookies",
     body:
-      "This website is not currently designed to place analytics, advertising, or preference cookies through its own site code."
+      "This website's own code sets no cookies: none for statistics, adverts or preferences."
   },
   {
-    title: "Non-essential cookies",
+    title: "Cookieless visitor counts",
     body:
-      "Because no non-essential cookies are currently being used by the site itself, there is no active cookie consent banner or preference tool on the live site at this time."
+      "Visits are counted with Vercel Web Analytics, which uses no cookies and stores nothing on your device. It shows totals only: pages viewed, where visits came from, countries and device types. It cannot identify you or follow you to other sites."
+  },
+  {
+    title: "No banner, and opting out",
+    body:
+      "As nothing is stored on your device, there is nothing to accept or reject, so there is no cookie banner. If your browser sends a Global Privacy Control or Do Not Track signal, your visit is not counted at all."
   },
   {
     title: "Future changes",
     body:
-      "If analytics, advertising tags, embedded third-party media, or other optional storage and access technologies are introduced later, the site will be updated to request consent before those non-essential technologies are used."
+      "If cookies, advertising tags, embedded third-party media or other optional storage are ever added, this page will be updated and your consent will be asked for before they are used."
   }
 ];
 
@@ -36,12 +41,13 @@ export default function CookiePolicyPage() {
           Cookie and consent policy.
         </h1>
         <p className="max-w-3xl text-base leading-7 text-body md:text-lg">
-          This page explains the website&apos;s current cookie position and what would happen if
-          non-essential cookies or similar tracking technologies are added in future.
+          This page explains why this website has no cookie banner: it sets no cookies, and its
+          visitor counts work without them.
         </p>
+        <p className="text-sm text-muted">Last updated 31 October 2026.</p>
       </section>
 
-      <section className="grid gap-6 md:grid-cols-3">
+      <section className="grid gap-6 md:grid-cols-2">
         {categories.map((category) => (
           <div key={category.title} className="rounded-2xl border border-line bg-surface p-6">
             <h2 className="font-display text-2xl text-strong">{category.title}</h2>

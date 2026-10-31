@@ -2,6 +2,7 @@ import "./globals.css";
 import type { ReactNode } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import SiteAnalytics from "../components/SiteAnalytics";
 import { createMetadata, personJsonLd, SITE_DESCRIPTION, siteUrl, websiteJsonLd } from "../lib/seo";
 
 export const metadata = {
@@ -54,6 +55,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </main>
           <Footer />
         </div>
+        <SiteAnalytics />
       </body>
     </html>
   );

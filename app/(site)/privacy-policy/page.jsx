@@ -3,7 +3,7 @@ import { createMetadata } from "../../../lib/seo";
 export const metadata = createMetadata({
   title: "Privacy Policy | Pradeep Dahiya",
   description:
-    "Privacy information covering contact data, basic website operation, and how this website currently handles cookies.",
+    "What this website collects: messages you choose to send, and cookieless visitor totals that cannot identify you. No cookies, adverts or profiles.",
   path: "/privacy-policy"
 });
 
@@ -11,12 +11,27 @@ const sections = [
   {
     title: "What this site collects",
     body:
-      "This site only collects personal information that you choose to provide directly, such as when you contact me by email. There is no newsletter signup, advertising profile, or analytics account connected to your visit at this time."
+      "The only personal information this site receives is what you choose to send me, such as an email. There is no sign-up, newsletter, account or advertising on this site."
   },
   {
-    title: "How this site currently uses cookies",
+    title: "Visitor counts",
     body:
-      "The website itself is not currently designed to set analytics, advertising, or preference cookies in your browser. Because no non-essential cookies are being used by the site code, there is no consent popup active at the moment."
+      "To see how many people visit and which pages are useful, this site uses Vercel Web Analytics, run by Vercel, the company that hosts the site. It counts page views and shows me totals only: which pages were viewed, which website or link a visit came from, the country, the type of device (phone, tablet or computer), the browser and the operating system. I use these totals to keep the site useful, and they cannot tell me who you are."
+  },
+  {
+    title: "What the visitor counts do not do",
+    body:
+      "They use no cookies and store nothing on your device. They build no profile of you, do not follow you to other websites, and are never used for adverts. Your IP address is not kept with the counts. To count unique visitors without cookies, Vercel turns each visit's request into a one-way code that cannot be reversed, and throws that code away after 24 hours."
+  },
+  {
+    title: "Links that name where they came from",
+    body:
+      "Some links to this site add a short label to the address, such as ?ref=example-site, to show which website the link was on. The label names the website, not the person who clicked it, and is only used to count how many visits came from there. Any other text added to a page address is removed before a visit is counted."
+  },
+  {
+    title: "Opting out",
+    body:
+      "If your browser sends a Global Privacy Control or Do Not Track signal, your visit is not counted at all."
   },
   {
     title: "Technical delivery and security",
@@ -26,7 +41,7 @@ const sections = [
   {
     title: "If this changes later",
     body:
-      "If non-essential cookies, analytics tools, embedded third-party media, or marketing technologies are added in future, this policy and the cookie policy will be updated first, and any consent mechanism required under UK law will be introduced before those tools are activated."
+      "If anything that uses cookies, tracks individual visitors, embeds third-party media or supports marketing is added in future, this policy and the cookie policy will be updated first, and any consent required under UK law will be asked for before it runs."
   }
 ];
 
@@ -41,10 +56,10 @@ export default function PrivacyPolicyPage() {
           Privacy information for this website.
         </h1>
         <p className="max-w-3xl text-base leading-7 text-body md:text-lg">
-          This policy explains what personal information this website currently handles, what it
-          does not currently do, and how that would change if non-essential tracking tools were
-          introduced later.
+          This policy explains what personal information this website handles, how visits are
+          counted without cookies, and what would happen if that ever changed.
         </p>
+        <p className="text-sm text-muted">Last updated 31 October 2026.</p>
       </section>
 
       <section className="flex flex-col gap-6">
